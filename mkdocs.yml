@@ -1,1 +1,49 @@
-site_name: My Docs
+site_name: Book Manual — Solutions
+site_url: https://YOUR_USERNAME.github.io/
+
+repo_url: https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io
+repo_name: YOUR_USERNAME/YOUR_USERNAME.github.io
+
+theme:
+  name: material
+  logo: assets/cover.png
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Overview: index.md
+  - Chapter 1:
+      - Chapter 1: chapter1/index.md
+      - Exercise 1.1*: chapter1/ex1-1.md
+  - Chapter 2:
+      - Chapter 2: chapter2/index.md
