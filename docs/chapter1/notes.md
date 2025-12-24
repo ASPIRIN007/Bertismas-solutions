@@ -1,23 +1,19 @@
-::: keybox
-These notes summarize the *important ideas* from Chapter 1: (i) what an
-LP is, (ii) how to convert among equivalent forms (especially to
-standard form), (iii) modeling tricks (absolute values, piecewise-linear
-convex costs, data fitting), (iv) geometric intuition (2D graphical
-method), and (v) linear algebra + computational-operation-count
-conventions used later.
-:::
+!!! info "Key box"
+    These notes summarize the *important ideas* from Chapter 1:
+    1. what an LP is
+    2. converting among equivalent forms
+    3. modeling tricks(absolute values, piecewise-linear convex costs, data fitting)
+    4. geometric intuition
+    5. linear algebra + computational-operation-count conventions used later.
 
 # What is Linear Programming (LP)?
 
-::: defbox
-A **linear program** (LP) optimizes a **linear** objective over a set
-defined by **linear** constraints. Typical primitives:
-
--   **Objective (cost)**: linear form $c^\mathsf{T}x$.
-
--   **Constraints**: linear equalities/inequalities such as $Ax \le b$,
+!!! tip "Def box"
+    A **linear program (LP)** optimizes a **linear** objective over **linear** constraints.
+    **Objective (cost)**: linear form $c^\mathsf{T}x$.
+    **Constraints**: linear equalities/inequalities such as $Ax \le b$,
     $Ax=b$, $Ax \ge b$.
-:::
+
 
 ## Common terminology (write these in notes)
 
