@@ -1,3 +1,4 @@
 # Chapter 2
 
-Coming soon.
+## Notes 
+- [Notes](notes2.md)
