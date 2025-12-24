@@ -1,7 +1,7 @@
 window.MathJax = {
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    inlineMath: [["\\(", "\\)"], ["$", "$"]],
+    displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true
   },
@@ -11,7 +11,7 @@ window.MathJax = {
   }
 };
 
-// Re-render math after Material's instant navigation swaps pages
+// Material for MkDocs: typeset after each page load/navigation
 document$.subscribe(() => {
   if (window.MathJax?.typesetPromise) {
     MathJax.typesetClear();
