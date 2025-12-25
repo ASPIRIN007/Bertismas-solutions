@@ -1,8 +1,11 @@
 site_name: Book Manual — Solutions
-site_url: https://ASPIRIN007.github.io/
+site_url: https://ASPIRIN007.github.io/Bertismas-solutions/
 
 repo_url: https://github.com/ASPIRIN007/Bertismas-solutions.git
 repo_name: ASPIRIN007/ASPIRIN007.github.io
+
+use_directory_urls: true
+
 
 theme:
   name: material
