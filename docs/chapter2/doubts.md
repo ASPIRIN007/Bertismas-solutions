@@ -196,3 +196,23 @@ Therefore, under this second representation, $x^*$ becomes **degenerate**.
     A BFS that is degenerate under one representation might be nondegenerate under another.
 
     However (important caveat): if a BFS is degenerate under one **standard form** representation, it can be shown it remains degenerate under every standard form representation of the same polyhedron.
+
+## Confusion between general and standard form of polyhedron and number of constraints
+
+!!! note "Clarification: $m<n$ does **not** mean “no feasible points”"
+    In the paragraph after Definition 2.9, $m$ denotes the **total number of constraints** used to define a polyhedron in $\mathbb{R}^n$ (equalities + inequalities).
+
+    A **basic solution** (Definition 2.9) requires that among the constraints active at $x^\*$ there are **$n$ linearly independent** ones.
+    Therefore, at any point,
+    $\#\{\text{active constraints}\}\le m.$
+
+    If $m<n$, then $\#\{\text{active constraints at }x\}<n$ for every $x$, so it is **impossible** to have $n$ linearly independent active constraints.
+    Hence there are **no basic solutions** and **no basic feasible solutions**.
+
+    This does **not** mean that the feasible set is empty. The polyhedron may still have feasible points (often infinitely many); it simply has no “corners/vertices” in the sense of Definition 2.9.
+
+    !!! note "Why this is not contradictory with standard form ($Ax=b,\ x\ge 0$)"
+        In standard form,
+        $P=\{x\in\mathbb{R}^n \mid Ax=b,\ x\ge 0\},$
+        the total number of constraints is $m+n$ (the $m$ equalities plus the $n$ nonnegativity inequalities).
+        Thus there are always at least $n$ constraints available, so basic/basic-feasible solutions can exist, and the construction “set $n-m$ variables to zero” makes sense.
