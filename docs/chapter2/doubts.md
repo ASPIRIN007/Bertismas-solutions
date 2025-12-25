@@ -167,28 +167,28 @@ Start with a standard form polyhedron
 $P=\{x\mid Ax=b,\ x\ge 0\}$
 with $A\in\mathbb{R}^{m\times n}$.
 
-Let $x^\*$ be a **nondegenerate** BFS under this representation.
+Let $x^*$ be a **nondegenerate** BFS under this representation.
 That means:
-- exactly $n-m$ components of $x^\*$ are equal to $0$, and
-- the number of active constraints at $x^\*$ is exactly $n$.
+- exactly $n-m$ components of $x^*$ are equal to $0$, and
+- the number of active constraints at $x^*$ is exactly $n$.
 
 Now represent the *same feasible set* by converting $Ax=b$ into two-sided inequalities:
 $P=\{x\mid Ax\ge b,\ -Ax\ge -b,\ x\ge 0\}.$
 
-!!! warning "What happens at $x^\*$ now?"
+!!! warning "What happens at $x^*$ now?"
     At any feasible point, $Ax=b$ implies both
     $Ax\ge b$ and $-Ax\ge -b$ hold **with equality**.
     So we add **$2m$ active inequality constraints** automatically.
 
-At the point $x^\*$:
+At the point $x^*$:
 - we still have the $n-m$ active constraints from $x\ge 0$ (the zero variables),
 - and now we also have **$2m$ active constraints** from the two-sided inequality representation of $Ax=b$.
 
-Total active constraints at $x^\*$:
+Total active constraints at $x^*$:
 $(n-m) + 2m = n+m,$
 which is strictly larger than $n$ (since $m>0$).
 
-Therefore, under this second representation, $x^\*$ becomes **degenerate**.
+Therefore, under this second representation, $x^*$ becomes **degenerate**.
 
 ---
 
