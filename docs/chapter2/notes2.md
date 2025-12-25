@@ -237,3 +237,121 @@ $a_i^\mathsf{T}x=b_i.$
       - **BFS** = $n$ linearly independent active constraints at the point  
     - Be able to state: **Extreme point ⇔ Vertex ⇔ BFS**.  
     - Know adjacency: share $n-1$ independent active constraints (neighbors along an edge).
+
+
+## 2.3 Polyhedra in Standard Form
+
+!!! info "Key box"
+    Section 2.3 specializes the geometry of Section 2.2 to the **standard form** feasible set:
+
+    1. Standard form polyhedron: $P=\{x\mid Ax=b,\ x\ge 0\}$  
+    2. **Basis** and partition into **basic** vs **nonbasic** variables  
+    3. Constructing a **basic solution** by setting $n-m$ variables to zero  
+    4. **Basic feasible solution (BFS)** = basic solution that also satisfies $x\ge 0$  
+    5. A basic solution has at most $m$ nonzero components  
+    6. Adjacent bases (differ by one column) correspond to “neighbor” corners (sets up simplex)  
+    7. Assuming $\mathrm{rank}(A)=m$ is **no loss of generality** (redundant equalities can be removed)
+
+---
+
+### Standard form feasible set
+
+!!! tip "Def box — Standard form polyhedron"
+    A **standard form** feasible set is
+    $P=\{x\in\mathbb{R}^n \mid Ax=b,\ x\ge 0\},$
+    where $A\in\mathbb{R}^{m\times n}$ and $b\in\mathbb{R}^m$.
+
+!!! note "Standing assumption (used throughout)"
+    Often we assume $\mathrm{rank}(A)=m$ (the $m$ equality constraints are linearly independent) and $m\le n$.
+
+---
+
+### Bases and basic variables
+
+Let $A_1,\dots,A_n$ denote the columns of $A$.
+
+!!! tip "Def box — Basis (column basis)"
+    A set of indices $B\subseteq\{1,\dots,n\}$ with $|B|=m$ is a **basis** if the columns $\{A_j\}_{j\in B}$ are linearly independent.
+
+!!! info "Notation"
+    - The **basis matrix** is $A_B\in\mathbb{R}^{m\times m}$ formed by the columns indexed by $B$.  
+    - The remaining indices are $N=\{1,\dots,n\}\setminus B$.  
+    - Variables $\{x_j\}_{j\in B}$ are **basic variables**; variables $\{x_j\}_{j\in N}$ are **nonbasic variables**.
+
+---
+
+### Basic solutions
+
+In standard form, the equalities $Ax=b$ are always active, and the only inequalities are $x\ge 0$.
+A “corner candidate” is obtained by activating $n-m$ of the nonnegativity constraints, i.e., setting $n-m$ variables to zero.
+
+!!! tip "Def box — Basic solution (associated with a basis $B$)"
+    Given a basis $B$ (so $A_B$ is invertible), define a vector $x$ by
+    $x_N=0,$
+    and
+    $A_B x_B=b,$
+    i.e.,
+    $x_B=A_B^{-1}b.$
+    This $x$ is called the **basic solution** associated with $B$.
+
+!!! note "Key property"
+    Any basic solution has **at most $m$ nonzero components**, because $x_N=0$ and only the $m$ basic variables can be nonzero.
+
+---
+
+### Basic feasible solutions (BFS)
+
+!!! tip "Def box — Basic feasible solution (BFS)"
+    A **basic feasible solution** is a basic solution that is feasible:
+    $x\ge 0.$
+
+!!! info "Interpretation"
+    - A **basis** always produces a **basic solution** via $x_B=A_B^{-1}b,\ x_N=0$.  
+    - That basic solution may be infeasible (some component negative).  
+    - If it satisfies $x\ge 0$, it is a **BFS** (a “corner” of $P$).
+
+---
+
+### Bases vs basic solutions (not always one-to-one)
+
+!!! note "Remark"
+    Different bases can sometimes lead to the **same** basic solution.
+    This typically happens when the resulting BFS has some basic variables equal to zero (degeneracy).
+    (Example: if $b=0$, then every basis yields the basic solution $x=0$.)
+
+---
+
+### Adjacency in standard form (sets up simplex moves)
+
+!!! tip "Def box — Adjacent bases"
+    Two bases $B$ and $B'$ are **adjacent** if they differ in exactly one index, i.e.,
+    $|B\cap B'|=m-1.$
+
+!!! note "Geometric meaning"
+    Adjacent bases correspond to swapping **one** basic variable with **one** nonbasic variable.
+    When this changes the basic solution, it moves to a neighboring corner along an edge of the feasible set.
+
+---
+
+### Full row rank assumption is no loss of generality
+
+!!! success "Theorem box — Removing redundant equalities"
+    Consider $P=\{x\mid Ax=b,\ x\ge 0\}$ and suppose $P$ is nonempty.
+    If $\mathrm{rank}(A)=k<m$, then some equality constraints are redundant.
+    There exists a matrix $D\in\mathbb{R}^{k\times n}$ with $\mathrm{rank}(D)=k$ and a vector $f\in\mathbb{R}^k$ such that
+    $\{x\mid Ax=b,\ x\ge 0\}=\{x\mid Dx=f,\ x\ge 0\}.$
+
+!!! note "Takeaway"
+    We can assume $\mathrm{rank}(A)=m$ (independent equality constraints) without changing the feasible set, as long as the feasible set is nonempty.
+
+---
+
+!!! info "Section 2.3 — Exam checklist"
+    - Standard form: $P=\{x\mid Ax=b,\ x\ge 0\}$.  
+    - Basis $B$: choose $m$ linearly independent columns $\Rightarrow A_B$ invertible.  
+    - Basic solution: $x_N=0$, $x_B=A_B^{-1}b$.  
+    - BFS: basic solution with $x\ge 0$.  
+    - Any basic solution has at most $m$ nonzeros.  
+    - Adjacent bases differ by one column (simplex “pivot” idea).  
+    - Redundant equalities can be removed $\Rightarrow$ assume $\mathrm{rank}(A)=m$.
+
