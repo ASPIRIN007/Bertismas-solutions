@@ -904,7 +904,3 @@ Theory:
 
 ---
 
-## 3.2–3.8 Placeholders (to be filled next)
-
-*(Removed — Chapter 3 notes are now complete from 3.1 to 3.8.)*
-
