@@ -1212,13 +1212,13 @@ When notes say something like “rank of <span class="arithmatex">\(x\)</span> i
 - <span class="arithmatex">\(v\)</span> is defined as the <strong>optimal value</strong> (the minimum of <span class="arithmatex">\(c^\top x\)</span> over the feasible set), and
 - <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span> are both <strong>optimal solutions</strong> (i.e., they <em>attain</em> the minimum).</p>
 <p>Then by definition:
-$$
+$
 v \le c^\top y,\quad v \le c^\top z,
-$$
+$
 and if <span class="arithmatex">\(y,z\)</span> are optimal, equality holds:
-$$
+$
 c^\top y=v,\quad c^\top z=v.
-$$</p>
+$</p>
 <hr />
 <h2 id="4-what-do-we-gain-by-writing-ctop-yv-isnt-it-just-choosing-lambda1-so-yx">4) “What do we gain by writing <span class="arithmatex">\(c^\top y=v\)</span>? Isn’t it just choosing <span class="arithmatex">\(\lambda=1\)</span> so <span class="arithmatex">\(y=x^*\)</span>?”<a class="headerlink" href="#4-what-do-we-gain-by-writing-ctop-yv-isnt-it-just-choosing-lambda1-so-yx" title="Permanent link">&para;</a></h2>
 <p>The gain is that <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span> can be <strong>distinct</strong> optimal points.<br />
@@ -1251,16 +1251,16 @@ If the objective is flat along a face, there are infinitely many optimal points 
 <hr />
 <h2 id="7-set-s-is-convex-what-exactly-does-that-mean">7) “Set <span class="arithmatex">\(S\)</span> is convex — what exactly does that mean?”<a class="headerlink" href="#7-set-s-is-convex-what-exactly-does-that-mean" title="Permanent link">&para;</a></h2>
 <p>Definition:
-$$
+$
 S \text{ convex } \iff \forall x,y\in S,\ \forall \lambda\in[0,1],\ \lambda x+(1-\lambda)y\in S.
-$$
+$
 Geometric meaning: line segment between any two points in <span class="arithmatex">\(S\)</span> stays inside <span class="arithmatex">\(S\)</span>.</p>
 <hr />
 <h2 id="8-why-do-we-introduce-reduced-costs-in-simplex">8) “Why do we introduce reduced costs in simplex?”<a class="headerlink" href="#8-why-do-we-introduce-reduced-costs-in-simplex" title="Permanent link">&para;</a></h2>
 <p>Reduced cost <span class="arithmatex">\(\bar c_j\)</span> is the <strong>instantaneous rate</strong> of objective change when we try to increase a nonbasic variable <span class="arithmatex">\(x_j\)</span> from zero while keeping feasibility:
-$$
+$
 \bar c_j = c_j - c_B^\top B^{-1}A_j.
-$$
+$
 - If <span class="arithmatex">\(\bar c_j &lt; 0\)</span> and the BFS is nondegenerate, then moving in that basic direction decreases cost (profitable entering variable).
 - If all <span class="arithmatex">\(\bar c_j \ge 0\)</span>, no edge from that BFS improves the cost ⇒ optimal (nondegenerate case).</p>
 <hr />
@@ -1281,16 +1281,16 @@ $$
 <hr />
 <h2 id="12-what-is-the-auxiliary-variable-phase-i-method-and-why-minimize-sum-y_i">12) “What is the auxiliary-variable (Phase I) method, and why minimize <span class="arithmatex">\(\sum y_i\)</span>?”<a class="headerlink" href="#12-what-is-the-auxiliary-variable-phase-i-method-and-why-minimize-sum-y_i" title="Permanent link">&para;</a></h2>
 <p>When the LP is in standard form
-$$
+$
 Ax=b,\quad x\ge 0,
-$$
+$
 we may not have an obvious starting BFS. We introduce artificial variables <span class="arithmatex">\(y\ge 0\)</span> and solve:</p>
-<div class="arithmatex">\[
+<p>$
 \min\ \sum_{i=1}^m y_i
 \quad \text{s.t.}\quad
 Ax+y=b,\;
 x\ge 0,\ y\ge 0.
-\]</div>
+$</p>
 <ul>
 <li>This auxiliary LP always has an easy BFS: <span class="arithmatex">\(x=0\)</span>, <span class="arithmatex">\(y=b\)</span> (assuming <span class="arithmatex">\(b\ge 0\)</span>).</li>
 <li>If the original system has a feasible <span class="arithmatex">\(x\ge 0\)</span> with <span class="arithmatex">\(Ax=b\)</span>, then <span class="arithmatex">\((x,0)\)</span> is feasible for the auxiliary LP and gives objective 0.</li>
@@ -1317,22 +1317,22 @@ x\ge 0,\ y\ge 0.
 <h2 id="15-why-do-they-add-the-convexity-constraint-etop-x1-in-the-geometry-section">15) “Why do they add the convexity constraint <span class="arithmatex">\(e^\top x=1\)</span> in the geometry section?”<a class="headerlink" href="#15-why-do-they-add-the-convexity-constraint-etop-x1-in-the-geometry-section" title="Permanent link">&para;</a></h2>
 <p>With <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(e^\top x=1\)</span>, the vector <span class="arithmatex">\(x\)</span> becomes a set of <strong>convex combination weights</strong>.</p>
 <p>Then:
-$$
+$
 b=Ax=\sum_i x_i A_i
-$$
+$
 means <span class="arithmatex">\(b\)</span> lies in the convex hull of the columns <span class="arithmatex">\(A_i\)</span>, and
-$$
+$
 z=c^\top x=\sum_i x_i c_i
-$$
+$
 means <span class="arithmatex">\((b,z)\)</span> lies in the convex hull of the lifted points <span class="arithmatex">\((A_i,c_i)\)</span>.</p>
 <p>That makes the geometry clean: feasibility becomes “does the vertical requirement line through <span class="arithmatex">\(b\)</span> intersect the convex hull?”
 The book notes that any bounded LP can be transformed into this form (exercise), so this picture still has general meaning.</p>
 <hr />
 <h2 id="16-what-is-the-requirement-line">16) “What is the requirement line?”<a class="headerlink" href="#16-what-is-the-requirement-line" title="Permanent link">&para;</a></h2>
 <p>It is the vertical line in <span class="arithmatex">\((m+1)\)</span>-dimensional space:
-$$
+$
 {(b,z)\mid z\in\mathbb{R}},
-$$
+$
 where <span class="arithmatex">\(b\)</span> is fixed by the constraints <span class="arithmatex">\(Ax=b\)</span>.
 Feasible solutions correspond to intersection points of this line with the convex hull of <span class="arithmatex">\((A_i,c_i)\)</span>, and the optimal solution is the lowest intersection point.</p>
 <hr />
