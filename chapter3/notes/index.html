@@ -1893,15 +1893,10 @@
 <h1 id="chapter-3-the-simplex-method">Chapter 3 — The Simplex Method<a class="headerlink" href="#chapter-3-the-simplex-method" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Key box — Standard form + what this chapter does</p>
-<p>We study the simplex method for the <strong>standard form</strong> LP
-$
-\min \; c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0,
-$
+<p>We study the simplex method for the <strong>standard form</strong> LP<br />
+<span class="arithmatex">\(\min\; c^\top x \ \text{s.t.}\ Ax=b,\ x\ge 0\)</span>,<br />
 where <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span> has <strong>linearly independent rows</strong> (rank <span class="arithmatex">\(m\)</span>).<br />
-The feasible set is the polyhedron
-$
-P={x\in\mathbb{R}^n\mid Ax=b,\;x\ge 0}.
-$</p>
+The feasible set is the polyhedron <span class="arithmatex">\(P=\{x\in\mathbb{R}^n\mid Ax=b,\ x\ge 0\}\)</span>.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Notation box</p>
@@ -1926,46 +1921,34 @@ $</p>
 <h3 id="312-feasible-directions">3.1.2 Feasible directions<a class="headerlink" href="#312-feasible-directions" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Feasible direction at <span class="arithmatex">\(x\)</span></p>
-<p>A vector <span class="arithmatex">\(d\in\mathbb{R}^n\)</span> is a <strong>feasible direction</strong> at <span class="arithmatex">\(x\in P\)</span> if there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that
-$
-x+\theta d \in P \quad \text{for all } \theta\in[0,\varepsilon].
-$</p>
+<p>A vector <span class="arithmatex">\(d\in\mathbb{R}^n\)</span> is a <strong>feasible direction</strong> at <span class="arithmatex">\(x\in P\)</span> if there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that<br />
+<span class="arithmatex">\(x+\theta d \in P\)</span> for all <span class="arithmatex">\(\theta\in[0,\varepsilon]\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — What feasibility forces in standard form</p>
 <p>Since feasibility means <strong>both</strong> <span class="arithmatex">\(Ax=b\)</span> and <span class="arithmatex">\(x\ge 0\)</span>:</p>
 <ul>
 <li>
-<p><strong>Equality constraints:</strong> <span class="arithmatex">\(Ax=b\)</span> must remain true along the move:
-  $
-  A(x+\theta d)=b\ \forall\theta \ \Longrightarrow\ Ad=0.
-  $</p>
+<p><strong>Equality constraints:</strong> <span class="arithmatex">\(Ax=b\)</span> must remain true along the move, so<br />
+<span class="arithmatex">\(A(x+\theta d)=b\ \forall\theta \ \Longrightarrow\ Ad=0\)</span>.</p>
 </li>
 <li>
-<p><strong>Nonnegativity:</strong> if a component is at zero, you cannot move it negative:
-  $
-  x_i=0\ \Longrightarrow\ d_i\ge 0.
-  $
-(This second condition is the clean algebraic version of Figure 3.1.)</p>
+<p><strong>Nonnegativity:</strong> if a component is at zero, you cannot move it negative, so<br />
+<span class="arithmatex">\(x_i=0\ \Longrightarrow\ d_i\ge 0\)</span>.</p>
 </li>
 </ul>
+<p>(This second condition is the clean algebraic version of Figure 3.1.)</p>
 </div>
 <hr />
 <h3 id="313-basic-feasible-solutions-and-basic-directions">3.1.3 Basic feasible solutions and “basic directions”<a class="headerlink" href="#313-basic-feasible-solutions-and-basic-directions" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Basis and basic solution (standard form)</p>
-<p>Choose an index set <span class="arithmatex">\(B=\{B(1),\dots,B(m)\}\)</span> such that the matrix
-$
-B=[A_{B(1)}\ \cdots\ A_{B(m)}]
-$
+<p>Choose an index set <span class="arithmatex">\(B=\{B(1),\dots,B(m)\}\)</span> such that the matrix<br />
+<span class="arithmatex">\(B=[A_{B(1)}\ \cdots\ A_{B(m)}]\)</span><br />
 is invertible.<br />
 Set all <strong>nonbasic</strong> variables to zero: <span class="arithmatex">\(x_j=0\)</span> for <span class="arithmatex">\(j\notin B\)</span>.<br />
-Then the <strong>basic variables</strong> satisfy
-$
-x_B=B^{-1}b.
-$
-This <span class="arithmatex">\(x\)</span> is a <strong>basic solution</strong>.<br />
-If additionally <span class="arithmatex">\(x_B\ge 0\)</span>, it is a <strong>basic feasible solution (BFS)</strong>.</p>
+Then the <strong>basic variables</strong> satisfy <span class="arithmatex">\(x_B=B^{-1}b\)</span>.<br />
+This <span class="arithmatex">\(x\)</span> is a <strong>basic solution</strong>. If additionally <span class="arithmatex">\(x_B\ge 0\)</span>, it is a <strong>basic feasible solution (BFS)</strong>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Basic direction associated with a nonbasic index <span class="arithmatex">\(j\notin B\)</span></p>
@@ -1974,10 +1957,8 @@ If additionally <span class="arithmatex">\(x_B\ge 0\)</span>, it is a <strong>ba
 - <span class="arithmatex">\(d_j=1\)</span>,
 - <span class="arithmatex">\(d_i=0\)</span> for all other nonbasic <span class="arithmatex">\(i\neq j\)</span>,
 - choose <span class="arithmatex">\(d_B\)</span> so that the equality constraints stay satisfied: <span class="arithmatex">\(Ad=0\)</span>.</p>
-<p>Since <span class="arithmatex">\(Ad = Bd_B + A_j = 0\)</span>, we obtain the <strong>basic-direction formula</strong>
-$
-d_B=-B^{-1}A_j.
-$
+<p>Since <span class="arithmatex">\(Ad = Bd_B + A_j = 0\)</span>, we obtain the <strong>basic-direction formula</strong><br />
+<span class="arithmatex">\(d_B=-B^{-1}A_j\)</span>.<br />
 (This is equation (3.1) in the text.)</p>
 </div>
 <div class="admonition info">
@@ -1997,10 +1978,8 @@ $
 <p>Even if <span class="arithmatex">\(Ad=0\)</span>, moving along <span class="arithmatex">\(d\)</span> can violate <span class="arithmatex">\(x\ge 0\)</span>.</p>
 <ul>
 <li>
-<p>If the BFS is <strong>nondegenerate</strong> (<span class="arithmatex">\(x_B&gt;0\)</span>), then for sufficiently small <span class="arithmatex">\(\theta&gt;0\)</span>,
-  $
-  x_B+\theta d_B \ge 0,
-  $
+<p>If the BFS is <strong>nondegenerate</strong> (<span class="arithmatex">\(x_B&gt;0\)</span>), then for sufficiently small <span class="arithmatex">\(\theta&gt;0\)</span>, we still have<br />
+<span class="arithmatex">\(x_B+\theta d_B \ge 0\)</span>,<br />
   so the basic direction is feasible.</p>
 </li>
 <li>
@@ -2017,18 +1996,12 @@ $
 <h3 id="315-reduced-costs">3.1.5 Reduced costs<a class="headerlink" href="#315-reduced-costs" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Reduced cost</p>
-<p>Along the <span class="arithmatex">\(j\)</span>-th basic direction <span class="arithmatex">\(d\)</span>,
-$
-c^\top d = c_B^\top d_B + c_j.
-$
-Using <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span> gives
-$
-c^\top d = c_j - c_B^\top B^{-1}A_j.
-$
-This motivates the <strong>reduced cost</strong>:
-$
-\bar c_j \;=\; c_j - c_B^\top B^{-1}A_j.
-$</p>
+<p>Along the <span class="arithmatex">\(j\)</span>-th basic direction <span class="arithmatex">\(d\)</span>, the objective change rate is<br />
+<span class="arithmatex">\(c^\top d = c_B^\top d_B + c_j\)</span>.<br />
+Using <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span> gives<br />
+<span class="arithmatex">\(c^\top d = c_j - c_B^\top B^{-1}A_j\)</span>.<br />
+This motivates the <strong>reduced cost</strong><br />
+<span class="arithmatex">\(\bar c_j = c_j - c_B^\top B^{-1}A_j\)</span>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Key box — Interpretation</p>
@@ -2039,39 +2012,27 @@ $</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Reduced costs of basic variables are zero</p>
-<p>If <span class="arithmatex">\(j=B(i)\)</span> is basic, then <span class="arithmatex">\(B^{-1}A_{B(i)}=e_i\)</span>, hence
-$
-\bar c_{B(i)} = c_{B(i)} - c_B^\top e_i = c_{B(i)}-c_{B(i)}=0.
-$</p>
+<p>If <span class="arithmatex">\(j=B(i)\)</span> is basic, then <span class="arithmatex">\(B^{-1}A_{B(i)}=e_i\)</span>, hence<br />
+<span class="arithmatex">\(\bar c_{B(i)} = c_{B(i)} - c_B^\top e_i = c_{B(i)}-c_{B(i)}=0\)</span>.</p>
 </div>
 <hr />
 <h3 id="316-example-as-in-example-31">3.1.6 Example (as in Example 3.1)<a class="headerlink" href="#316-example-as-in-example-31" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — Setup</p>
-<p>Consider
-$
-\min\ c_1x_1+c_2x_2+c_3x_3+c_4x_4
-$
-subject to
-$
-x_1+x_2+x_3+x_4=2,\quad
-2x_1+3x_3+4x_4=2,\quad x\ge 0.
-$</p>
+<p>Consider <span class="arithmatex">\(\min\ c_1x_1+c_2x_2+c_3x_3+c_4x_4\)</span> subject to<br />
+<span class="arithmatex">\(x_1+x_2+x_3+x_4=2\)</span>,<br />
+<span class="arithmatex">\(2x_1+3x_3+4x_4=2\)</span>, and <span class="arithmatex">\(x\ge 0\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Choose a basis and compute the BFS</p>
-<p>Choose <span class="arithmatex">\(x_1,x_2\)</span> basic:
-$
-B=\begin{bmatrix}1&amp;1\2&amp;0\end{bmatrix},\qquad x_3=x_4=0.
-$
+<p>Choose <span class="arithmatex">\(x_1,x_2\)</span> basic. Then<br />
+<span class="arithmatex">\(B=\begin{bmatrix}1&amp;1\\2&amp;0\end{bmatrix}\)</span> and <span class="arithmatex">\(x_3=x_4=0\)</span>.<br />
 Solve <span class="arithmatex">\(Bx_B=b\)</span> to get <span class="arithmatex">\(x_1=1,\ x_2=1\)</span> (nondegenerate).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Entering <span class="arithmatex">\(x_3\)</span></p>
-<p>For entering <span class="arithmatex">\(x_3\)</span>, with <span class="arithmatex">\(A_3=(1,3)^\top\)</span>:
-$
-d_3=1,\ d_4=0,\ d_B=-B^{-1}A_3.
-$
+<p>For entering <span class="arithmatex">\(x_3\)</span>, with <span class="arithmatex">\(A_3=(1,3)^\top\)</span>:<br />
+<span class="arithmatex">\(d_3=1,\ d_4=0,\ d_B=-B^{-1}A_3\)</span>.<br />
 The objective rate along this direction is <span class="arithmatex">\(\bar c_3\)</span>.</p>
 </div>
 <hr />
@@ -2121,11 +2082,7 @@ The objective rate along this direction is <span class="arithmatex">\(\bar c_3\)
 <div class="admonition note">
 <p class="admonition-title">Key box — Useful corollary</p>
 <p>If the optimal cost is finite, there exists an <strong>optimal basis</strong>, i.e. a basis with<br />
-$
-B^{-1}b\ge 0
-\quad\text{and}\quad
-\bar c = c^\top - c_B^\top B^{-1}A \ge 0.
-$</p>
+<span class="arithmatex">\(B^{-1}b\ge 0\)</span> and reduced costs <span class="arithmatex">\(\bar c = c^\top - c_B^\top B^{-1}A \ge 0\)</span>.</p>
 </div>
 <hr />
 <h3 id="342-lexicographic-order-definitions">3.4.2 Lexicographic order (definitions)<a class="headerlink" href="#342-lexicographic-order-definitions" title="Permanent link">&para;</a></h3>
@@ -2142,28 +2099,22 @@ $</p>
 <div class="admonition note">
 <p class="admonition-title">Example box</p>
 <ul>
-<li><span class="arithmatex">\((0,2,3,0)\succ(0,2,1,4)\)</span> (first difference is at index 3: <span class="arithmatex">\(3&gt;1\)</span>).  </li>
-<li><span class="arithmatex">\((0,4,5,0)\prec(1,2,1,2)\)</span> (first difference is at index 1: <span class="arithmatex">\(0&lt;1\)</span>).</li>
+<li><span class="arithmatex">\((0,2,3,0)\succ(0,2,1,4)\)</span> (first difference at index 3: <span class="arithmatex">\(3&gt;1\)</span>).  </li>
+<li><span class="arithmatex">\((0,4,5,0)\prec(1,2,1,2)\)</span> (first difference at index 1: <span class="arithmatex">\(0&lt;1\)</span>).</li>
 </ul>
 </div>
 <hr />
 <h3 id="343-the-lexicographic-pivoting-rule-full-tableau-form">3.4.3 The lexicographic pivoting rule (full tableau form)<a class="headerlink" href="#343-the-lexicographic-pivoting-rule-full-tableau-form" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — Pivot column entries</p>
-<p>Fix an entering column <span class="arithmatex">\(j\)</span>. Let the pivot column entries be
-$
-u_i=(B^{-1}A_j)_i.
-$</p>
+<p>Fix an entering column <span class="arithmatex">\(j\)</span>. Let the pivot column entries be<br />
+<span class="arithmatex">\(u_i=(B^{-1}A_j)_i\)</span>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Definition box — Lexicographic leaving rule</p>
 <p>Among rows with <span class="arithmatex">\(u_i&gt;0\)</span>, normalize each candidate row by dividing by <span class="arithmatex">\(u_i\)</span>.<br />
-Choose the pivot row <span class="arithmatex">\(\ell\)</span> such that <span class="arithmatex">\(u_\ell&gt;0\)</span> and
-$
-\frac{\text{row }\ell}{u_\ell} \prec \frac{\text{row }i}{u_i}
-\quad \text{for every } i\ne \ell \text{ with } u_i&gt;0.
-\tag{3.5}
-$</p>
+Choose the pivot row <span class="arithmatex">\(\ell\)</span> such that <span class="arithmatex">\(u_\ell&gt;0\)</span> and<br />
+<span class="arithmatex">\(\dfrac{\text{row }\ell}{u_\ell} \prec \dfrac{\text{row }i}{u_i}\)</span> for every <span class="arithmatex">\(i\ne \ell\)</span> with <span class="arithmatex">\(u_i&gt;0\)</span>. (3.5)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Meaning</p>
@@ -2173,16 +2124,13 @@ $</p>
 <h3 id="344-example-37-how-tie-breaking-works">3.4.4 Example 3.7 (how tie-breaking works)<a class="headerlink" href="#344-example-37-how-tie-breaking-works" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — Ratio tie</p>
-<p>Suppose <span class="arithmatex">\(j=3\)</span> and two rows tie:
-$
-\frac{x_{B(1)}}{u_1}=\frac{1}{3},\qquad
-\frac{x_{B(3)}}{u_3}=\frac{3}{9}=\frac{1}{3}.
-$
-Divide each candidate row by its pivot entry and compare the normalized rows lexicographically.</p>
+<p>Suppose <span class="arithmatex">\(j=3\)</span> and two rows tie:<br />
+<span class="arithmatex">\(\dfrac{x_{B(1)}}{u_1}=\dfrac{1}{3}\)</span> and <span class="arithmatex">\(\dfrac{x_{B(3)}}{u_3}=\dfrac{3}{9}=\dfrac{1}{3}\)</span>.<br />
+Divide each candidate row by its pivot entry and compare normalized rows lexicographically.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Uniqueness point used in the book</p>
-<p>Under the assumption that rows of <span class="arithmatex">\(A\)</span> are linearly independent, this rule yields a <strong>unique</strong> leaving row: if two normalized rows were identical, it would force proportionality in rows of <span class="arithmatex">\(B^{-1}A\)</span> and contradict <span class="arithmatex">\(\mathrm{rank}(A)=m\)</span>.</p>
+<p>Under the assumption that rows of <span class="arithmatex">\(A\)</span> are linearly independent, this rule yields a <strong>unique</strong> leaving row; identical normalized rows would contradict <span class="arithmatex">\(\mathrm{rank}(A)=m\)</span>.</p>
 </div>
 <hr />
 <h3 id="345-why-lexicographic-pivoting-prevents-cycling-main-idea">3.4.5 Why lexicographic pivoting prevents cycling (main idea)<a class="headerlink" href="#345-why-lexicographic-pivoting-prevents-cycling-main-idea" title="Permanent link">&para;</a></h3>
@@ -2236,35 +2184,19 @@ Divide each candidate row by its pivot entry and compare the normalized rows lex
 <h3 id="352-easy-case-inequalities-with-nonnegative-right-hand-side">3.5.2 Easy case: inequalities with nonnegative right-hand side<a class="headerlink" href="#352-easy-case-inequalities-with-nonnegative-right-hand-side" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — Slack variable start</p>
-<p>If constraints are
-$
-Ax\le b,\quad b\ge 0,
-$
-introduce slack <span class="arithmatex">\(s\ge 0\)</span> so that
-$
-Ax+s=b.
-$
+<p>If constraints are <span class="arithmatex">\(Ax\le b\)</span> with <span class="arithmatex">\(b\ge 0\)</span>, introduce slack <span class="arithmatex">\(s\ge 0\)</span> so <span class="arithmatex">\(Ax+s=b\)</span>.<br />
 Then <span class="arithmatex">\(x=0,\ s=b\)</span> is feasible and gives an obvious BFS (slack columns form the identity).</p>
 </div>
 <hr />
 <h3 id="353-general-case-use-an-auxiliary-phase-i-problem">3.5.3 General case: use an auxiliary (Phase I) problem<a class="headerlink" href="#353-general-case-use-an-auxiliary-phase-i-problem" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Assumption box</p>
-<p>After possibly multiplying some equalities by <span class="arithmatex">\(-1\)</span>, assume
-$
-b\ge 0.
-$</p>
+<p>After possibly multiplying some equalities by <span class="arithmatex">\(-1\)</span>, assume <span class="arithmatex">\(b\ge 0\)</span>.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Phase I auxiliary LP</p>
-<p>Introduce artificial variables <span class="arithmatex">\(y\in\mathbb{R}^m\)</span> with <span class="arithmatex">\(y\ge 0\)</span> and solve:
-$
-\min\ \sum_{i=1}^m y_i
-\quad \text{s.t.}\quad
-Ax+y=b,\;
-x\ge 0,\; y\ge 0.
-\tag{Phase I}
-$</p>
+<p>Introduce artificial variables <span class="arithmatex">\(y\in\mathbb{R}^m\)</span> with <span class="arithmatex">\(y\ge 0\)</span> and solve:<br />
+<span class="arithmatex">\(\min\ \sum_{i=1}^m y_i \ \text{s.t.}\ Ax+y=b,\ x\ge 0,\ y\ge 0\)</span>.  (Phase I)</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Theorem box — Phase I correctness (core logic)</p>
@@ -2299,39 +2231,24 @@ $</p>
 <h3 id="355-a-complete-worked-example-two-phase-full-tableau-style">3.5.5 A complete worked example (two-phase, full tableau style)<a class="headerlink" href="#355-a-complete-worked-example-two-phase-full-tableau-style" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Example box — Original LP</p>
-<p>$
-\min\ z=x_1+2x_2
-$
-s.t.
-$
-\begin{aligned}
-x_1-x_2&amp;=1,\
-x_1+x_2+x_3&amp;=3,\
-x_1,x_2,x_3&amp;\ge 0.
-\end{aligned}
-$</p>
+<p><span class="arithmatex">\(\min\ z=x_1+2x_2\)</span> subject to<br />
+<span class="arithmatex">\(x_1-x_2=1\)</span>,<br />
+<span class="arithmatex">\(x_1+x_2+x_3=3\)</span>,<br />
+<span class="arithmatex">\(x_1,x_2,x_3\ge 0\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Example box — Phase I formulation</p>
-<p>Add artificials <span class="arithmatex">\(y_1,y_2\ge 0\)</span>:
-$
-\begin{aligned}
-x_1-x_2+y_1&amp;=1,\
-x_1+x_2+x_3+y_2&amp;=3,
-\end{aligned}
-$
+<p>Add artificials <span class="arithmatex">\(y_1,y_2\ge 0\)</span>:<br />
+<span class="arithmatex">\(x_1-x_2+y_1=1\)</span>,<br />
+<span class="arithmatex">\(x_1+x_2+x_3+y_2=3\)</span>,<br />
 and minimize <span class="arithmatex">\(w=y_1+y_2\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Example box — Key conclusion</p>
-<p>Phase I ends with <span class="arithmatex">\(w^*=0\)</span> and (example endpoint shown earlier):
-$
-(x_1,x_2,x_3,y_1,y_2)=(2,1,0,0,0).
-$
-Then Phase II (dropping <span class="arithmatex">\(y\)</span>) optimizes the true objective and yields:
-$
-(x_1,x_2,x_3)=(1,0,2),\qquad z^*=1.
-$</p>
+<p>Phase I ends with <span class="arithmatex">\(w^*=0\)</span> and (example endpoint shown earlier)<br />
+<span class="arithmatex">\((x_1,x_2,x_3,y_1,y_2)=(2,1,0,0,0)\)</span>.<br />
+Then Phase II (dropping <span class="arithmatex">\(y\)</span>) yields<br />
+<span class="arithmatex">\((x_1,x_2,x_3)=(1,0,2)\)</span> and <span class="arithmatex">\(z^*=1\)</span>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Key box — What to remember</p>
@@ -2344,15 +2261,9 @@ $</p>
 <h3 id="356-the-big-m-method-single-phase-alternative">3.5.6 The big-<span class="arithmatex">\(M\)</span> method (single-phase alternative)<a class="headerlink" href="#356-the-big-m-method-single-phase-alternative" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Big-<span class="arithmatex">\(M\)</span></p>
-<p>Solve one LP:
-$
-\min\ \sum_{j=1}^n c_jx_j + M\sum_{i=1}^m y_i
-$
-s.t.
-$
-Ax+y=b,\quad x\ge 0,\ y\ge 0,
-$
-with <span class="arithmatex">\(M\)</span> “very large”.</p>
+<p>Solve one LP:<br />
+<span class="arithmatex">\(\min\ \sum_{j=1}^n c_jx_j + M\sum_{i=1}^m y_i\)</span><br />
+s.t. <span class="arithmatex">\(Ax+y=b,\ x\ge 0,\ y\ge 0\)</span>, with <span class="arithmatex">\(M\)</span> “very large”.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Key box — Numerical note</p>
@@ -2378,59 +2289,30 @@ with <span class="arithmatex">\(M\)</span> “very large”.</p>
 <h3 id="361-add-a-convexity-constraint">3.6.1 Add a convexity constraint<a class="headerlink" href="#361-add-a-convexity-constraint" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Convexity constraint</p>
-<p>Add
-$
-e^\top x=1
-$
-so that <span class="arithmatex">\(x\)</span> becomes convex-combination weights.</p>
+<p>Add <span class="arithmatex">\(e^\top x=1\)</span> so that <span class="arithmatex">\(x\)</span> becomes convex-combination weights.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — The lifted formulation used in the book</p>
-<p>Consider
-$
-\min\ c^\top x
-\quad \text{s.t.}\quad
-Ax=b,\; e^\top x=1,\; x\ge 0.
-\tag{3.6}
-$
-Define the scalar
-$
-z=c^\top x.
-$</p>
+<p>Consider <span class="arithmatex">\(\min\ c^\top x\)</span> s.t. <span class="arithmatex">\(Ax=b,\ e^\top x=1,\ x\ge 0\)</span>. (3.6)<br />
+Define the scalar <span class="arithmatex">\(z=c^\top x\)</span>.</p>
 </div>
 <hr />
 <h3 id="362-lift-the-columns-into-one-higher-dimension">3.6.2 Lift the columns into one higher dimension<a class="headerlink" href="#362-lift-the-columns-into-one-higher-dimension" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — Convex hull picture</p>
-<p>Because <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(\sum_i x_i=1\)</span>:
-$
-Ax=\sum_{i=1}^n x_iA_i=b
-$
-so <span class="arithmatex">\(b\)</span> is a convex combination of the columns <span class="arithmatex">\(A_i\)</span>.</p>
-<p>Also
-$
-z=c^\top x=\sum_{i=1}^n x_ic_i.
-$
-Therefore <span class="arithmatex">\((b,z)\)</span> is a convex combination of the <strong>lifted points</strong>
-$
-(A_i,c_i)\in\mathbb{R}^{m+1}.
-$</p>
+<p>Because <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(\sum_i x_i=1\)</span>, we have <span class="arithmatex">\(Ax=\sum_{i=1}^n x_iA_i=b\)</span>, so <span class="arithmatex">\(b\)</span> is a convex combination of the columns <span class="arithmatex">\(A_i\)</span>.<br />
+Also <span class="arithmatex">\(z=c^\top x=\sum_{i=1}^n x_ic_i\)</span>.<br />
+Therefore <span class="arithmatex">\((b,z)\)</span> is a convex combination of the lifted points <span class="arithmatex">\((A_i,c_i)\in\mathbb{R}^{m+1}\)</span>.</p>
 </div>
 <hr />
 <h3 id="363-requirement-line-and-feasibility">3.6.3 Requirement line and feasibility<a class="headerlink" href="#363-requirement-line-and-feasibility" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Requirement line</p>
-<p>The <strong>requirement line</strong> is the vertical line above <span class="arithmatex">\(b\)</span>:
-$
-{(b,z)\mid z\in\mathbb{R}}.
-$</p>
+<p>The <strong>requirement line</strong> is the vertical line above <span class="arithmatex">\(b\)</span>: <span class="arithmatex">\(\{(b,z)\mid z\in\mathbb{R}\}\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Feasibility and optimality in the picture</p>
-<p>Let
-$
-H=\mathrm{conv}{(A_1,c_1),\dots,(A_n,c_n)}.
-$
+<p>Let <span class="arithmatex">\(H=\mathrm{conv}\{(A_1,c_1),\dots,(A_n,c_n)\}\)</span>.<br />
 - Feasible <span class="arithmatex">\(\Longleftrightarrow\)</span> requirement line intersects <span class="arithmatex">\(H\)</span>.<br />
 - Optimal solution corresponds to the <strong>lowest</strong> intersection point (smallest <span class="arithmatex">\(z\)</span>).</p>
 </div>
@@ -2438,16 +2320,12 @@ $
 <h3 id="364-affine-independence-and-simplices-definition-36">3.6.4 Affine independence and simplices (Definition 3.6)<a class="headerlink" href="#364-affine-independence-and-simplices-definition-36" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Affine independence</p>
-<p>Points <span class="arithmatex">\(y^1,\dots,y^{k+1}\in\mathbb{R}^n\)</span> are <strong>affinely independent</strong> if
-$
-y^1-y^{k+1},\ y^2-y^{k+1},\ \dots,\ y^k-y^{k+1}
-$
-are linearly independent.</p>
+<p>Points <span class="arithmatex">\(y^1,\dots,y^{k+1}\in\mathbb{R}^n\)</span> are <strong>affinely independent</strong> if<br />
+<span class="arithmatex">\(y^1-y^{k+1},\ y^2-y^{k+1},\ \dots,\ y^k-y^{k+1}\)</span> are linearly independent.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — Simplex</p>
-<p>The convex hull of <span class="arithmatex">\(k+1\)</span> affinely independent points is a <strong><span class="arithmatex">\(k\)</span>-dimensional simplex</strong><br />
-(segment, triangle, tetrahedron, …).</p>
+<p>The convex hull of <span class="arithmatex">\(k+1\)</span> affinely independent points is a <strong><span class="arithmatex">\(k\)</span>-dimensional simplex</strong> (segment, triangle, tetrahedron, …).</p>
 </div>
 <hr />
 <h3 id="365-bfs-and-the-basic-simplex">3.6.5 BFS and the “basic simplex”<a class="headerlink" href="#365-bfs-and-the-basic-simplex" title="Permanent link">&para;</a></h3>
@@ -2477,10 +2355,8 @@ Geometrically, simplex walks from one basic simplex to an adjacent one along the
 <div class="admonition info">
 <p class="admonition-title">Theorem box — Reduced cost = below/above dual plane (minimization)</p>
 <p>For a nonbasic index <span class="arithmatex">\(j\)</span>:
-- <span class="arithmatex">\((A_j,c_j)\)</span> lies <strong>below</strong> the current dual plane<br />
-<span class="arithmatex">\(\Longleftrightarrow\ \bar c_j&lt;0\)</span>,
-- <span class="arithmatex">\((A_j,c_j)\)</span> lies <strong>above</strong> the dual plane<br />
-<span class="arithmatex">\(\Longleftrightarrow\ \bar c_j&gt;0\)</span>.</p>
+- <span class="arithmatex">\((A_j,c_j)\)</span> lies <strong>below</strong> the current dual plane <span class="arithmatex">\(\Longleftrightarrow\ \bar c_j&lt;0\)</span>,<br />
+- <span class="arithmatex">\((A_j,c_j)\)</span> lies <strong>above</strong> the dual plane <span class="arithmatex">\(\Longleftrightarrow\ \bar c_j&gt;0\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Meaning</p>
@@ -2527,13 +2403,9 @@ A profitable pivot moves the intersection <strong>down</strong> (decreases <span
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Construction idea</p>
-<p>Start from the unit cube <span class="arithmatex">\(0\le x_i\le 1\)</span> and perturb it with constraints like
-$
-\varepsilon\le x_1\le 1,
-$
-$
-\varepsilon x_{i-1}\le x_i \le 1-\varepsilon x_{i-1},\quad i=2,\dots,n,
-$
+<p>Start from the unit cube <span class="arithmatex">\(0\le x_i\le 1\)</span> and perturb it with constraints like<br />
+<span class="arithmatex">\(\varepsilon\le x_1\le 1\)</span>,<br />
+<span class="arithmatex">\(\varepsilon x_{i-1}\le x_i \le 1-\varepsilon x_{i-1}\)</span> for <span class="arithmatex">\(i=2,\dots,n\)</span>,<br />
 so the objective decreases along a long edge-walk path.</p>
 </div>
 <hr />
@@ -2542,18 +2414,12 @@ so the objective decreases along a long edge-walk path.</p>
 <p class="admonition-title">Definition box — Diameter of a polyhedron</p>
 <p>Vertices <span class="arithmatex">\(x,y\)</span> are adjacent if connected by an edge.<br />
 Let <span class="arithmatex">\(d(x,y)\)</span> be the minimum number of edges in a path from <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(y\)</span>.<br />
-The <strong>diameter</strong> is
-$
-D(P)=\max_{x,y\text{ vertices}} d(x,y).
-$</p>
+The <strong>diameter</strong> is <span class="arithmatex">\(D(P)=\max_{x,y\text{ vertices}} d(x,y)\)</span>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — <span class="arithmatex">\(\Delta(n,m)\)</span> and Hirsch</p>
 <p>Let <span class="arithmatex">\(\Delta(n,m)\)</span> be the maximum diameter over bounded polyhedra in <span class="arithmatex">\(\mathbb{R}^n\)</span> described by <span class="arithmatex">\(m\)</span> inequalities.<br />
-Hirsch conjectured:
-$
-\Delta(n,m)\le m-n.
-$
+Hirsch conjectured <span class="arithmatex">\(\Delta(n,m)\le m-n\)</span>.<br />
 (The book discusses related results and bounds, especially differences between bounded and unbounded cases.)</p>
 </div>
 <hr />
@@ -2577,19 +2443,14 @@ Average-case claims depend on the probability model for “random LP,” but man
 <h3 id="382-core-mathematical-ingredients">3.8.2 Core mathematical ingredients<a class="headerlink" href="#382-core-mathematical-ingredients" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Key box — Reduced costs</p>
-<p>For basis <span class="arithmatex">\(B\)</span>:
-$
-\bar c_j = c_j - c_B^\top B^{-1}A_j.
-$
+<p>For basis <span class="arithmatex">\(B\)</span>: <span class="arithmatex">\(\bar c_j = c_j - c_B^\top B^{-1}A_j\)</span>.<br />
 - If <span class="arithmatex">\(\bar c_j\ge 0\)</span> for all nonbasic <span class="arithmatex">\(j\)</span>, the BFS is optimal.<br />
 - If BFS is nondegenerate and some <span class="arithmatex">\(\bar c_j&lt;0\)</span>, there is a feasible improving edge.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Key box — Ratio test</p>
-<p>For entering index <span class="arithmatex">\(j\)</span>, the step size is
-$
-\theta^*=\min_{i:(B^{-1}A_j)_i&gt;0}\frac{(x_B)_i}{(B^{-1}A_j)_i}.
-$
+<p>For entering index <span class="arithmatex">\(j\)</span>, the step size is<br />
+<span class="arithmatex">\(\theta^*=\min_{i:(B^{-1}A_j)_i&gt;0}\dfrac{(x_B)_i}{(B^{-1}A_j)_i}\)</span>.<br />
 - Leaving variable is the minimizer.<br />
 - If no component of <span class="arithmatex">\(B^{-1}A_j\)</span> is positive, the objective is unbounded below (<span class="arithmatex">\(-\infty\)</span>).</p>
 </div>
@@ -2617,12 +2478,8 @@ guarantee termination (no basis repetition).</p>
 <h3 id="385-how-to-start-initial-bfs">3.8.5 How to start: initial BFS<a class="headerlink" href="#385-how-to-start-initial-bfs" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Key box — Phase I</p>
-<p>If no obvious BFS exists, use Phase I:
-$
-\min\ \sum_{i=1}^m y_i
-\quad \text{s.t.}\quad
-Ax+y=b,\ x\ge 0,\ y\ge 0.
-$
+<p>If no obvious BFS exists, use Phase I:<br />
+<span class="arithmatex">\(\min\ \sum_{i=1}^m y_i \ \text{s.t.}\ Ax+y=b,\ x\ge 0,\ y\ge 0\)</span>.<br />
 - optimum <span class="arithmatex">\(&gt;0\)</span> <span class="arithmatex">\(\Rightarrow\)</span> infeasible original LP<br />
 - optimum <span class="arithmatex">\(=0\)</span> <span class="arithmatex">\(\Rightarrow\)</span> feasible and provides a starting basis for Phase II</p>
 </div>
