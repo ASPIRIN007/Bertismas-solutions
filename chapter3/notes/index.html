@@ -1,0 +1,2816 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ASPIRIN007.github.io/Bertismas-solutions/chapter3/notes/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../doubts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Notes - Book Manual — Solutions</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-the-simplex-method" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Book Manual — Solutions" class="md-header__button md-logo" aria-label="Book Manual — Solutions" data-md-component="logo">
+      
+  <img src="../../assets/cover.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Book Manual — Solutions
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ASPIRIN007/Bertismas-solutions.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ASPIRIN007/ASPIRIN007.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Book Manual — Solutions" class="md-nav__button md-logo" aria-label="Book Manual — Solutions" data-md-component="logo">
+      
+  <img src="../../assets/cover.png" alt="logo">
+
+    </a>
+    Book Manual — Solutions
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ASPIRIN007/Bertismas-solutions.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ASPIRIN007/ASPIRIN007.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter1/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter1/ex1-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 1.1*
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter2/notes2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter2/doubts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doubts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapter 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-optimality-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Optimality conditions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Optimality conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-local-improvement-is-enough-in-lp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Local improvement is enough in LP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-feasible-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Feasible directions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-basic-feasible-solutions-and-basic-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Basic feasible solutions and “basic directions”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-degeneracy-a-basic-direction-might-not-be-feasible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 Degeneracy: a “basic direction” might not be feasible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-reduced-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5 Reduced costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-example-as-in-the-books-example-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.6 Example (as in the book’s Example 3.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-optimality-conditions-nondegenerate-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.7 Optimality conditions (nondegenerate case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-anticycling-lexicography-and-blands-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Anticycling: lexicography and Bland’s rule
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Anticycling: lexicography and Bland’s rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-why-cycling-happens-degeneracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 Why cycling happens (degeneracy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-lexicographic-order-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 Lexicographic order (definitions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-the-lexicographic-pivoting-rule-full-tableau-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 The lexicographic pivoting rule (full tableau form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-example-37-how-tie-breaking-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4 Example 3.7 (how tie-breaking works)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#345-why-lexicographic-pivoting-prevents-cycling-main-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.5 Why lexicographic pivoting prevents cycling (main idea)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346-blands-rule-smallest-subscript-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.6 Bland’s rule (smallest-subscript pivoting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#347-practical-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.7 Practical notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-finding-an-initial-basic-feasible-solution-initial-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Finding an initial basic feasible solution (initial BFS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Finding an initial basic feasible solution (initial BFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-the-problem-simplex-needs-a-starting-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1 The problem: simplex needs a starting BFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-easy-case-inequalities-with-nonnegative-right-hand-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2 Easy case: inequalities with nonnegative right-hand side
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-general-case-use-an-auxiliary-phase-i-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3 General case: use an auxiliary (Phase I) problem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.3 General case: use an auxiliary (Phase I) problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-works-the-key-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this works (the key logic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-the-two-phase-simplex-method-algorithm-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.4 The two-phase simplex method (algorithm form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-a-complete-worked-example-two-phase-full-tableau-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.5 A complete worked example (two-phase, full tableau style)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.5 A complete worked example (two-phase, full tableau style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-i-add-artificial-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase I: add artificial variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-ii-drop-y-and-optimize-original-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase II: drop \(y\) and optimize original \(z\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356-the-big-m-method-single-phase-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.6 The big-\(M\) method (single-phase alternative)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#357-comparison-two-phase-vs-big-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.7 Comparison: two-phase vs big-\(M\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-the-geometry-of-the-simplex-method-column-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 The geometry of the simplex method (column geometry)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 The geometry of the simplex method (column geometry)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-add-a-convexity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1 Add a convexity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-lift-the-columns-into-one-higher-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2 Lift the columns into one higher dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-requirement-line-and-feasibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.3 Requirement line and feasibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-affine-independence-and-simplices-definition-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.4 Affine independence and simplices (Definition 3.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-bfs-and-the-basic-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.5 BFS and the “basic simplex”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#366-change-of-basis-move-to-an-adjacent-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.6 Change of basis = move to an adjacent simplex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#367-dual-plane-and-reduced-costs-key-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.7 Dual plane and reduced costs (key link)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#368-pivoting-as-hinging-physical-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.8 Pivoting as “hinging” (physical analogy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#369-example-310-why-simplex-can-be-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.9 Example 3.10 (why simplex can be fast)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-computational-efficiency-of-the-simplex-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Computational efficiency of the simplex method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 Computational efficiency of the simplex method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-work-per-iteration-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.1 Work per iteration (recap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-worst-case-number-of-iterations-can-be-exponential" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.2 Worst-case number of iterations can be exponential
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#373-diameter-of-polyhedra-and-the-hirsch-conjecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.3 Diameter of polyhedra and the Hirsch conjecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374-average-case-behavior-why-practice-looks-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.4 Average-case behavior (why practice looks good)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-summary-what-to-memorize-for-exams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Summary (what to memorize for exams)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 Summary (what to memorize for exams)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381-the-big-picture-of-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.1 The “big picture” of simplex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382-core-mathematical-ingredients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.2 Core mathematical ingredients
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8.2 Core mathematical ingredients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-reduced-costs-and-optimality-section-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (a) Reduced costs and optimality (Section 3.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pivot-mechanics-section-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (b) Pivot mechanics (Section 3.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-implementation-styles-section-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.3 Implementation styles (Section 3.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#384-degeneracy-cycling-and-anticycling-section-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.4 Degeneracy, cycling, and anticycling (Section 3.4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#385-how-to-start-initial-bfs-section-35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.5 How to start: initial BFS (Section 3.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#386-geometry-intuition-section-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.6 Geometry intuition (Section 3.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#387-efficiency-story-section-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.7 Efficiency story (Section 3.7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../doubts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doubts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-optimality-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Optimality conditions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Optimality conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-local-improvement-is-enough-in-lp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Local improvement is enough in LP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-feasible-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Feasible directions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-basic-feasible-solutions-and-basic-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 Basic feasible solutions and “basic directions”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-degeneracy-a-basic-direction-might-not-be-feasible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 Degeneracy: a “basic direction” might not be feasible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-reduced-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.5 Reduced costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-example-as-in-the-books-example-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.6 Example (as in the book’s Example 3.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-optimality-conditions-nondegenerate-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.7 Optimality conditions (nondegenerate case)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-anticycling-lexicography-and-blands-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Anticycling: lexicography and Bland’s rule
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Anticycling: lexicography and Bland’s rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-why-cycling-happens-degeneracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 Why cycling happens (degeneracy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-lexicographic-order-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 Lexicographic order (definitions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-the-lexicographic-pivoting-rule-full-tableau-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 The lexicographic pivoting rule (full tableau form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-example-37-how-tie-breaking-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4 Example 3.7 (how tie-breaking works)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#345-why-lexicographic-pivoting-prevents-cycling-main-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.5 Why lexicographic pivoting prevents cycling (main idea)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346-blands-rule-smallest-subscript-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.6 Bland’s rule (smallest-subscript pivoting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#347-practical-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.7 Practical notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-finding-an-initial-basic-feasible-solution-initial-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Finding an initial basic feasible solution (initial BFS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Finding an initial basic feasible solution (initial BFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-the-problem-simplex-needs-a-starting-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1 The problem: simplex needs a starting BFS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-easy-case-inequalities-with-nonnegative-right-hand-side" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2 Easy case: inequalities with nonnegative right-hand side
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-general-case-use-an-auxiliary-phase-i-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3 General case: use an auxiliary (Phase I) problem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.3 General case: use an auxiliary (Phase I) problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-works-the-key-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this works (the key logic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354-the-two-phase-simplex-method-algorithm-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.4 The two-phase simplex method (algorithm form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#355-a-complete-worked-example-two-phase-full-tableau-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.5 A complete worked example (two-phase, full tableau style)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.5 A complete worked example (two-phase, full tableau style)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-i-add-artificial-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase I: add artificial variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-ii-drop-y-and-optimize-original-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase II: drop \(y\) and optimize original \(z\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#356-the-big-m-method-single-phase-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.6 The big-\(M\) method (single-phase alternative)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#357-comparison-two-phase-vs-big-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.7 Comparison: two-phase vs big-\(M\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-the-geometry-of-the-simplex-method-column-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 The geometry of the simplex method (column geometry)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 The geometry of the simplex method (column geometry)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-add-a-convexity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.1 Add a convexity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-lift-the-columns-into-one-higher-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.2 Lift the columns into one higher dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#363-requirement-line-and-feasibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.3 Requirement line and feasibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-affine-independence-and-simplices-definition-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.4 Affine independence and simplices (Definition 3.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#365-bfs-and-the-basic-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.5 BFS and the “basic simplex”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#366-change-of-basis-move-to-an-adjacent-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.6 Change of basis = move to an adjacent simplex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#367-dual-plane-and-reduced-costs-key-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.7 Dual plane and reduced costs (key link)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#368-pivoting-as-hinging-physical-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.8 Pivoting as “hinging” (physical analogy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#369-example-310-why-simplex-can-be-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6.9 Example 3.10 (why simplex can be fast)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-computational-efficiency-of-the-simplex-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Computational efficiency of the simplex method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7 Computational efficiency of the simplex method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-work-per-iteration-recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.1 Work per iteration (recap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-worst-case-number-of-iterations-can-be-exponential" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.2 Worst-case number of iterations can be exponential
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#373-diameter-of-polyhedra-and-the-hirsch-conjecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.3 Diameter of polyhedra and the Hirsch conjecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#374-average-case-behavior-why-practice-looks-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7.4 Average-case behavior (why practice looks good)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-summary-what-to-memorize-for-exams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Summary (what to memorize for exams)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 Summary (what to memorize for exams)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381-the-big-picture-of-simplex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.1 The “big picture” of simplex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382-core-mathematical-ingredients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.2 Core mathematical ingredients
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8.2 Core mathematical ingredients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-reduced-costs-and-optimality-section-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (a) Reduced costs and optimality (Section 3.1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-pivot-mechanics-section-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (b) Pivot mechanics (Section 3.2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-implementation-styles-section-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.3 Implementation styles (Section 3.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#384-degeneracy-cycling-and-anticycling-section-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.4 Degeneracy, cycling, and anticycling (Section 3.4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#385-how-to-start-initial-bfs-section-35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.5 How to start: initial BFS (Section 3.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#386-geometry-intuition-section-36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.6 Geometry intuition (Section 3.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#387-efficiency-story-section-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8.7 Efficiency story (Section 3.7)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-3-the-simplex-method">Chapter 3 — The Simplex Method<a class="headerlink" href="#chapter-3-the-simplex-method" title="Permanent link">&para;</a></h1>
+<h2 id="31-optimality-conditions">3.1 Optimality conditions<a class="headerlink" href="#31-optimality-conditions" title="Permanent link">&para;</a></h2>
+<p>We consider the <strong>standard form</strong> linear program:</p>
+<div class="arithmatex">\[
+\min \; c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0,
+\]</div>
+<ul>
+<li><span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m\times n\)</span> and its <strong>rows are linearly independent</strong> (rank <span class="arithmatex">\(m\)</span>).  </li>
+<li><span class="arithmatex">\(P=\{x\in\mathbb{R}^n\mid Ax=b,\;x\ge 0\}\)</span> is the feasible set.  </li>
+<li><span class="arithmatex">\(A_i\)</span> denotes the <em>i-th column</em> of <span class="arithmatex">\(A\)</span>; <span class="arithmatex">\(a_i^\top\)</span> denotes the <em>i-th row</em> of <span class="arithmatex">\(A\)</span>.</li>
+</ul>
+<h3 id="311-local-improvement-is-enough-in-lp">3.1.1 Local improvement is enough in LP<a class="headerlink" href="#311-local-improvement-is-enough-in-lp" title="Permanent link">&para;</a></h3>
+<p>Many algorithms try to improve the objective by searching “nearby” feasible points.<br />
+For general nonconvex problems, “no improving nearby move” only implies <em>local</em> optimality.  </p>
+<p>For LP, <strong>local optimality implies global optimality</strong>, because:
+- the objective <span class="arithmatex">\(c^\top x\)</span> is convex (actually linear), and
+- the feasible set <span class="arithmatex">\(P\)</span> is convex.</p>
+<p>So if, at a feasible point, you cannot move in any feasible direction that decreases cost, that point is optimal.</p>
+<hr />
+<h3 id="312-feasible-directions">3.1.2 Feasible directions<a class="headerlink" href="#312-feasible-directions" title="Permanent link">&para;</a></h3>
+<p><strong>Definition (Feasible direction at <span class="arithmatex">\(x\)</span>)</strong><br />
+A vector <span class="arithmatex">\(d\in\mathbb{R}^n\)</span> is a feasible direction at <span class="arithmatex">\(x\in P\)</span> if there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that
+$$
+x+\theta d \in P \quad \text{for all } \theta\in[0,\varepsilon].
+$$</p>
+<p><strong>Key constraints for a feasible direction</strong>
+- Equality constraints: since <span class="arithmatex">\(Ax=b\)</span>, moving must keep <span class="arithmatex">\(Ax\)</span> unchanged:
+  $$
+  A(x+\theta d)=b\ \forall \theta \ \Rightarrow\ Ad=0.
+  $$
+- Nonnegativity: for each component where <span class="arithmatex">\(x_i=0\)</span>, you cannot decrease it:
+  $$
+  x_i=0 \ \Rightarrow\ d_i\ge 0.
+  $$
+(That second condition is formalized later as an exercise in the book; it’s the clean algebraic description of Figure 3.1.)</p>
+<hr />
+<h3 id="313-basic-feasible-solutions-and-basic-directions">3.1.3 Basic feasible solutions and “basic directions”<a class="headerlink" href="#313-basic-feasible-solutions-and-basic-directions" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(x\)</span> be a <strong>basic feasible solution (BFS)</strong>. That means:
+- There is an index set of <strong>basic variables</strong> <span class="arithmatex">\(B=\{B(1),\dots,B(m)\}\)</span>.
+- The corresponding <strong>basis matrix</strong>
+  $$
+  B=[A_{B(1)}\ \cdots\ A_{B(m)}]
+  $$
+  is invertible.
+- All <strong>nonbasic</strong> variables are at zero: <span class="arithmatex">\(x_j=0\)</span> for <span class="arithmatex">\(j\notin B\)</span>.
+- The basic variables satisfy:
+  $$
+  x_B = B^{-1}b.
+  $$</p>
+<p>Now pick a <strong>nonbasic</strong> index <span class="arithmatex">\(j\notin B\)</span>.<br />
+A natural “edge move” from a BFS is: increase <span class="arithmatex">\(x_j\)</span> from 0, while keeping all other nonbasic variables at 0.</p>
+<p>Construct a direction <span class="arithmatex">\(d\)</span> by:
+- <span class="arithmatex">\(d_j=1\)</span>,
+- <span class="arithmatex">\(d_i=0\)</span> for all other nonbasic <span class="arithmatex">\(i\neq j\)</span>,
+- choose <span class="arithmatex">\(d_B\)</span> so that <span class="arithmatex">\(Ad=0\)</span>.</p>
+<p>Since <span class="arithmatex">\(Ad = Bd_B + A_j = 0\)</span>, we get the <strong>basic-direction formula</strong>:
+$$
+d_B = -B^{-1}A_j.
+$$
+This is equation (3.1) in the text.</p>
+<blockquote>
+<p>Intuition: increasing <span class="arithmatex">\(x_j\)</span> forces a compensating change in the basic variables so that <span class="arithmatex">\(Ax=b\)</span> remains true.</p>
+</blockquote>
+<hr />
+<h3 id="314-degeneracy-a-basic-direction-might-not-be-feasible">3.1.4 Degeneracy: a “basic direction” might not be feasible<a class="headerlink" href="#314-degeneracy-a-basic-direction-might-not-be-feasible" title="Permanent link">&para;</a></h3>
+<p>Even if <span class="arithmatex">\(Ad=0\)</span>, the move can violate <span class="arithmatex">\(x\ge 0\)</span>.</p>
+<ul>
+<li>
+<p><strong>Nondegenerate BFS</strong>: <span class="arithmatex">\(x_B&gt;0\)</span>.<br />
+  Then for small enough <span class="arithmatex">\(\theta&gt;0\)</span>, <span class="arithmatex">\(x_B+\theta d_B\ge 0\)</span> automatically, so the basic direction is feasible.</p>
+</li>
+<li>
+<p><strong>Degenerate BFS</strong>: some basic variable is 0.<br />
+  If that zero basic variable has a negative component in <span class="arithmatex">\(d_B\)</span>, then <span class="arithmatex">\(x_B+\theta d_B\)</span> becomes negative immediately, so that basic direction is <strong>not</strong> feasible.<br />
+  (This is what Figure 3.2 illustrates.)</p>
+</li>
+</ul>
+<p><strong>Subtle point:</strong> Degeneracy breaks the “easy test” that “negative reduced cost ⇒ there is a feasible improving edge,” because the edge might point out of <span class="arithmatex">\(P\)</span>.</p>
+<hr />
+<h3 id="315-reduced-costs">3.1.5 Reduced costs<a class="headerlink" href="#315-reduced-costs" title="Permanent link">&para;</a></h3>
+<p>Suppose we move along the <span class="arithmatex">\(j\)</span>-th basic direction <span class="arithmatex">\(d\)</span>.<br />
+The objective change rate is:</p>
+<div class="arithmatex">\[
+c^\top d = c_B^\top d_B + c_j.
+\]</div>
+<p>Using <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span>,</p>
+<div class="arithmatex">\[
+c^\top d = c_j - c_B^\top B^{-1}A_j.
+\]</div>
+<p>This motivates:</p>
+<p><strong>Definition (Reduced cost of variable <span class="arithmatex">\(x_j\)</span>)</strong>
+$$
+\bar c_j \;=\; c_j - c_B^\top B^{-1}A_j.
+$$</p>
+<p>Interpretation:
+- <span class="arithmatex">\(c_j\)</span>: direct cost per unit increase in <span class="arithmatex">\(x_j\)</span>.
+- <span class="arithmatex">\(-c_B^\top B^{-1}A_j\)</span>: induced cost from adjusting the basic variables to keep feasibility.</p>
+<p><strong>Important fact:</strong> reduced costs of <em>basic</em> variables are zero.<br />
+Reason: if <span class="arithmatex">\(j=B(i)\)</span> is basic, then <span class="arithmatex">\(B^{-1}A_{B(i)}=e_i\)</span> (the <span class="arithmatex">\(i\)</span>-th unit vector), so:
+$$
+\bar c_{B(i)} = c_{B(i)} - c_B^\top e_i = c_{B(i)}-c_{B(i)}=0.
+$$</p>
+<hr />
+<h3 id="316-example-as-in-the-books-example-31">3.1.6 Example (as in the book’s Example 3.1)<a class="headerlink" href="#316-example-as-in-the-books-example-31" title="Permanent link">&para;</a></h3>
+<p>For the LP:</p>
+<div class="arithmatex">\[
+\min\ c_1x_1+c_2x_2+c_3x_3+c_4x_4
+$$
+$$
+\text{s.t.}\quad 
+x_1+x_2+x_3+x_4=2,\quad
+2x_1+3x_3+4x_4=2,\quad x\ge 0,
+\]</div>
+<p>Choose <span class="arithmatex">\(x_1,x_2\)</span> basic. Then:</p>
+<p>$$
+B=\begin{bmatrix}1&amp;1\2&amp;0\end{bmatrix},\qquad x_3=x_4=0.
+$$
+Solve <span class="arithmatex">\(Bx_B=b\)</span> to get <span class="arithmatex">\(x_1=1,\ x_2=1\)</span> (nondegenerate).</p>
+<p>For entering <span class="arithmatex">\(x_3\)</span>: <span class="arithmatex">\(A_3=(1,3)^\top\)</span>.<br />
+Direction:
+$$
+d_3=1,\ d_4=0,\ d_B=-B^{-1}A_3.
+$$
+The objective rate along this direction equals the reduced cost <span class="arithmatex">\(\bar c_3\)</span>.</p>
+<hr />
+<h3 id="317-optimality-conditions-nondegenerate-case">3.1.7 Optimality conditions (nondegenerate case)<a class="headerlink" href="#317-optimality-conditions-nondegenerate-case" title="Permanent link">&para;</a></h3>
+<p><strong>Theorem (Optimality conditions via reduced costs)</strong><br />
+Let <span class="arithmatex">\(x\)</span> be a basic feasible solution associated with a basis <span class="arithmatex">\(B\)</span>, and let <span class="arithmatex">\(\bar c\)</span> be the vector of reduced costs.</p>
+<ol>
+<li>If <span class="arithmatex">\(\bar c\ge 0\)</span>, then <span class="arithmatex">\(x\)</span> is optimal.  </li>
+<li>If <span class="arithmatex">\(x\)</span> is optimal and <strong>nondegenerate</strong>, then <span class="arithmatex">\(\bar c\ge 0\)</span>.</li>
+</ol>
+<p><strong>Why it makes sense</strong>
+- <span class="arithmatex">\(\bar c_j\)</span> is the “slope” of the objective along the <span class="arithmatex">\(j\)</span>-th basic direction.
+- If every slope is <span class="arithmatex">\(\ge 0\)</span>, then none of the edge directions improves the cost, so <span class="arithmatex">\(x\)</span> is optimal.
+- If <span class="arithmatex">\(x\)</span> is nondegenerate and some <span class="arithmatex">\(\bar c_j&lt;0\)</span>, then that direction is feasible and decreases cost ⇒ <span class="arithmatex">\(x\)</span> cannot be optimal.</p>
+<p><strong>Subtle but crucial warning (degeneracy):</strong><br />
+An optimal <strong>degenerate</strong> BFS may still have some negative reduced costs, because the corresponding basic directions might not be feasible.</p>
+<hr />
+<hr />
+<h2 id="34-anticycling-lexicography-and-blands-rule">3.4 Anticycling: lexicography and Bland’s rule<a class="headerlink" href="#34-anticycling-lexicography-and-blands-rule" title="Permanent link">&para;</a></h2>
+<h3 id="341-why-cycling-happens-degeneracy">3.4.1 Why cycling happens (degeneracy)<a class="headerlink" href="#341-why-cycling-happens-degeneracy" title="Permanent link">&para;</a></h3>
+<p>In the <strong>nondegenerate</strong> case, every pivot gives <span class="arithmatex">\(\theta^*&gt;0\)</span>, so the objective value strictly decreases and no basis can repeat (Theorem 3.3).</p>
+<p>In the <strong>degenerate</strong> case, it can happen that the ratio test gives <span class="arithmatex">\(\theta^*=0\)</span>.
+Then:
+- the <strong>basis changes</strong>, but
+- the <strong>basic feasible solution (the point <span class="arithmatex">\(x\)</span>)</strong> does not change, and
+- the objective value does not improve.</p>
+<p>After a sequence of such “zero-length pivots,” the algorithm can return to a previous basis and then repeat forever.<br />
+This infinite loop is called <strong>cycling</strong>.</p>
+<p>So, in degenerate problems, we need <strong>pivoting rules</strong> that guarantee:
+- no basis is repeated, hence
+- termination in finitely many pivots.</p>
+<p>A key corollary of any anticycling rule is:</p>
+<blockquote>
+<p>If the optimal cost is finite, then there exists an <strong>optimal basis</strong>, i.e. a basis with<br />
+<span class="arithmatex">\(B^{-1}b\ge 0\)</span> and reduced costs <span class="arithmatex">\(\bar c = c^\top - c_B^\top B^{-1}A \ge 0\)</span>.</p>
+</blockquote>
+<hr />
+<h3 id="342-lexicographic-order-definitions">3.4.2 Lexicographic order (definitions)<a class="headerlink" href="#342-lexicographic-order-definitions" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(u,v\in\mathbb{R}^k\)</span>.</p>
+<ul>
+<li>We say <span class="arithmatex">\(u\)</span> is <strong>lexicographically smaller</strong> than <span class="arithmatex">\(v\)</span> (write <span class="arithmatex">\(u \prec v\)</span>) if, at the first index where they differ,
+  the component of <span class="arithmatex">\(u\)</span> is smaller:</li>
+<li>find the smallest <span class="arithmatex">\(t\)</span> such that <span class="arithmatex">\(u_t\ne v_t\)</span>,</li>
+<li>
+<p>then <span class="arithmatex">\(u\prec v\)</span> iff <span class="arithmatex">\(u_t &lt; v_t\)</span>.</p>
+</li>
+<li>
+<p>We say <span class="arithmatex">\(u\)</span> is <strong>lexicographically positive</strong> if <span class="arithmatex">\(u\succ 0\)</span> (i.e., the first nonzero component of <span class="arithmatex">\(u\)</span> is positive).</p>
+</li>
+</ul>
+<p>Example comparisons (same style as in the book):
+- <span class="arithmatex">\((0,2,3,0) \succ (0,2,1,4)\)</span> because at the first difference (third component), <span class="arithmatex">\(3&gt;1\)</span>.
+- <span class="arithmatex">\((0,4,5,0) \prec (1,2,1,2)\)</span> because at the first component, <span class="arithmatex">\(0&lt;1\)</span>.</p>
+<hr />
+<h3 id="343-the-lexicographic-pivoting-rule-full-tableau-form">3.4.3 The lexicographic pivoting rule (full tableau form)<a class="headerlink" href="#343-the-lexicographic-pivoting-rule-full-tableau-form" title="Permanent link">&para;</a></h3>
+<p>Assume we are using a <strong>full tableau</strong> (so each basic row is visible).</p>
+<p>Fix an entering column <span class="arithmatex">\(j\)</span>.<br />
+Let the pivot column entries in the constraint rows be
+$$
+u_i = (B^{-1}A_j)_i.
+$$</p>
+<p>Among rows with <span class="arithmatex">\(u_i&gt;0\)</span>, the usual ratio test looks at <span class="arithmatex">\(\dfrac{x_{B(i)}}{u_i}\)</span> and chooses the minimum.
+If there is a tie, the lexicographic rule breaks ties as follows:</p>
+<p><strong>Lexicographic leaving rule:</strong> choose the pivot row <span class="arithmatex">\(\ell\)</span> such that <span class="arithmatex">\(u_\ell&gt;0\)</span> and
+$$
+\frac{\text{row }\ell}{u_\ell} \prec \frac{\text{row }i}{u_i}
+\quad \text{for every } i\ne \ell \text{ with } u_i&gt;0.
+\tag{3.5}
+$$</p>
+<p>In words: divide each candidate row by its pivot-column entry, then pick the row whose normalized row is <strong>lexicographically smallest</strong>.</p>
+<hr />
+<h3 id="344-example-37-how-tie-breaking-works">3.4.4 Example 3.7 (how tie-breaking works)<a class="headerlink" href="#344-example-37-how-tie-breaking-works" title="Permanent link">&para;</a></h3>
+<p>Suppose the pivot column is <span class="arithmatex">\(j=3\)</span>.</p>
+<p>Assume two rows tie in the ratio test:
+$$
+\frac{x_{B(1)}}{u_1} = \frac{1}{3},
+\qquad
+\frac{x_{B(3)}}{u_3} = \frac{3}{9} = \frac{1}{3}.
+$$</p>
+<p>So we divide the candidate rows by their pivot entries:
+- row 1 divided by <span class="arithmatex">\(u_1=3\)</span>,
+- row 3 divided by <span class="arithmatex">\(u_3=9\)</span>,</p>
+<p>and then compare the normalized rows lexicographically.
+If the comparison yields (as in the book) something like
+$$
+\frac{7}{9} &lt; \frac{5}{3},
+$$
+then row 3 is lexicographically smaller, so <strong>row 3 leaves</strong>.</p>
+<p><strong>Important subtle point:</strong> under the standing assumption that <span class="arithmatex">\(A\)</span> has linearly independent rows, this rule leads to a <strong>unique</strong> leaving row.<br />
+Reason (book’s argument): if two candidate normalized rows were identical, two rows of <span class="arithmatex">\(B^{-1}A\)</span> would be proportional, forcing <span class="arithmatex">\(\mathrm{rank}(B^{-1}A)&lt;m\)</span>, hence <span class="arithmatex">\(\mathrm{rank}(A)&lt;m\)</span>, contradicting independence of rows of <span class="arithmatex">\(A\)</span>.</p>
+<hr />
+<h3 id="345-why-lexicographic-pivoting-prevents-cycling-main-idea">3.4.5 Why lexicographic pivoting prevents cycling (main idea)<a class="headerlink" href="#345-why-lexicographic-pivoting-prevents-cycling-main-idea" title="Permanent link">&para;</a></h3>
+<p>The proof uses three facts (book’s structure):</p>
+<ol>
+<li><strong>If constraint rows start lexicographically positive, they stay lexicographically positive.</strong>  </li>
+<li>Pivot row is divided by a positive number ⇒ stays lex-positive.  </li>
+<li>For any other row with <span class="arithmatex">\(u_i&lt;0\)</span>, we add a <strong>positive</strong> multiple of the pivot row to eliminate the pivot entry ⇒ lex-positive stays lex-positive.  </li>
+<li>
+<p>For <span class="arithmatex">\(u_i&gt;0\)</span> (and <span class="arithmatex">\(i\ne \ell\)</span>), the lexicographic choice (3.5) guarantees the update keeps the row lex-positive.</p>
+</li>
+<li>
+<p><strong>The objective (zeroth) row increases lexicographically at each pivot.</strong><br />
+   At the start of an iteration, the reduced cost in the entering column is negative.
+   To make it zero, we add a positive multiple of the pivot row to the objective row.
+   Since the pivot row is lexicographically positive, the objective row becomes lexicographically larger.</p>
+</li>
+<li>
+<p><strong>Therefore, no tableau repeats, hence no basis repeats.</strong><br />
+   Because the objective row strictly increases lexicographically each iteration, it cannot return to a previous value.
+   But for a fixed basis, the tableau (and objective row) is uniquely determined.
+   So the basis can never repeat ⇒ <strong>no cycling</strong> ⇒ termination.</p>
+</li>
+</ol>
+<hr />
+<h3 id="346-blands-rule-smallest-subscript-pivoting">3.4.6 Bland’s rule (smallest-subscript pivoting)<a class="headerlink" href="#346-blands-rule-smallest-subscript-pivoting" title="Permanent link">&para;</a></h3>
+<p>Lexicographic pivoting is clean in a full tableau setting, but it is not very convenient in sophisticated revised simplex codes (where <span class="arithmatex">\(B^{-1}\)</span> is not explicitly formed).</p>
+<p>A simpler anticycling rule is <strong>Bland’s rule</strong>:</p>
+<p><strong>Bland’s entering rule:</strong> among all eligible entering variables (for minimization: <span class="arithmatex">\(\bar c_j&lt;0\)</span>), choose the one with the <strong>smallest index</strong> <span class="arithmatex">\(j\)</span>.</p>
+<p><strong>Bland’s leaving rule:</strong> apply the ratio test; among all ties for the minimum ratio, choose the leaving basic variable with the <strong>smallest index</strong>.</p>
+<p><strong>Theorem (Bland).</strong> If Bland’s rule is used, the simplex method cannot cycle and must terminate in finitely many pivots.</p>
+<p>Practical meaning:
+- Bland’s rule is easy to implement in revised simplex.
+- It may take more iterations than aggressive pricing rules, but it gives a theoretical guarantee.</p>
+<hr />
+<h3 id="347-practical-notes">3.4.7 Practical notes<a class="headerlink" href="#347-practical-notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Lexicographic pivoting</strong> is naturally expressed with a <strong>full tableau</strong> (where you can literally compare rows).
+  It can be used with revised simplex only if you maintain enough tableau-like information (e.g., explicit <span class="arithmatex">\(B^{-1}\)</span>), which many modern sparse implementations avoid.</p>
+</li>
+<li>
+<p><strong>Bland’s rule</strong> is the simplest “always safe” fallback when degeneracy causes stalling/cycling concerns.</p>
+</li>
+</ul>
+<hr />
+<h2 id="35-finding-an-initial-basic-feasible-solution-initial-bfs">3.5 Finding an initial basic feasible solution (initial BFS)<a class="headerlink" href="#35-finding-an-initial-basic-feasible-solution-initial-bfs" title="Permanent link">&para;</a></h2>
+<h3 id="351-the-problem-simplex-needs-a-starting-bfs">3.5.1 The problem: simplex needs a starting BFS<a class="headerlink" href="#351-the-problem-simplex-needs-a-starting-bfs" title="Permanent link">&para;</a></h3>
+<p>The simplex method (Sections 3.2–3.4) assumes we start from a <strong>basic feasible solution</strong> (BFS):
+- choose a basis matrix <span class="arithmatex">\(B\)</span> (invertible),
+- set <span class="arithmatex">\(x_N=0\)</span>,
+- compute <span class="arithmatex">\(x_B=B^{-1}b\)</span>,
+- and require <span class="arithmatex">\(x_B\ge 0\)</span>.</p>
+<p>Sometimes a BFS is <strong>obvious</strong>; often it is not.</p>
+<hr />
+<h3 id="352-easy-case-inequalities-with-nonnegative-right-hand-side">3.5.2 Easy case: inequalities with nonnegative right-hand side<a class="headerlink" href="#352-easy-case-inequalities-with-nonnegative-right-hand-side" title="Permanent link">&para;</a></h3>
+<p>If the original constraints are of the form
+$$
+Ax \le b, \quad b\ge 0,
+$$
+introduce <strong>slack variables</strong> <span class="arithmatex">\(s\ge 0\)</span>:
+$$
+Ax+s=b.
+$$</p>
+<p>Then the point
+- <span class="arithmatex">\(x=0\)</span>,
+- <span class="arithmatex">\(s=b\)</span>,</p>
+<p>is feasible, and the basis matrix is the identity (columns of <span class="arithmatex">\(s\)</span>).<br />
+So we immediately have a BFS.</p>
+<hr />
+<h3 id="353-general-case-use-an-auxiliary-phase-i-problem">3.5.3 General case: use an auxiliary (Phase I) problem<a class="headerlink" href="#353-general-case-use-an-auxiliary-phase-i-problem" title="Permanent link">&para;</a></h3>
+<p>Now consider standard form
+$$
+\min\ c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0,
+$$
+and assume (after possibly multiplying some equalities by <span class="arithmatex">\(-1\)</span>) that
+$$
+b\ge 0.
+$$</p>
+<p>If there is no obvious BFS, we introduce <strong>artificial variables</strong>
+$$
+y\in\mathbb{R}^m,\quad y\ge 0,
+$$
+and solve the <strong>auxiliary problem</strong> (Phase I):</p>
+<div class="arithmatex">\[
+\min\ \sum_{i=1}^m y_i
+\quad \text{s.t.}\quad
+Ax + y = b,\;
+x\ge 0,\; y\ge 0.
+\tag{Phase I}
+\]</div>
+<h4 id="why-this-works-the-key-logic">Why this works (the key logic)<a class="headerlink" href="#why-this-works-the-key-logic" title="Permanent link">&para;</a></h4>
+<p>1) <strong>Phase I is always easy to initialize.</strong><br />
+Set <span class="arithmatex">\(x=0\)</span> and <span class="arithmatex">\(y=b\)</span>.
+Then <span class="arithmatex">\(Ax+y=b\)</span> holds and <span class="arithmatex">\(y\ge 0\)</span>.<br />
+The basis matrix is the identity (columns of <span class="arithmatex">\(y\)</span>), so this is a BFS.</p>
+<p>2) <strong>If the original problem is feasible, Phase I optimum is 0.</strong><br />
+If there exists some <span class="arithmatex">\(x\ge 0\)</span> with <span class="arithmatex">\(Ax=b\)</span>, then choosing that <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y=0\)</span> is feasible for Phase I and gives objective 0.<br />
+Since <span class="arithmatex">\(\sum y_i\ge 0\)</span> always, the optimal Phase I value must be 0.</p>
+<p>3) <strong>If Phase I optimum is positive, the original problem is infeasible.</strong><br />
+Because we could not drive all <span class="arithmatex">\(y_i\)</span> to zero, there is no <span class="arithmatex">\(x\ge 0\)</span> that satisfies <span class="arithmatex">\(Ax=b\)</span>.</p>
+<p>So Phase I is a <strong>feasibility detector</strong> and also provides a feasible point for the original LP when feasible.</p>
+<hr />
+<h3 id="354-the-two-phase-simplex-method-algorithm-form">3.5.4 The two-phase simplex method (algorithm form)<a class="headerlink" href="#354-the-two-phase-simplex-method-algorithm-form" title="Permanent link">&para;</a></h3>
+<p><strong>Phase I</strong>
+1. Multiply some equalities by <span class="arithmatex">\(-1\)</span> so that <span class="arithmatex">\(b\ge 0\)</span>.
+2. Add artificial variables <span class="arithmatex">\(y_1,\dots,y_m\)</span> and solve the auxiliary LP
+   $$
+   \min\ \sum_{i=1}^m y_i
+   \quad \text{s.t.}\quad
+   Ax+y=b,\; x\ge 0,\; y\ge 0.
+   $$
+3. If the optimal value is <span class="arithmatex">\(&gt;0\)</span>, stop: the original LP is <strong>infeasible</strong>.
+4. If the optimal value is <span class="arithmatex">\(0\)</span>, we have found a feasible solution with <span class="arithmatex">\(y=0\)</span>.
+   - If <strong>no artificial variable is basic</strong> in the final basis, drop the <span class="arithmatex">\(y\)</span>-columns and start Phase II.
+   - If <strong>some artificial variable is still basic</strong> (necessarily with value 0), proceed to Step 5.
+5. <strong>Drive artificial variables out of the basis</strong> (or remove redundant constraints):
+   - Let the <span class="arithmatex">\(\ell\)</span>-th basic variable be artificial (<span class="arithmatex">\(y_\ell\)</span>).
+   - Look at the <span class="arithmatex">\(\ell\)</span>-th row of the current tableau (equivalently the <span class="arithmatex">\(\ell\)</span>-th row of <span class="arithmatex">\(B^{-1}A\)</span>).
+     - If all entries in that row for the original columns are zero, then that equality is <strong>redundant</strong> and can be eliminated (drop the row).
+     - Otherwise, pick a column <span class="arithmatex">\(A_j\)</span> whose entry in that row is nonzero and pivot so that <span class="arithmatex">\(x_j\)</span> enters and <span class="arithmatex">\(y_\ell\)</span> leaves.
+   - Repeat until all artificial variables are nonbasic.</p>
+<p><strong>Phase II</strong>
+1. Use the final basis from Phase I (containing only columns of <span class="arithmatex">\(A\)</span>) as the starting basis.
+2. Recompute reduced costs using the original cost vector <span class="arithmatex">\(c\)</span>.
+3. Run simplex on the original LP.</p>
+<hr />
+<h3 id="355-a-complete-worked-example-two-phase-full-tableau-style">3.5.5 A complete worked example (two-phase, full tableau style)<a class="headerlink" href="#355-a-complete-worked-example-two-phase-full-tableau-style" title="Permanent link">&para;</a></h3>
+<p>Consider the LP
+$$
+\min\ z = x_1 + 2x_2
+$$
+subject to
+$$
+\begin{aligned}
+x_1 - x_2 &amp;= 1,\
+x_1 + x_2 + x_3 &amp;= 3,\
+x_1,x_2,x_3 &amp;\ge 0.
+\end{aligned}
+$$</p>
+<p>There is no obvious BFS for <span class="arithmatex">\(Ax=b\)</span> (you cannot set <span class="arithmatex">\(x=0\)</span>).</p>
+<h4 id="phase-i-add-artificial-variables">Phase I: add artificial variables<a class="headerlink" href="#phase-i-add-artificial-variables" title="Permanent link">&para;</a></h4>
+<p>Introduce <span class="arithmatex">\(y_1,y_2\ge 0\)</span>:
+$$
+\begin{aligned}
+x_1 - x_2 + y_1 &amp;= 1,\
+x_1 + x_2 + x_3 + y_2 &amp;= 3.
+\end{aligned}
+$$
+Phase I objective:
+$$
+\min\ w = y_1+y_2.
+$$</p>
+<p>Start BFS: <span class="arithmatex">\(x=0\)</span>, <span class="arithmatex">\(y=b=(1,3)\)</span>.</p>
+<p>Running tableau pivots (as shown earlier in chat), Phase I ends at
+$$
+(x_1,x_2,x_3,y_1,y_2)=(2,1,0,0,0),
+$$
+so <span class="arithmatex">\(w^*=0\)</span> and the original constraints are feasible.</p>
+<h4 id="phase-ii-drop-y-and-optimize-original-z">Phase II: drop <span class="arithmatex">\(y\)</span> and optimize original <span class="arithmatex">\(z\)</span><a class="headerlink" href="#phase-ii-drop-y-and-optimize-original-z" title="Permanent link">&para;</a></h4>
+<p>Using the Phase I final basis as the starting basis, Phase II yields the optimal solution
+$$
+(x_1,x_2,x_3)=(1,0,2),\qquad z^*=1.
+$$</p>
+<p><strong>What to remember from this example</strong>
+- Phase I is only about forcing <span class="arithmatex">\(y\to 0\)</span> (feasibility).
+- Phase II reuses the found feasible basis and then optimizes the true cost.</p>
+<hr />
+<h3 id="356-the-big-m-method-single-phase-alternative">3.5.6 The big-<span class="arithmatex">\(M\)</span> method (single-phase alternative)<a class="headerlink" href="#356-the-big-m-method-single-phase-alternative" title="Permanent link">&para;</a></h3>
+<p>Instead of two phases, we combine them by penalizing artificial variables in the objective:</p>
+<div class="arithmatex">\[
+\min\ \sum_{j=1}^n c_j x_j + M\sum_{i=1}^m y_i,
+\]</div>
+<p>subject to
+$$
+Ax+y=b,\quad x\ge 0,\ y\ge 0,
+$$
+where <span class="arithmatex">\(M\)</span> is a “very large” positive constant.</p>
+<p><strong>Meaning</strong>
+- The term <span class="arithmatex">\(M\sum y_i\)</span> makes it extremely expensive to keep <span class="arithmatex">\(y_i&gt;0\)</span>.
+- If the original problem is feasible and has a finite optimum, the algorithm drives <span class="arithmatex">\(y\to 0\)</span> and then behaves like minimizing <span class="arithmatex">\(c^\top x\)</span>.</p>
+<p><strong>Important implementation idea (used in the book):</strong><br />
+Treat <span class="arithmatex">\(M\)</span> symbolically as a parameter and compare expressions like <span class="arithmatex">\(-8M+1\)</span> as negative for “<span class="arithmatex">\(M\)</span> large enough,” without fixing a numeric value.</p>
+<hr />
+<h3 id="357-comparison-two-phase-vs-big-m">3.5.7 Comparison: two-phase vs big-<span class="arithmatex">\(M\)</span><a class="headerlink" href="#357-comparison-two-phase-vs-big-m" title="Permanent link">&para;</a></h3>
+<p>Two-phase simplex:
+- Clean separation: Phase I finds feasibility, Phase II optimizes.
+- Numerically stable and standard in solvers.</p>
+<p>Big-<span class="arithmatex">\(M\)</span>:
+- One phase, simpler conceptually.
+- Can be numerically troublesome if <span class="arithmatex">\(M\)</span> is taken as a huge number in floating point arithmetic.
+- Using symbolic <span class="arithmatex">\(M\)</span> avoids choosing a specific value but is mainly a textbook device.</p>
+<hr />
+<h2 id="36-the-geometry-of-the-simplex-method-column-geometry">3.6 The geometry of the simplex method (column geometry)<a class="headerlink" href="#36-the-geometry-of-the-simplex-method-column-geometry" title="Permanent link">&para;</a></h2>
+<p>This section gives a geometric interpretation of simplex that explains (i) what a <strong>basis</strong> means geometrically, and (ii) why reduced costs control the choice of entering variables.</p>
+<h3 id="361-add-a-convexity-constraint">3.6.1 Add a convexity constraint<a class="headerlink" href="#361-add-a-convexity-constraint" title="Permanent link">&para;</a></h3>
+<p>The book considers the problem</p>
+<div class="arithmatex">\[
+\min\ c^\top x
+\quad \text{s.t.}\quad
+Ax=b,\; e^\top x=1,\; x\ge 0,
+\tag{3.6}
+\]</div>
+<p>where <span class="arithmatex">\(e\)</span> is the all-ones vector.</p>
+<ul>
+<li>The constraint <span class="arithmatex">\(e^\top x=1\)</span> is called the <strong>convexity constraint</strong>.</li>
+<li>Although it looks restrictive, the book notes that <strong>any bounded feasible set</strong> can be transformed into this form (Exercise 3.28).<br />
+  The point is: the geometry they build is easiest to see when <span class="arithmatex">\(x\)</span> is a <strong>convex combination</strong>.</li>
+</ul>
+<p>Define an auxiliary scalar variable
+$$
+z=c^\top x.
+$$</p>
+<hr />
+<h3 id="362-lift-the-columns-into-one-higher-dimension">3.6.2 Lift the columns into one higher dimension<a class="headerlink" href="#362-lift-the-columns-into-one-higher-dimension" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(A_1,\dots,A_n\)</span> be the columns of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(c_1,\dots,c_n\)</span> be the cost coefficients.</p>
+<p>Because <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(\sum_i x_i=1\)</span>,
+$$
+Ax = \sum_{i=1}^n x_i A_i = b,
+$$
+so <span class="arithmatex">\(b\)</span> is a <strong>convex combination</strong> of the column vectors <span class="arithmatex">\(A_i\)</span>.</p>
+<p>Also
+$$
+z=c^\top x = \sum_{i=1}^n x_i c_i.
+$$</p>
+<p>So the pair <span class="arithmatex">\((b,z)\)</span> is a convex combination of the lifted points
+$$
+(A_i,c_i)\in\mathbb{R}^{m+1}.
+$$</p>
+<p>This is the <strong>column geometry</strong> picture:
+- Horizontal space: <span class="arithmatex">\(\mathbb{R}^m\)</span> containing the columns <span class="arithmatex">\(A_i\)</span> and the point <span class="arithmatex">\(b\)</span>.
+- Vertical axis: the cost coordinate <span class="arithmatex">\(z\)</span>.</p>
+<p>Each feasible solution corresponds to a point <span class="arithmatex">\((b,z)\)</span> on a vertical line above <span class="arithmatex">\(b\)</span>.</p>
+<hr />
+<h3 id="363-requirement-line-and-feasibility">3.6.3 Requirement line and feasibility<a class="headerlink" href="#363-requirement-line-and-feasibility" title="Permanent link">&para;</a></h3>
+<p>The vertical line through <span class="arithmatex">\((b,\cdot)\)</span> is the <strong>requirement line</strong>.</p>
+<p>Let <span class="arithmatex">\(H\)</span> be the convex hull of the lifted points:
+$$
+H = \mathrm{conv}{(A_1,c_1),\dots,(A_n,c_n)}.
+$$</p>
+<ul>
+<li>The LP is feasible iff the requirement line intersects <span class="arithmatex">\(H\)</span>.</li>
+<li>Among all intersection points, the optimal solution corresponds to the <strong>lowest</strong> point on that intersection (smallest <span class="arithmatex">\(z\)</span>).</li>
+</ul>
+<p>So:</p>
+<p><strong>Feasibility:</strong> requirement line intersects <span class="arithmatex">\(H\)</span>.<br />
+<strong>Optimality:</strong> lowest intersection point.</p>
+<p>(This is exactly what Figure 3.6 is showing.)</p>
+<hr />
+<h3 id="364-affine-independence-and-simplices-definition-36">3.6.4 Affine independence and simplices (Definition 3.6)<a class="headerlink" href="#364-affine-independence-and-simplices-definition-36" title="Permanent link">&para;</a></h3>
+<p>A collection of vectors <span class="arithmatex">\(y^1,\dots,y^{k+1}\in\mathbb{R}^n\)</span> is <strong>affinely independent</strong> if
+$$
+y^1-y^{k+1},\ y^2-y^{k+1},\ \dots,\ y^k-y^{k+1}
+$$
+are linearly independent.</p>
+<p>The convex hull of <span class="arithmatex">\(k+1\)</span> affinely independent points is a <strong><span class="arithmatex">\(k\)</span>-dimensional simplex</strong>:
+- <span class="arithmatex">\(k=1\)</span>: line segment
+- <span class="arithmatex">\(k=2\)</span>: triangle
+- <span class="arithmatex">\(k=3\)</span>: tetrahedron/pyramid
+- etc.</p>
+<hr />
+<h3 id="365-bfs-and-the-basic-simplex">3.6.5 BFS and the “basic simplex”<a class="headerlink" href="#365-bfs-and-the-basic-simplex" title="Permanent link">&para;</a></h3>
+<p>In problem (3.6), there are <span class="arithmatex">\(m+1\)</span> equality constraints (<span class="arithmatex">\(Ax=b\)</span> gives <span class="arithmatex">\(m\)</span>, plus <span class="arithmatex">\(e^\top x=1\)</span> gives one more).
+So a BFS corresponds to choosing <span class="arithmatex">\(m+1\)</span> basic variables (equivalently <span class="arithmatex">\(m+1\)</span> basic points).</p>
+<p>Geometrically:
+- A basis corresponds to selecting <span class="arithmatex">\(m+1\)</span> lifted points <span class="arithmatex">\((A_{B(i)},c_{B(i)})\)</span> that are affinely independent.
+- Their convex hull is an <strong><span class="arithmatex">\(m\)</span>-dimensional simplex</strong>, called the <strong>basic simplex</strong>.
+- The current point <span class="arithmatex">\((b,z)\)</span> is written as a convex combination of these basic points; the coefficients are the basic variables.</p>
+<p>The remaining points are <strong>nonbasic points</strong>.</p>
+<hr />
+<h3 id="366-change-of-basis-move-to-an-adjacent-simplex">3.6.6 Change of basis = move to an adjacent simplex<a class="headerlink" href="#366-change-of-basis-move-to-an-adjacent-simplex" title="Permanent link">&para;</a></h3>
+<p>A simplex pivot replaces one basic point by one nonbasic point:
+- one point enters the basic simplex (entering variable),
+- one point leaves it (leaving variable).</p>
+<p>So simplex “walks” from one basic simplex to a neighboring one along the boundary of the convex hull.</p>
+<hr />
+<h3 id="367-dual-plane-and-reduced-costs-key-link">3.6.7 Dual plane and reduced costs (key link)<a class="headerlink" href="#367-dual-plane-and-reduced-costs-key-link" title="Permanent link">&para;</a></h3>
+<p>Take the current basic simplex. The lifted basic points lie on an <span class="arithmatex">\(m\)</span>-dimensional hyperplane in <span class="arithmatex">\(\mathbb{R}^{m+1}\)</span>.
+The book calls the hyperplane through these basic points the <strong>dual plane</strong>.</p>
+<p>Now pick a candidate entering point <span class="arithmatex">\((A_j,c_j)\)</span>.
+- If <span class="arithmatex">\((A_j,c_j)\)</span> lies <strong>below</strong> the dual plane, then moving to a new basis that includes it can lower the achieved height (cost).
+- If it lies <strong>above</strong> the dual plane, it is not profitable.</p>
+<p>The book states the geometric equivalence:</p>
+<blockquote>
+<p>“Point <span class="arithmatex">\((A_j,c_j)\)</span> is below the dual plane”<br />
+<span class="arithmatex">\(\Longleftrightarrow\)</span><br />
+“Reduced cost of <span class="arithmatex">\(x_j\)</span> is negative” (for minimization).</p>
+</blockquote>
+<p>So reduced cost is literally a <strong>signed vertical distance</strong> from the dual plane to the candidate point.</p>
+<hr />
+<h3 id="368-pivoting-as-hinging-physical-analogy">3.6.8 Pivoting as “hinging” (physical analogy)<a class="headerlink" href="#368-pivoting-as-hinging-physical-analogy" title="Permanent link">&para;</a></h3>
+<p>Think of the current basic simplex as a rigid face (triangle/pyramid/etc.).
+- The requirement line intersects it at the current BFS point.
+- When a new point enters, the simplex changes by “hinging” about a shared edge (face),
+  moving the intersection point up or down.</p>
+<p>A profitable pivot is one that makes the new simplex <strong>lower</strong> (decreases cost).</p>
+<hr />
+<h3 id="369-example-310-why-simplex-can-be-fast">3.6.9 Example 3.10 (why simplex can be fast)<a class="headerlink" href="#369-example-310-why-simplex-can-be-fast" title="Permanent link">&para;</a></h3>
+<p>For the case <span class="arithmatex">\(m=1\)</span>, the geometry becomes two-dimensional.
+The book gives an example where the optimal basis is found in <strong>two pivots</strong>, even though there may be many variables <span class="arithmatex">\(n\)</span>.</p>
+<p>This motivates the practical observation:
+- simplex often needs <strong>few pivots</strong> relative to problem size, despite worst-case examples.</p>
+<hr />
+<h2 id="37-computational-efficiency-of-the-simplex-method">3.7 Computational efficiency of the simplex method<a class="headerlink" href="#37-computational-efficiency-of-the-simplex-method" title="Permanent link">&para;</a></h2>
+<p>The computational effort of simplex depends on:</p>
+<ol>
+<li><strong>Work per iteration</strong></li>
+<li><strong>Number of iterations</strong></li>
+</ol>
+<p>Section 3.3 already discussed (1). Here the focus is mostly on (2), while summarizing (1).</p>
+<hr />
+<h3 id="371-work-per-iteration-recap">3.7.1 Work per iteration (recap)<a class="headerlink" href="#371-work-per-iteration-recap" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Full tableau: about <span class="arithmatex">\(O(mn)\)</span> arithmetic per iteration (updating a size <span class="arithmatex">\(m\times n\)</span> tableau).</li>
+<li>Revised simplex: basis solves and updates are about <span class="arithmatex">\(O(m^2)\)</span> per iteration, with reduced-cost computation ranging from <span class="arithmatex">\(O(m)\)</span> to <span class="arithmatex">\(O(mn)\)</span> depending on pricing strategy and sparsity.</li>
+</ul>
+<p>So per-iteration cost can be controlled; the main theoretical difficulty is the number of pivots.</p>
+<hr />
+<h3 id="372-worst-case-number-of-iterations-can-be-exponential">3.7.2 Worst-case number of iterations can be exponential<a class="headerlink" href="#372-worst-case-number-of-iterations-can-be-exponential" title="Permanent link">&para;</a></h3>
+<p>The book discusses a construction where simplex visits an exponentially long path of adjacent vertices.</p>
+<p>Start with the <span class="arithmatex">\(n\)</span>-dimensional unit cube:
+$$
+0\le x_i\le 1,\quad i=1,\dots,n,
+$$
+which has <span class="arithmatex">\(2^n\)</span> vertices.</p>
+<p>There exists a <strong>spanning path</strong> that visits all <span class="arithmatex">\(2^n\)</span> vertices by moving along edges (Figures 3.8(a),(b) illustrate this for <span class="arithmatex">\(n=2,3\)</span>).
+With an appropriate objective and a suitable pivot rule, simplex can be forced to follow such a path.</p>
+<p>To make the objective strictly decrease each step, the book perturbs the cube with constraints (for some small <span class="arithmatex">\(\varepsilon\in(0,1/2)\)</span>):</p>
+<div class="arithmatex">\[
+\varepsilon\le x_1\le 1,
+\tag{3.7}
+\]</div>
+<div class="arithmatex">\[
+\varepsilon x_{i-1} \le x_i \le 1-\varepsilon x_{i-1},
+\quad i=2,\dots,n.
+\tag{3.8}
+\]</div>
+<p>Then one can choose a cost (book uses <span class="arithmatex">\(-x_n\)</span>) so that the simplex method decreases cost at every move along that spanning path.</p>
+<p><strong>Theorem 3.3 (worst case).</strong><br />
+For the LP that minimizes <span class="arithmatex">\(-x_n\)</span> subject to (3.7)–(3.8):
+- the feasible set has <span class="arithmatex">\(2^n\)</span> vertices,
+- there is a pivot rule under which simplex requires <span class="arithmatex">\(2^n-1\)</span> basis changes before terminating.</p>
+<p>So worst-case pivots are exponential in <span class="arithmatex">\(n\)</span>.</p>
+<hr />
+<h3 id="373-diameter-of-polyhedra-and-the-hirsch-conjecture">3.7.3 Diameter of polyhedra and the Hirsch conjecture<a class="headerlink" href="#373-diameter-of-polyhedra-and-the-hirsch-conjecture" title="Permanent link">&para;</a></h3>
+<p>To relate “number of pivots” to geometry, define adjacency graph distance.</p>
+<ul>
+<li>Two vertices are <strong>adjacent</strong> if connected by an edge.</li>
+<li>Let <span class="arithmatex">\(d(x,y)\)</span> be the minimum number of edges in a path from <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(y\)</span>.</li>
+<li>The <strong>diameter</strong> of a polyhedron <span class="arithmatex">\(P\)</span> is
+  $$
+  D(P) = \max_{x,y\text{ vertices}} d(x,y).
+  $$</li>
+</ul>
+<p>Define:
+- <span class="arithmatex">\(\Delta(n,m)\)</span> = maximum possible diameter over all <strong>bounded</strong> polyhedra in <span class="arithmatex">\(\mathbb{R}^n\)</span> described by <span class="arithmatex">\(m\)</span> linear inequalities.
+- <span class="arithmatex">\(\Delta_u(n,m)\)</span> = same but allowing <strong>unbounded</strong> polyhedra.</p>
+<p>If every bounded polyhedron had diameter polynomial in <span class="arithmatex">\(m,n\)</span>, then there would always exist a short vertex-to-vertex path, suggesting that an edge-following method might be polynomial with a good rule.
+However, simplex’s pivot rule might still fail to find the short path.</p>
+<p><strong>Hirsch conjecture (as stated in the book):</strong>
+$$
+\Delta(n,m) \le m-n.
+$$</p>
+<p>The book notes:
+- Hirsch is <strong>false for unbounded</strong> polyhedra (Klee and Walkup, 1967), and gives a lower bound:
+  $$
+  \Delta_u(n,m) \ge m-n+\left\lfloor\frac{n}{5}\right\rfloor.
+  $$
+- Worst-case upper bounds exist but are still large; the book quotes bounds of the form
+  $$
+  \Delta(n,m) \le \Delta_u(n,m) \le m^{1+\log_2 n} = (2n)^{\log_2 m}.
+  $$</p>
+<p>So the true growth of diameters (and its relation to polynomial-time behavior) is subtle.</p>
+<hr />
+<h3 id="374-average-case-behavior-why-practice-looks-good">3.7.4 Average-case behavior (why practice looks good)<a class="headerlink" href="#374-average-case-behavior-why-practice-looks-good" title="Permanent link">&para;</a></h3>
+<p>Worst-case results do not explain practical performance.</p>
+<p>The “average-case” question is hard because:
+- we must define a probability distribution over LP instances,
+- different distributions give different behavior.</p>
+<p>The book mentions positive results under certain random models:
+- randomly chosen <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(A\)</span>, and <span class="arithmatex">\(b\)</span>,
+- constraints of the form <span class="arithmatex">\(a_i^\top x\le b_i\)</span> or <span class="arithmatex">\(a_i^\top x\ge b_i\)</span> with equal probability,
+- conditioned on feasibility, simplex can have expected pivot count that grows moderately (often near linear in <span class="arithmatex">\(n\)</span> for fixed <span class="arithmatex">\(m\)</span>).</p>
+<p>Main point:
+- <strong>simplex is not polynomial in the worst case</strong>, but
+- <strong>it is often efficient in practice</strong>, and explaining this rigorously is a major research topic.</p>
+<hr />
+<h2 id="38-summary-what-to-memorize-for-exams">3.8 Summary (what to memorize for exams)<a class="headerlink" href="#38-summary-what-to-memorize-for-exams" title="Permanent link">&para;</a></h2>
+<p>This chapter developed the simplex method as a complete algorithm for LPs in standard form.</p>
+<h3 id="381-the-big-picture-of-simplex">3.8.1 The “big picture” of simplex<a class="headerlink" href="#381-the-big-picture-of-simplex" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The feasible set <span class="arithmatex">\(P=\{x\mid Ax=b,\ x\ge 0\}\)</span> is a polyhedron.</li>
+<li>Simplex moves from one <strong>basic feasible solution</strong> (vertex/extreme point) to another along <strong>edges</strong>.</li>
+<li>Each pivot is a <strong>basis change</strong>: one nonbasic variable enters, one basic variable leaves.</li>
+</ul>
+<hr />
+<h3 id="382-core-mathematical-ingredients">3.8.2 Core mathematical ingredients<a class="headerlink" href="#382-core-mathematical-ingredients" title="Permanent link">&para;</a></h3>
+<h4 id="a-reduced-costs-and-optimality-section-31">(a) Reduced costs and optimality (Section 3.1)<a class="headerlink" href="#a-reduced-costs-and-optimality-section-31" title="Permanent link">&para;</a></h4>
+<p>For a basis <span class="arithmatex">\(B\)</span>:</p>
+<ul>
+<li>Basic solution: <span class="arithmatex">\(x_B=B^{-1}b\)</span>, <span class="arithmatex">\(x_N=0\)</span>.</li>
+<li>Reduced cost:
+  $$
+  \bar c_j = c_j - c_B^\top B^{-1}A_j.
+  $$</li>
+</ul>
+<p>Key optimality condition:
+- If <span class="arithmatex">\(\bar c_j\ge 0\)</span> for all nonbasic <span class="arithmatex">\(j\)</span>, the BFS is optimal.
+- If BFS is nondegenerate and some <span class="arithmatex">\(\bar c_j&lt;0\)</span>, then there is a feasible improving edge.</p>
+<h4 id="b-pivot-mechanics-section-32">(b) Pivot mechanics (Section 3.2)<a class="headerlink" href="#b-pivot-mechanics-section-32" title="Permanent link">&para;</a></h4>
+<p>Given an entering index <span class="arithmatex">\(j\)</span>:</p>
+<ul>
+<li>Direction: <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span> and <span class="arithmatex">\(d_j=1\)</span>.</li>
+<li>
+<p>Ratio test:
+  $$
+  \theta^* = \min_{i: (B^{-1}A_j)_i&gt;0}\ \frac{(x_B)_i}{(B^{-1}A_j)_i}.
+  $$</p>
+</li>
+<li>
+<p>Leaving variable is the one achieving the minimum.</p>
+</li>
+<li>If no component of <span class="arithmatex">\(B^{-1}A_j\)</span> is positive, then <span class="arithmatex">\(d\ge 0\)</span> and <span class="arithmatex">\(c^\top d&lt;0\)</span> ⇒ objective is unbounded below (<span class="arithmatex">\(-\infty\)</span>).</li>
+</ul>
+<hr />
+<h3 id="383-implementation-styles-section-33">3.8.3 Implementation styles (Section 3.3)<a class="headerlink" href="#383-implementation-styles-section-33" title="Permanent link">&para;</a></h3>
+<p>Three equivalent bookkeeping styles:</p>
+<ol>
+<li><strong>Naive:</strong> form <span class="arithmatex">\(B^{-1}\)</span> explicitly each iteration (mostly educational).</li>
+<li><strong>Revised simplex:</strong> store <span class="arithmatex">\(B\)</span> (or its factorization) and compute:</li>
+<li><span class="arithmatex">\(x_B\)</span> by solving <span class="arithmatex">\(Bx_B=b\)</span>,</li>
+<li>simplex multipliers <span class="arithmatex">\(p\)</span> by solving <span class="arithmatex">\(B^\top p=c_B\)</span>,</li>
+<li>reduced costs by <span class="arithmatex">\(\bar c_j=c_j-p^\top A_j\)</span>,</li>
+<li>pivot column by solving <span class="arithmatex">\(Bu=A_j\)</span>.</li>
+<li><strong>Full tableau:</strong> maintain a tableau containing <span class="arithmatex">\(B^{-1}A\)</span> and <span class="arithmatex">\(B^{-1}b\)</span>, update by row operations.</li>
+</ol>
+<p>Memory/time tradeoff:
+- Full tableau uses <span class="arithmatex">\(O(mn)\)</span> storage and about <span class="arithmatex">\(O(mn)\)</span> work per pivot.
+- Revised simplex uses <span class="arithmatex">\(O(m^2)\)</span> basis storage (plus sparse <span class="arithmatex">\(A\)</span>) and can be much more efficient in large problems.</p>
+<hr />
+<h3 id="384-degeneracy-cycling-and-anticycling-section-34">3.8.4 Degeneracy, cycling, and anticycling (Section 3.4)<a class="headerlink" href="#384-degeneracy-cycling-and-anticycling-section-34" title="Permanent link">&para;</a></h3>
+<p>Degeneracy causes:
+- <span class="arithmatex">\(\theta^*=0\)</span> pivots (basis changes without moving in <span class="arithmatex">\(x\)</span>),
+- potential <strong>cycling</strong> (infinite repetition of bases).</p>
+<p>Anticycling rules:
+- <strong>Lexicographic pivoting:</strong> break ratio ties by lexicographic row comparison; guarantees no repetition.
+- <strong>Bland’s rule:</strong> smallest-index entering variable; smallest-index leaving among ratio ties; guarantees termination.</p>
+<hr />
+<h3 id="385-how-to-start-initial-bfs-section-35">3.8.5 How to start: initial BFS (Section 3.5)<a class="headerlink" href="#385-how-to-start-initial-bfs-section-35" title="Permanent link">&para;</a></h3>
+<p>If a BFS is not obvious:
+- Solve a <strong>Phase I auxiliary LP</strong> using artificial variables <span class="arithmatex">\(y\ge 0\)</span>:</p>
+<div class="arithmatex">\[
+\min\ \sum_{i=1}^m y_i
+\quad \text{s.t.}\quad
+Ax+y=b,\;
+x\ge 0,\ y\ge 0.
+\]</div>
+<ul>
+<li>If the optimal Phase I value is <span class="arithmatex">\(&gt;0\)</span>: original LP infeasible.</li>
+<li>If Phase I optimum is <span class="arithmatex">\(0\)</span>: obtain a feasible basis for Phase II (drive artificial variables out if needed).</li>
+</ul>
+<p>Alternative: <strong>big-<span class="arithmatex">\(M\)</span> method</strong> (one-phase), but can be numerically delicate.</p>
+<hr />
+<h3 id="386-geometry-intuition-section-36">3.8.6 Geometry intuition (Section 3.6)<a class="headerlink" href="#386-geometry-intuition-section-36" title="Permanent link">&para;</a></h3>
+<p>With the convexity constraint <span class="arithmatex">\(e^\top x=1\)</span>:
+- feasible solutions correspond to intersections of a vertical <strong>requirement line</strong> through <span class="arithmatex">\(b\)</span> with the convex hull of lifted points <span class="arithmatex">\((A_i,c_i)\)</span>,
+- each basis corresponds to an <span class="arithmatex">\(m\)</span>-dimensional <strong>basic simplex</strong> (simplex face),
+- reduced costs determine whether a candidate point lies below the <strong>dual plane</strong> (profitable entering variable).</p>
+<hr />
+<h3 id="387-efficiency-story-section-37">3.8.7 Efficiency story (Section 3.7)<a class="headerlink" href="#387-efficiency-story-section-37" title="Permanent link">&para;</a></h3>
+<p>Simplex performance depends on:
+- work per iteration (tableau vs revised simplex),
+- number of iterations.</p>
+<p>Theory:
+- worst-case number of pivots can be exponential (<span class="arithmatex">\(2^n-1\)</span> for certain families),
+- geometric concepts like polyhedron <strong>diameter</strong> relate to shortest possible vertex paths,
+- average-case behavior is more subtle and depends on the distribution of instances, but simplex is often efficient in practice.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+      
+    
+  </body>
+</html>
