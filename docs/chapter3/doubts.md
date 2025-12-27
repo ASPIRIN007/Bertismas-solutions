@@ -1,213 +1,240 @@
-```md
 # Quick fixes for recurring confusions
 
+!!! info "Key box"
+    This page is a running “FAQ” of common confusions that come up while reading Bertsimas (LP).  
+    I keep the statements **clean**, specify **what is actually meant**, and (when useful) restate the precise definition/theorem-like claim.
+
+---
+
 ## 1) “How can a vector $x$ have a rank? It’s not a matrix.”
-**Fix:** A *vector* doesn’t have rank (in the matrix-rank sense).  
-When notes say something like “rank of $x$ is $k$”, they almost always mean one of these:
 
-- **Rank of a matrix built from vectors**, e.g., rank of $[v_1\ \cdots\ v_k]$.
-- **Number of linearly independent active constraint normals** at $x$.
-- **Dimension of the affine hull** of a set (sometimes loosely called “rank” in informal lecture talk).
+!!! note "Key box — What’s going on?"
+    A **vector** does *not* have a rank (rank is a matrix concept).  
+    When the text/notes say “rank of $x$ is $k$”, they almost always mean:
+    - the number of **linearly independent active constraints** at $x$, or
+    - the rank of some **matrix built from vectors** (e.g., active constraint normals), or
+    - the **dimension** of an affine hull/subspace (sometimes said informally as “rank”).
 
-If you show me the exact sentence again, we can map it to the correct interpretation.
+!!! tip "Definition box — Active constraints (inequality form)"
+    For $P=\{x\mid a_i^\top x \ge b_i,\ i=1,\dots,m\}$, constraint $i$ is **active** at $x\in P$ if  
+    $a_i^\top x=b_i$.
+
+!!! tip "Definition box — Rank at a point (as used in Section 2.5 / 2.8 style arguments)"
+    The “rank of $x$” (informal) means:  
+    the maximum number $k$ of **linearly independent** constraint normals among the constraints that are active at $x$.
 
 ---
 
 ## 2) “Why does local optimality imply global optimality in LP?”
-Because:
-- $P$ is a **convex set** (intersection of a plane $Ax=b$ with halfspaces $x\ge 0$), and
-- the objective $c^\top x$ is **convex** (linear).
 
-So if there is no feasible direction with $c^\top d<0$ at a feasible point, you are globally optimal.
+!!! tip "Definition box — Convex set"
+    A set $S$ is **convex** if for all $x,y\in S$ and all $\lambda\in[0,1]$,  
+    $\lambda x+(1-\lambda)y \in S$.
+
+!!! note "Key box — LP convexity fact"
+    - The feasible set of an LP is convex (intersection of halfspaces/affine sets).  
+    - The objective $c^\top x$ is linear, hence convex.  
+    Therefore, if you cannot improve locally (no feasible descent direction), you are globally optimal.
 
 ---
 
 ## 3) “They say $c^\top y \ge v$ and $c^\top z \ge v$ implies $c^\top y=v$ and $c^\top z=v$. Why?”
-That implication is **not automatically true** for arbitrary $y,z$. It’s true only if:
-- $v$ is defined as the **optimal value** (the minimum of $c^\top x$ over the feasible set), and
-- $y$ and $z$ are both **optimal solutions** (i.e., they *attain* the minimum).
 
-Then by definition:
+!!! tip "Definition box — Optimal value"
+    If $P$ is feasible, the **optimal value** is  
+    $v=\min\{c^\top x\mid x\in P\}$ (for a minimization LP).
 
-$$
-v \le c^\top y,\quad v \le c^\top z,
-$$
+!!! note "Key box — When equality holds"
+    For any feasible $y\in P$, we always have $c^\top y\ge v$.  
+    If in addition $y$ is **optimal**, then necessarily $c^\top y=v$.  
+    Same for $z$.
 
-and if $y,z$ are optimal, equality holds:
-
-$$
-c^\top y=v,\quad c^\top z=v.
-$$
+!!! warning "Common confusion"
+    The implication “$c^\top y\ge v$ therefore $c^\top y=v$” is **false** unless you already know $y$ is optimal.
 
 ---
 
 ## 4) “What do we gain by writing $c^\top y=v$? Isn’t it just choosing $\lambda=1$ so $y=x^*$?”
-The gain is that $y$ and $z$ can be **distinct** optimal points.  
-If the objective is flat along a face, there are infinitely many optimal points on that face. Showing multiple points achieve the same $v$ is a key step in arguments about:
-- optimal faces,
-- extreme points,
-- expressing an optimal point as a convex combination of corners.
+
+!!! note "Key box — What we gain"
+    In proofs, we usually start with an optimal point $x^*$ and write it as  
+    $x^*=\lambda y+(1-\lambda)z$ with $y\neq z$ and $\lambda\in(0,1)$.  
+    Linearity gives:
+    $c^\top x^*=\lambda c^\top y+(1-\lambda)c^\top z$.
+    
+    Since $c^\top x^*=v$ and also $c^\top y\ge v$, $c^\top z\ge v$, the only way the convex combination equals $v$ is:
+    $c^\top y=v$ and $c^\top z=v$.
+    
+    This shows **both endpoints are optimal**, which is the whole point (we are not setting $\lambda=1$).
 
 ---
 
 ## 5) “How does ‘$x^*$ is a corner/extreme point’ solve a contradiction?”
-Typical structure of those proofs:
-- Assume an optimal solution is **not** at a corner.
-- Then you can write it as a strict convex combination of two distinct feasible points.
-- Because the objective is linear, the objective value at the combination is the same convex combination of objective values.
-- If the combination is optimal, that forces the endpoints to be optimal too.
-- This contradicts “not a corner” (or forces a descent direction), depending on the theorem.
 
-So “corner” matters because corners cannot be decomposed nontrivially into two different feasible points.
+!!! tip "Definition box — Extreme point"
+    A point $x^*\in P$ is an **extreme point** if it cannot be written as  
+    $x^*=\lambda y+(1-\lambda)z$ with $y,z\in P$, $y\neq z$, and $\lambda\in(0,1)$.
+
+!!! note "Key box — Why corners matter in linear objectives"
+    If $x^*$ is optimal and not an extreme point, you can express it as a strict convex combination of two distinct feasible points.  
+    Linearity forces those points to also be optimal (same argument as above).  
+    Then you can keep decomposing until you reach an optimal **extreme point** (under the “no lines / at least one extreme point exists” assumptions).
 
 ---
 
 ## 6) “If an LP has $m$ constraints and $n$ variables, what does rank tell us about existence?”
-Careful: there are multiple “systems” here.
 
-- For **equality constraints** $Ax=b$, feasibility depends on whether $b$ lies in the column space of $A$.  
-  - If $\mathrm{rank}(A)<m$, it does **not** automatically mean infeasible. It means some rows are dependent (constraints redundant or inconsistent depending on $b$).  
-  - In general: feasibility $\iff$ $Ax=b$ is consistent.
+!!! tip "Definition box — Consistency of $Ax=b$"
+    The system $Ax=b$ is **consistent** if there exists $x$ such that $Ax=b$.
 
-- For standard form $Ax=b, x\ge 0$, feasibility is stricter: even if $Ax=b$ is consistent, you may have **no nonnegative** solution.
+!!! note "Key box — Equality constraints only"
+    For $Ax=b$:
+    - $\mathrm{rank}(A)<m$ means the **rows are dependent** (some equalities are redundant *or* inconsistent depending on $b$).  
+    - It does **not** automatically mean infeasible.
+
+!!! note "Key box — Standard form feasibility is stricter"
+    In standard form $Ax=b,\ x\ge 0$:
+    - Even if $Ax=b$ is consistent, there may be **no nonnegative** solution.  
+    - Feasibility means: $\exists x\ge 0$ such that $Ax=b$.
 
 ---
 
 ## 7) “Set $S$ is convex — what exactly does that mean?”
-Definition:
 
-$$
-S \text{ convex } \iff \forall x,y\in S,\ \forall \lambda\in[0,1],\ \lambda x+(1-\lambda)y\in S.
-$$
+!!! tip "Definition box — Convexity (repeat, because it’s used everywhere)"
+    $S$ is convex iff for all $x,y\in S$ and all $\lambda\in[0,1]$,  
+    $\lambda x+(1-\lambda)y\in S$.
 
-Geometric meaning: line segment between any two points in $S$ stays inside $S$.
+!!! info "Key box — Geometry"
+    Convex means: **the entire line segment** between any two feasible points stays feasible.
 
 ---
 
 ## 8) “Why do we introduce reduced costs in simplex?”
-Reduced cost $\bar c_j$ is the **instantaneous rate** of objective change when we try to increase a nonbasic variable $x_j$ from zero while keeping feasibility:
 
-$$
-\bar c_j = c_j - c_B^\top B^{-1}A_j.
-$$
+!!! tip "Definition box — Reduced cost (standard form)"
+    For a basis $B$ and nonbasic index $j$, the **reduced cost** is  
+    $\bar c_j = c_j - c_B^\top B^{-1}A_j$.
 
-- If $\bar c_j < 0$ and the BFS is nondegenerate, then moving in that basic direction decreases cost (profitable entering variable).
-- If all $\bar c_j \ge 0$, no edge from that BFS improves the cost $\Rightarrow$ optimal (nondegenerate case).
-
----
-
-### Add more doubts as we go
-Whenever you ask a question that feels like a “recurring confusion,” I’ll append it here with the cleanest explanation + any small example we used.
+!!! note "Key box — Meaning"
+    $\bar c_j$ is the objective’s **rate of change** when you try to increase $x_j$ from $0$ while keeping $Ax=b$ satisfied by adjusting basic variables.
 
 ---
 
 ## 11) “What is cycling in simplex and how do anticycling rules fix it?”
-Cycling happens only in **degenerate** LPs.
 
-- In a degenerate BFS, the ratio test can give $\theta^*=0$.
-- Then the **basis changes** but the **point $x$ does not move**.
-- After several such zero-length pivots, simplex can return to an earlier basis and repeat forever.
+!!! tip "Definition box — Degenerate BFS"
+    A basic feasible solution is **degenerate** if at least one basic variable equals $0$.
 
-Anticycling rules guarantee that **no basis repeats**, so the method must terminate.
+!!! tip "Definition box — Cycling"
+    **Cycling** means simplex repeats a previously visited **basis** and can loop forever (possible only under degeneracy).
 
-Two standard anticycling rules in this chapter:
-- **Lexicographic pivoting:** break ratio-test ties by comparing normalized tableau rows lexicographically; this makes the objective row increase lexicographically each pivot, so repetition is impossible.
-- **Bland’s rule:** choose the entering variable with smallest index, and among tied leaving choices choose the smallest index; this also prevents cycling.
+!!! note "Key box — Why it happens"
+    Degeneracy can cause $\theta^*=0$ in the ratio test:  
+    basis changes but the point $x$ does not move → can return to an old basis.
+
+!!! info "Theorem box — Anticycling idea (informal)"
+    If a pivoting rule guarantees **no basis repeats**, then simplex must terminate in finitely many pivots.
+
+!!! note "Key box — Two rules"
+    - **Lexicographic pivoting:** tie-breaks so tableau increases lexicographically → no repetition.  
+    - **Bland’s rule:** smallest-index entering + smallest-index leaving among ties → no cycling.
 
 ---
 
 ## 12) “What is the auxiliary-variable (Phase I) method, and why minimize $\sum y_i$?”
-When the LP is in standard form
 
-$$
-Ax=b,\quad x\ge 0,
-$$
+!!! tip "Definition box — Phase I (auxiliary LP)"
+    For $Ax=b,\ x\ge 0$ (assume $b\ge 0$ after sign changes), introduce $y\ge 0$ and solve:
+    $$
+    \min \sum_{i=1}^m y_i
+    \quad \text{s.t.}\quad
+    Ax+y=b,\ x\ge 0,\ y\ge 0.
+    $$
 
-we may not have an obvious starting BFS. We introduce artificial variables $y\ge 0$ and solve:
+!!! info "Theorem box — Phase I feasibility test (core fact)"
+    The original LP is feasible **iff** the Phase I optimal value is $0$.
 
-$$
-\min\ \sum_{i=1}^m y_i
-\quad \text{s.t.}\quad
-Ax+y=b,\;
-x\ge 0,\ y\ge 0.
-$$
-
-- This auxiliary LP always has an easy BFS: $x=0$, $y=b$ (assuming $b\ge 0$).
-- If the original system has a feasible $x\ge 0$ with $Ax=b$, then $(x,0)$ is feasible for the auxiliary LP and gives objective 0.
-- Because $\sum y_i\ge 0$, the auxiliary optimum is 0 **iff** the original problem is feasible.
-
-So Phase I is both a **feasibility test** and a way to produce a feasible starting basis for Phase II.
+!!! note "Key box — Why"
+    - Always-feasible start: $x=0,\ y=b$.  
+    - If original feasible, then $(x,0)$ feasible in Phase I → objective $0$.  
+    - Objective is $\ge 0$, so optimum is $0$ exactly when we can drive $y$ to $0$.
 
 ---
 
 ## 13) “Phase I ended with an artificial variable still basic (value 0). What do we do?”
-This happens under degeneracy. If an artificial variable $y_\ell$ is basic but equals 0 at the end of Phase I:
 
-- Look at the corresponding row (the $\ell$-th row) of $B^{-1}A$.
-- If all entries in that row (for original columns) are 0, the equality constraint is **redundant**, so you can drop that row.
-- Otherwise, pick a column with a nonzero entry in that row and pivot so that an original variable enters and the artificial variable leaves.
+!!! note "Key box — Degenerate cleanup step"
+    If some artificial $y_\ell$ is basic with value $0$ at the end of Phase I:
 
-Repeat until all artificial variables are out of the basis.
+    - If the entire $\ell$-th row has zeros in the original-variable columns, the corresponding equality is **redundant** → drop that constraint row.
+    - Otherwise, pivot in an original variable with a nonzero entry in that row so that $y_\ell$ leaves the basis.
 
 ---
 
 ## 14) “Big-$M$ vs two-phase simplex — what’s the difference?”
-- **Two-phase simplex:** solve Phase I (minimize $\sum y_i$) to get feasibility; then Phase II solves the original objective starting from that feasible basis.
-- **Big-$M$:** solve one LP with objective $c^\top x + M\sum y_i$ where $M$ is huge, so the method prioritizes driving $y$ to zero.
 
-In practice, two-phase is often preferred for numerical stability (big-$M$ can require dangerously large constants in floating point arithmetic).
+!!! tip "Definition box — Big-$M$ objective"
+    Solve one LP:
+    $$
+    \min\ c^\top x + M\sum_{i=1}^m y_i
+    \quad \text{s.t.}\quad
+    Ax+y=b,\ x\ge 0,\ y\ge 0,
+    $$
+    where $M$ is “very large”.
+
+!!! note "Key box — Comparison"
+    - **Two-phase:** clean and numerically stable in practice.  
+    - **Big-$M$:** conceptually one phase, but large $M$ can cause numerical issues (unless treated symbolically as in textbooks).
 
 ---
 
-## 15) “Why do they add the convexity constraint $e^\top x=1$ in the geometry section?”
-With $x\ge 0$ and $e^\top x=1$, the vector $x$ becomes a set of **convex combination weights**.
+## 15) “Why add the convexity constraint $e^\top x=1$ in the geometry section?”
 
-Then:
+!!! tip "Definition box — Convex combination weights"
+    If $x\ge 0$ and $e^\top x=1$, then $x$ acts as weights of a convex combination.
 
-$$
-b=Ax=\sum_i x_i A_i
-$$
-
-means $b$ lies in the convex hull of the columns $A_i$, and
-
-$$
-z=c^\top x=\sum_i x_i c_i
-$$
-
-means $(b,z)$ lies in the convex hull of the lifted points $(A_i,c_i)$.
-
-That makes the geometry clean: feasibility becomes “does the vertical requirement line through $b$ intersect the convex hull?”
-The book notes that any bounded LP can be transformed into this form (exercise), so this picture still has general meaning.
+!!! note "Key box — Column geometry meaning"
+    With $Ax=b$ and $e^\top x=1$:
+    - $b=\sum_i x_i A_i$ means $b$ is in $\mathrm{conv}\{A_i\}$.  
+    - $z=c^\top x=\sum_i x_i c_i$ means $(b,z)$ is in $\mathrm{conv}\{(A_i,c_i)\}$.
 
 ---
 
 ## 16) “What is the requirement line?”
-It is the vertical line in $(m+1)$-dimensional space:
 
-$$
-\{(b,z)\mid z\in\mathbb{R}\},
-$$
+!!! tip "Definition box — Requirement line"
+    For fixed $b$, the **requirement line** is  
+    $\{(b,z)\mid z\in\mathbb{R}\}$ in $\mathbb{R}^{m+1}$.
 
-where $b$ is fixed by the constraints $Ax=b$.
-Feasible solutions correspond to intersection points of this line with the convex hull of $(A_i,c_i)$, and the optimal solution is the lowest intersection point.
+!!! note "Key box"
+    Feasible solutions correspond to intersection points of this vertical line with  
+    $H=\mathrm{conv}\{(A_i,c_i)\}$, and the optimum is the **lowest** intersection point.
 
 ---
 
 ## 17) “What is the dual plane, and why is ‘below the plane’ the same as negative reduced cost?”
-The basic points $(A_{B(i)},c_{B(i)})$ lie on an $m$-dimensional hyperplane (dual plane).
-A candidate point $(A_j,c_j)$ lying below that plane means that swapping it into the basis can lower the intersection height on the requirement line.
 
-Algebraically, “below the plane” is equivalent to $\bar c_j<0$ (for minimization), so reduced cost is a signed vertical distance from the dual plane.
+!!! tip "Definition box — Dual plane (geometry picture)"
+    The lifted basic points $(A_{B(i)},c_{B(i)})$ lie on an $m$-dimensional hyperplane in $\mathbb{R}^{m+1}$ (the **dual plane**).
+
+!!! info "Theorem box — Geometric meaning of reduced cost (informal)"
+    For minimization, a point $(A_j,c_j)$ lies **below** the dual plane  
+    $\Longleftrightarrow$ the reduced cost satisfies $\bar c_j<0$.
+
+!!! note "Key box"
+    Reduced cost is a **signed vertical distance** from the dual plane to the candidate lifted point.
 
 ---
 
 ## 18) “How can simplex be fast in practice if worst-case is exponential?”
-Worst-case examples force simplex to walk an exponentially long path of vertices.
-But typical real LPs have structure and good pivot rules often reach optimality in far fewer pivots.
 
-Theory section 3.7 separates:
-- **per-iteration work** (handled by revised simplex / sparsity), and
-- **number of iterations** (can be exponential in worst case).
+!!! note "Key box"
+    - Worst-case constructions force simplex to visit exponentially many vertices.  
+    - Real LPs often have structure; with good pivot rules, simplex typically needs far fewer pivots.
 
-Average-case behavior depends on the probabilistic model for “random LP,” so it’s harder to state universal guarantees.
-```
+!!! info "Key box — What theory separates"
+    Performance = (work per pivot) + (number of pivots).  
+    Revised simplex + sparsity handles the first; the second is where worst-case exponential behavior lives.
+
+---
