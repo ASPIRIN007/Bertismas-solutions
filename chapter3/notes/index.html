@@ -2061,9 +2061,9 @@
 <h1 id="chapter-3-the-simplex-method">Chapter 3 — The Simplex Method<a class="headerlink" href="#chapter-3-the-simplex-method" title="Permanent link">&para;</a></h1>
 <h2 id="31-optimality-conditions">3.1 Optimality conditions<a class="headerlink" href="#31-optimality-conditions" title="Permanent link">&para;</a></h2>
 <p>We consider the <strong>standard form</strong> linear program:</p>
-<p>$
-\min \; c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0,
-$</p>
+<div class="arithmatex">\[
+\min \; c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0.
+\]</div>
 <ul>
 <li><span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m\times n\)</span> and its <strong>rows are linearly independent</strong> (rank <span class="arithmatex">\(m\)</span>).  </li>
 <li><span class="arithmatex">\(P=\{x\in\mathbb{R}^n\mid Ax=b,\;x\ge 0\}\)</span> is the feasible set.  </li>
@@ -2079,45 +2079,49 @@ For general nonconvex problems, “no improving nearby move” only implies <em>
 <hr />
 <h3 id="312-feasible-directions">3.1.2 Feasible directions<a class="headerlink" href="#312-feasible-directions" title="Permanent link">&para;</a></h3>
 <p><strong>Definition (Feasible direction at <span class="arithmatex">\(x\)</span>)</strong><br />
-A vector <span class="arithmatex">\(d\in\mathbb{R}^n\)</span> is a feasible direction at <span class="arithmatex">\(x\in P\)</span> if there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that
-$
+A vector <span class="arithmatex">\(d\in\mathbb{R}^n\)</span> is a feasible direction at <span class="arithmatex">\(x\in P\)</span> if there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that</p>
+<div class="arithmatex">\[
 x+\theta d \in P \quad \text{for all } \theta\in[0,\varepsilon].
-$</p>
-<p><strong>Key constraints for a feasible direction</strong>
-- Equality constraints: since <span class="arithmatex">\(Ax=b\)</span>, moving must keep <span class="arithmatex">\(Ax\)</span> unchanged:
-  $
-  A(x+\theta d)=b\ \forall \theta \ \Rightarrow\ Ad=0.
-  $
-- Nonnegativity: for each component where <span class="arithmatex">\(x_i=0\)</span>, you cannot decrease it:
-  $
-  x_i=0 \ \Rightarrow\ d_i\ge 0.
-  $
-(That second condition is formalized later as an exercise in the book; it’s the clean algebraic description of Figure 3.1.)</p>
+\]</div>
+<p><strong>Key constraints for a feasible direction</strong></p>
+<ul>
+<li>Equality constraints: since <span class="arithmatex">\(Ax=b\)</span>, moving must keep <span class="arithmatex">\(Ax\)</span> unchanged:</li>
+</ul>
+<div class="arithmatex">\[
+A(x+\theta d)=b\ \forall \theta \ \Rightarrow\ Ad=0.
+\]</div>
+<ul>
+<li>Nonnegativity: for each component where <span class="arithmatex">\(x_i=0\)</span>, you cannot decrease it:</li>
+</ul>
+<div class="arithmatex">\[
+x_i=0 \ \Rightarrow\ d_i\ge 0.
+\]</div>
+<p>(That second condition is formalized later as an exercise in the book; it’s the clean algebraic description of Figure 3.1.)</p>
 <hr />
 <h3 id="313-basic-feasible-solutions-and-basic-directions">3.1.3 Basic feasible solutions and “basic directions”<a class="headerlink" href="#313-basic-feasible-solutions-and-basic-directions" title="Permanent link">&para;</a></h3>
 <p>Let <span class="arithmatex">\(x\)</span> be a <strong>basic feasible solution (BFS)</strong>. That means:
 - There is an index set of <strong>basic variables</strong> <span class="arithmatex">\(B=\{B(1),\dots,B(m)\}\)</span>.
-- The corresponding <strong>basis matrix</strong>
-  $
-  B=[A_{B(1)}\ \cdots\ A_{B(m)}]
-  $
-  is invertible.
+- The corresponding <strong>basis matrix</strong></p>
+<div class="arithmatex">\[
+B=[A_{B(1)}\ \cdots\ A_{B(m)}]
+\]</div>
+<p>is invertible.
 - All <strong>nonbasic</strong> variables are at zero: <span class="arithmatex">\(x_j=0\)</span> for <span class="arithmatex">\(j\notin B\)</span>.
-- The basic variables satisfy:
-  $
-  x_B = B^{-1}b.
-  $</p>
+- The basic variables satisfy:</p>
+<div class="arithmatex">\[
+x_B = B^{-1}b.
+\]</div>
 <p>Now pick a <strong>nonbasic</strong> index <span class="arithmatex">\(j\notin B\)</span>.<br />
 A natural “edge move” from a BFS is: increase <span class="arithmatex">\(x_j\)</span> from 0, while keeping all other nonbasic variables at 0.</p>
 <p>Construct a direction <span class="arithmatex">\(d\)</span> by:
 - <span class="arithmatex">\(d_j=1\)</span>,
 - <span class="arithmatex">\(d_i=0\)</span> for all other nonbasic <span class="arithmatex">\(i\neq j\)</span>,
 - choose <span class="arithmatex">\(d_B\)</span> so that <span class="arithmatex">\(Ad=0\)</span>.</p>
-<p>Since <span class="arithmatex">\(Ad = Bd_B + A_j = 0\)</span>, we get the <strong>basic-direction formula</strong>:
-$
+<p>Since <span class="arithmatex">\(Ad = Bd_B + A_j = 0\)</span>, we get the <strong>basic-direction formula</strong>:</p>
+<div class="arithmatex">\[
 d_B = -B^{-1}A_j.
-$
-This is equation (3.1) in the text.</p>
+\]</div>
+<p>This is equation (3.1) in the text.</p>
 <blockquote>
 <p>Intuition: increasing <span class="arithmatex">\(x_j\)</span> forces a compensating change in the basic variables so that <span class="arithmatex">\(Ax=b\)</span> remains true.</p>
 </blockquote>
@@ -2140,48 +2144,48 @@ This is equation (3.1) in the text.</p>
 <h3 id="315-reduced-costs">3.1.5 Reduced costs<a class="headerlink" href="#315-reduced-costs" title="Permanent link">&para;</a></h3>
 <p>Suppose we move along the <span class="arithmatex">\(j\)</span>-th basic direction <span class="arithmatex">\(d\)</span>.<br />
 The objective change rate is:</p>
-<p>$
+<div class="arithmatex">\[
 c^\top d = c_B^\top d_B + c_j.
-$</p>
+\]</div>
 <p>Using <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span>,</p>
-<p>$
+<div class="arithmatex">\[
 c^\top d = c_j - c_B^\top B^{-1}A_j.
-$</p>
+\]</div>
 <p>This motivates:</p>
-<p><strong>Definition (Reduced cost of variable <span class="arithmatex">\(x_j\)</span>)</strong>
-$
+<p><strong>Definition (Reduced cost of variable <span class="arithmatex">\(x_j\)</span>)</strong></p>
+<div class="arithmatex">\[
 \bar c_j \;=\; c_j - c_B^\top B^{-1}A_j.
-$</p>
+\]</div>
 <p>Interpretation:
 - <span class="arithmatex">\(c_j\)</span>: direct cost per unit increase in <span class="arithmatex">\(x_j\)</span>.
 - <span class="arithmatex">\(-c_B^\top B^{-1}A_j\)</span>: induced cost from adjusting the basic variables to keep feasibility.</p>
 <p><strong>Important fact:</strong> reduced costs of <em>basic</em> variables are zero.<br />
-Reason: if <span class="arithmatex">\(j=B(i)\)</span> is basic, then <span class="arithmatex">\(B^{-1}A_{B(i)}=e_i\)</span> (the <span class="arithmatex">\(i\)</span>-th unit vector), so:
-$
+Reason: if <span class="arithmatex">\(j=B(i)\)</span> is basic, then <span class="arithmatex">\(B^{-1}A_{B(i)}=e_i\)</span> (the <span class="arithmatex">\(i\)</span>-th unit vector), so:</p>
+<div class="arithmatex">\[
 \bar c_{B(i)} = c_{B(i)} - c_B^\top e_i = c_{B(i)}-c_{B(i)}=0.
-$</p>
+\]</div>
 <hr />
 <h3 id="316-example-as-in-the-books-example-31">3.1.6 Example (as in the book’s Example 3.1)<a class="headerlink" href="#316-example-as-in-the-books-example-31" title="Permanent link">&para;</a></h3>
 <p>For the LP:</p>
-<p>$
+<div class="arithmatex">\[
 \min\ c_1x_1+c_2x_2+c_3x_3+c_4x_4
-$
-$
+\]</div>
+<div class="arithmatex">\[
 \text{s.t.}\quad 
 x_1+x_2+x_3+x_4=2,\quad
 2x_1+3x_3+4x_4=2,\quad x\ge 0,
-$</p>
+\]</div>
 <p>Choose <span class="arithmatex">\(x_1,x_2\)</span> basic. Then:</p>
-<p>$
-B=\begin{bmatrix}1&amp;1\2&amp;0\end{bmatrix},\qquad x_3=x_4=0.
-$
-Solve <span class="arithmatex">\(Bx_B=b\)</span> to get <span class="arithmatex">\(x_1=1,\ x_2=1\)</span> (nondegenerate).</p>
+<div class="arithmatex">\[
+B=\begin{bmatrix}1&amp;1\\2&amp;0\end{bmatrix},\qquad x_3=x_4=0.
+\]</div>
+<p>Solve <span class="arithmatex">\(Bx_B=b\)</span> to get <span class="arithmatex">\(x_1=1,\ x_2=1\)</span> (nondegenerate).</p>
 <p>For entering <span class="arithmatex">\(x_3\)</span>: <span class="arithmatex">\(A_3=(1,3)^\top\)</span>.<br />
-Direction:
-$
+Direction:</p>
+<div class="arithmatex">\[
 d_3=1,\ d_4=0,\ d_B=-B^{-1}A_3.
-$
-The objective rate along this direction equals the reduced cost <span class="arithmatex">\(\bar c_3\)</span>.</p>
+\]</div>
+<p>The objective rate along this direction equals the reduced cost <span class="arithmatex">\(\bar c_3\)</span>.</p>
 <hr />
 <h3 id="317-optimality-conditions-nondegenerate-case">3.1.7 Optimality conditions (nondegenerate case)<a class="headerlink" href="#317-optimality-conditions-nondegenerate-case" title="Permanent link">&para;</a></h3>
 <p><strong>Theorem (Optimality conditions via reduced costs)</strong><br />
@@ -2196,7 +2200,6 @@ Let <span class="arithmatex">\(x\)</span> be a basic feasible solution associate
 - If <span class="arithmatex">\(x\)</span> is nondegenerate and some <span class="arithmatex">\(\bar c_j&lt;0\)</span>, then that direction is feasible and decreases cost ⇒ <span class="arithmatex">\(x\)</span> cannot be optimal.</p>
 <p><strong>Subtle but crucial warning (degeneracy):</strong><br />
 An optimal <strong>degenerate</strong> BFS may still have some negative reduced costs, because the corresponding basic directions might not be feasible.</p>
-<hr />
 <hr />
 <h2 id="34-anticycling-lexicography-and-blands-rule">3.4 Anticycling: lexicography and Bland’s rule<a class="headerlink" href="#34-anticycling-lexicography-and-blands-rule" title="Permanent link">&para;</a></h2>
 <h3 id="341-why-cycling-happens-degeneracy">3.4.1 Why cycling happens (degeneracy)<a class="headerlink" href="#341-why-cycling-happens-degeneracy" title="Permanent link">&para;</a></h3>
@@ -2237,37 +2240,37 @@ This infinite loop is called <strong>cycling</strong>.</p>
 <h3 id="343-the-lexicographic-pivoting-rule-full-tableau-form">3.4.3 The lexicographic pivoting rule (full tableau form)<a class="headerlink" href="#343-the-lexicographic-pivoting-rule-full-tableau-form" title="Permanent link">&para;</a></h3>
 <p>Assume we are using a <strong>full tableau</strong> (so each basic row is visible).</p>
 <p>Fix an entering column <span class="arithmatex">\(j\)</span>.<br />
-Let the pivot column entries in the constraint rows be
-$
+Let the pivot column entries in the constraint rows be</p>
+<div class="arithmatex">\[
 u_i = (B^{-1}A_j)_i.
-$</p>
+\]</div>
 <p>Among rows with <span class="arithmatex">\(u_i&gt;0\)</span>, the usual ratio test looks at <span class="arithmatex">\(\dfrac{x_{B(i)}}{u_i}\)</span> and chooses the minimum.
 If there is a tie, the lexicographic rule breaks ties as follows:</p>
-<p><strong>Lexicographic leaving rule:</strong> choose the pivot row <span class="arithmatex">\(\ell\)</span> such that <span class="arithmatex">\(u_\ell&gt;0\)</span> and
-$
+<p><strong>Lexicographic leaving rule:</strong> choose the pivot row <span class="arithmatex">\(\ell\)</span> such that <span class="arithmatex">\(u_\ell&gt;0\)</span> and</p>
+<div class="arithmatex">\[
 \frac{\text{row }\ell}{u_\ell} \prec \frac{\text{row }i}{u_i}
 \quad \text{for every } i\ne \ell \text{ with } u_i&gt;0.
 \tag{3.5}
-$</p>
+\]</div>
 <p>In words: divide each candidate row by its pivot-column entry, then pick the row whose normalized row is <strong>lexicographically smallest</strong>.</p>
 <hr />
 <h3 id="344-example-37-how-tie-breaking-works">3.4.4 Example 3.7 (how tie-breaking works)<a class="headerlink" href="#344-example-37-how-tie-breaking-works" title="Permanent link">&para;</a></h3>
 <p>Suppose the pivot column is <span class="arithmatex">\(j=3\)</span>.</p>
-<p>Assume two rows tie in the ratio test:
-$
+<p>Assume two rows tie in the ratio test:</p>
+<div class="arithmatex">\[
 \frac{x_{B(1)}}{u_1} = \frac{1}{3},
 \qquad
 \frac{x_{B(3)}}{u_3} = \frac{3}{9} = \frac{1}{3}.
-$</p>
+\]</div>
 <p>So we divide the candidate rows by their pivot entries:
 - row 1 divided by <span class="arithmatex">\(u_1=3\)</span>,
 - row 3 divided by <span class="arithmatex">\(u_3=9\)</span>,</p>
 <p>and then compare the normalized rows lexicographically.
-If the comparison yields (as in the book) something like
-$
+If the comparison yields (as in the book) something like</p>
+<div class="arithmatex">\[
 \frac{7}{9} &lt; \frac{5}{3},
-$
-then row 3 is lexicographically smaller, so <strong>row 3 leaves</strong>.</p>
+\]</div>
+<p>then row 3 is lexicographically smaller, so <strong>row 3 leaves</strong>.</p>
 <p><strong>Important subtle point:</strong> under the standing assumption that <span class="arithmatex">\(A\)</span> has linearly independent rows, this rule leads to a <strong>unique</strong> leaving row.<br />
 Reason (book’s argument): if two candidate normalized rows were identical, two rows of <span class="arithmatex">\(B^{-1}A\)</span> would be proportional, forcing <span class="arithmatex">\(\mathrm{rank}(B^{-1}A)&lt;m\)</span>, hence <span class="arithmatex">\(\mathrm{rank}(A)&lt;m\)</span>, contradicting independence of rows of <span class="arithmatex">\(A\)</span>.</p>
 <hr />
@@ -2325,14 +2328,14 @@ Reason (book’s argument): if two candidate normalized rows were identical, two
 <p>Sometimes a BFS is <strong>obvious</strong>; often it is not.</p>
 <hr />
 <h3 id="352-easy-case-inequalities-with-nonnegative-right-hand-side">3.5.2 Easy case: inequalities with nonnegative right-hand side<a class="headerlink" href="#352-easy-case-inequalities-with-nonnegative-right-hand-side" title="Permanent link">&para;</a></h3>
-<p>If the original constraints are of the form
-$
+<p>If the original constraints are of the form</p>
+<div class="arithmatex">\[
 Ax \le b, \quad b\ge 0,
-$
-introduce <strong>slack variables</strong> <span class="arithmatex">\(s\ge 0\)</span>:
-$
+\]</div>
+<p>introduce <strong>slack variables</strong> <span class="arithmatex">\(s\ge 0\)</span>:</p>
+<div class="arithmatex">\[
 Ax+s=b.
-$</p>
+\]</div>
 <p>Then the point
 - <span class="arithmatex">\(x=0\)</span>,
 - <span class="arithmatex">\(s=b\)</span>,</p>
@@ -2340,26 +2343,26 @@ $</p>
 So we immediately have a BFS.</p>
 <hr />
 <h3 id="353-general-case-use-an-auxiliary-phase-i-problem">3.5.3 General case: use an auxiliary (Phase I) problem<a class="headerlink" href="#353-general-case-use-an-auxiliary-phase-i-problem" title="Permanent link">&para;</a></h3>
-<p>Now consider standard form
-$
+<p>Now consider standard form</p>
+<div class="arithmatex">\[
 \min\ c^\top x \quad \text{s.t.}\quad Ax=b,\; x\ge 0,
-$
-and assume (after possibly multiplying some equalities by <span class="arithmatex">\(-1\)</span>) that
-$
+\]</div>
+<p>and assume (after possibly multiplying some equalities by <span class="arithmatex">\(-1\)</span>) that</p>
+<div class="arithmatex">\[
 b\ge 0.
-$</p>
-<p>If there is no obvious BFS, we introduce <strong>artificial variables</strong>
-$
+\]</div>
+<p>If there is no obvious BFS, we introduce <strong>artificial variables</strong></p>
+<div class="arithmatex">\[
 y\in\mathbb{R}^m,\quad y\ge 0,
-$
-and solve the <strong>auxiliary problem</strong> (Phase I):</p>
-<p>$
+\]</div>
+<p>and solve the <strong>auxiliary problem</strong> (Phase I):</p>
+<div class="arithmatex">\[
 \min\ \sum_{i=1}^m y_i
 \quad \text{s.t.}\quad
 Ax + y = b,\;
 x\ge 0,\; y\ge 0.
 \tag{Phase I}
-$</p>
+\]</div>
 <h4 id="why-this-works-the-key-logic">Why this works (the key logic)<a class="headerlink" href="#why-this-works-the-key-logic" title="Permanent link">&para;</a></h4>
 <p>1) <strong>Phase I is always easy to initialize.</strong><br />
 Set <span class="arithmatex">\(x=0\)</span> and <span class="arithmatex">\(y=b\)</span>.
@@ -2375,78 +2378,82 @@ Because we could not drive all <span class="arithmatex">\(y_i\)</span> to zero, 
 <h3 id="354-the-two-phase-simplex-method-algorithm-form">3.5.4 The two-phase simplex method (algorithm form)<a class="headerlink" href="#354-the-two-phase-simplex-method-algorithm-form" title="Permanent link">&para;</a></h3>
 <p><strong>Phase I</strong>
 1. Multiply some equalities by <span class="arithmatex">\(-1\)</span> so that <span class="arithmatex">\(b\ge 0\)</span>.
-2. Add artificial variables <span class="arithmatex">\(y_1,\dots,y_m\)</span> and solve the auxiliary LP
-   $
-   \min\ \sum_{i=1}^m y_i
-   \quad \text{s.t.}\quad
-   Ax+y=b,\; x\ge 0,\; y\ge 0.
-   $
-3. If the optimal value is <span class="arithmatex">\(&gt;0\)</span>, stop: the original LP is <strong>infeasible</strong>.
-4. If the optimal value is <span class="arithmatex">\(0\)</span>, we have found a feasible solution with <span class="arithmatex">\(y=0\)</span>.
-   - If <strong>no artificial variable is basic</strong> in the final basis, drop the <span class="arithmatex">\(y\)</span>-columns and start Phase II.
-   - If <strong>some artificial variable is still basic</strong> (necessarily with value 0), proceed to Step 5.
-5. <strong>Drive artificial variables out of the basis</strong> (or remove redundant constraints):
-   - Let the <span class="arithmatex">\(\ell\)</span>-th basic variable be artificial (<span class="arithmatex">\(y_\ell\)</span>).
-   - Look at the <span class="arithmatex">\(\ell\)</span>-th row of the current tableau (equivalently the <span class="arithmatex">\(\ell\)</span>-th row of <span class="arithmatex">\(B^{-1}A\)</span>).
-     - If all entries in that row for the original columns are zero, then that equality is <strong>redundant</strong> and can be eliminated (drop the row).
-     - Otherwise, pick a column <span class="arithmatex">\(A_j\)</span> whose entry in that row is nonzero and pivot so that <span class="arithmatex">\(x_j\)</span> enters and <span class="arithmatex">\(y_\ell\)</span> leaves.
-   - Repeat until all artificial variables are nonbasic.</p>
+2. Add artificial variables <span class="arithmatex">\(y_1,\dots,y_m\)</span> and solve the auxiliary LP</p>
+<div class="arithmatex">\[
+\min\ \sum_{i=1}^m y_i
+\quad \text{s.t.}\quad
+Ax+y=b,\; x\ge 0,\; y\ge 0.
+\]</div>
+<ol>
+<li>If the optimal value is <span class="arithmatex">\(&gt;0\)</span>, stop: the original LP is <strong>infeasible</strong>.</li>
+<li>If the optimal value is <span class="arithmatex">\(0\)</span>, we have found a feasible solution with <span class="arithmatex">\(y=0\)</span>.</li>
+<li>If <strong>no artificial variable is basic</strong> in the final basis, drop the <span class="arithmatex">\(y\)</span>-columns and start Phase II.</li>
+<li>If <strong>some artificial variable is still basic</strong> (necessarily with value 0), proceed to Step 5.</li>
+<li><strong>Drive artificial variables out of the basis</strong> (or remove redundant constraints):</li>
+<li>Let the <span class="arithmatex">\(\ell\)</span>-th basic variable be artificial (<span class="arithmatex">\(y_\ell\)</span>).</li>
+<li>Look at the <span class="arithmatex">\(\ell\)</span>-th row of the current tableau (equivalently the <span class="arithmatex">\(\ell\)</span>-th row of <span class="arithmatex">\(B^{-1}A\)</span>).<ul>
+<li>If all entries in that row for the original columns are zero, then that equality is <strong>redundant</strong> and can be eliminated (drop the row).</li>
+<li>Otherwise, pick a column <span class="arithmatex">\(A_j\)</span> whose entry in that row is nonzero and pivot so that <span class="arithmatex">\(x_j\)</span> enters and <span class="arithmatex">\(y_\ell\)</span> leaves.</li>
+</ul>
+</li>
+<li>Repeat until all artificial variables are nonbasic.</li>
+</ol>
 <p><strong>Phase II</strong>
 1. Use the final basis from Phase I (containing only columns of <span class="arithmatex">\(A\)</span>) as the starting basis.
 2. Recompute reduced costs using the original cost vector <span class="arithmatex">\(c\)</span>.
 3. Run simplex on the original LP.</p>
 <hr />
 <h3 id="355-a-complete-worked-example-two-phase-full-tableau-style">3.5.5 A complete worked example (two-phase, full tableau style)<a class="headerlink" href="#355-a-complete-worked-example-two-phase-full-tableau-style" title="Permanent link">&para;</a></h3>
-<p>Consider the LP
-$
+<p>Consider the LP</p>
+<div class="arithmatex">\[
 \min\ z = x_1 + 2x_2
-$
-subject to
-$
+\]</div>
+<p>subject to</p>
+<div class="arithmatex">\[
 \begin{aligned}
-x_1 - x_2 &amp;= 1,\
-x_1 + x_2 + x_3 &amp;= 3,\
+x_1 - x_2 &amp;= 1,\\
+x_1 + x_2 + x_3 &amp;= 3,\\
 x_1,x_2,x_3 &amp;\ge 0.
 \end{aligned}
-$</p>
+\]</div>
 <p>There is no obvious BFS for <span class="arithmatex">\(Ax=b\)</span> (you cannot set <span class="arithmatex">\(x=0\)</span>).</p>
 <h4 id="phase-i-add-artificial-variables">Phase I: add artificial variables<a class="headerlink" href="#phase-i-add-artificial-variables" title="Permanent link">&para;</a></h4>
-<p>Introduce <span class="arithmatex">\(y_1,y_2\ge 0\)</span>:
-$
+<p>Introduce <span class="arithmatex">\(y_1,y_2\ge 0\)</span>:</p>
+<div class="arithmatex">\[
 \begin{aligned}
-x_1 - x_2 + y_1 &amp;= 1,\
+x_1 - x_2 + y_1 &amp;= 1,\\
 x_1 + x_2 + x_3 + y_2 &amp;= 3.
 \end{aligned}
-$
-Phase I objective:
-$
+\]</div>
+<p>Phase I objective:</p>
+<div class="arithmatex">\[
 \min\ w = y_1+y_2.
-$</p>
+\]</div>
 <p>Start BFS: <span class="arithmatex">\(x=0\)</span>, <span class="arithmatex">\(y=b=(1,3)\)</span>.</p>
-<p>Running tableau pivots (as shown earlier in chat), Phase I ends at
-$
+<p>Running tableau pivots (as shown earlier in chat), Phase I ends at</p>
+<div class="arithmatex">\[
 (x_1,x_2,x_3,y_1,y_2)=(2,1,0,0,0),
-$
-so <span class="arithmatex">\(w^*=0\)</span> and the original constraints are feasible.</p>
+\]</div>
+<p>so <span class="arithmatex">\(w^*=0\)</span> and the original constraints are feasible.</p>
 <h4 id="phase-ii-drop-y-and-optimize-original-z">Phase II: drop <span class="arithmatex">\(y\)</span> and optimize original <span class="arithmatex">\(z\)</span><a class="headerlink" href="#phase-ii-drop-y-and-optimize-original-z" title="Permanent link">&para;</a></h4>
-<p>Using the Phase I final basis as the starting basis, Phase II yields the optimal solution
-$
+<p>Using the Phase I final basis as the starting basis, Phase II yields the optimal solution</p>
+<div class="arithmatex">\[
 (x_1,x_2,x_3)=(1,0,2),\qquad z^*=1.
-$</p>
+\]</div>
 <p><strong>What to remember from this example</strong>
 - Phase I is only about forcing <span class="arithmatex">\(y\to 0\)</span> (feasibility).
 - Phase II reuses the found feasible basis and then optimizes the true cost.</p>
 <hr />
 <h3 id="356-the-big-m-method-single-phase-alternative">3.5.6 The big-<span class="arithmatex">\(M\)</span> method (single-phase alternative)<a class="headerlink" href="#356-the-big-m-method-single-phase-alternative" title="Permanent link">&para;</a></h3>
 <p>Instead of two phases, we combine them by penalizing artificial variables in the objective:</p>
-<p>$
+<div class="arithmatex">\[
 \min\ \sum_{j=1}^n c_j x_j + M\sum_{i=1}^m y_i,
-$</p>
-<p>subject to
-$
+\]</div>
+<p>subject to</p>
+<div class="arithmatex">\[
 Ax+y=b,\quad x\ge 0,\ y\ge 0,
-$
-where <span class="arithmatex">\(M\)</span> is a “very large” positive constant.</p>
+\]</div>
+<p>where <span class="arithmatex">\(M\)</span> is a “very large” positive constant.</p>
 <p><strong>Meaning</strong>
 - The term <span class="arithmatex">\(M\sum y_i\)</span> makes it extremely expensive to keep <span class="arithmatex">\(y_i&gt;0\)</span>.
 - If the original problem is feasible and has a finite optimum, the algorithm drives <span class="arithmatex">\(y\to 0\)</span> and then behaves like minimizing <span class="arithmatex">\(c^\top x\)</span>.</p>
@@ -2466,38 +2473,38 @@ Treat <span class="arithmatex">\(M\)</span> symbolically as a parameter and comp
 <p>This section gives a geometric interpretation of simplex that explains (i) what a <strong>basis</strong> means geometrically, and (ii) why reduced costs control the choice of entering variables.</p>
 <h3 id="361-add-a-convexity-constraint">3.6.1 Add a convexity constraint<a class="headerlink" href="#361-add-a-convexity-constraint" title="Permanent link">&para;</a></h3>
 <p>The book considers the problem</p>
-<p>$
+<div class="arithmatex">\[
 \min\ c^\top x
 \quad \text{s.t.}\quad
 Ax=b,\; e^\top x=1,\; x\ge 0,
 \tag{3.6}
-$</p>
+\]</div>
 <p>where <span class="arithmatex">\(e\)</span> is the all-ones vector.</p>
 <ul>
 <li>The constraint <span class="arithmatex">\(e^\top x=1\)</span> is called the <strong>convexity constraint</strong>.</li>
 <li>Although it looks restrictive, the book notes that <strong>any bounded feasible set</strong> can be transformed into this form (Exercise 3.28).<br />
   The point is: the geometry they build is easiest to see when <span class="arithmatex">\(x\)</span> is a <strong>convex combination</strong>.</li>
 </ul>
-<p>Define an auxiliary scalar variable
-$
+<p>Define an auxiliary scalar variable</p>
+<div class="arithmatex">\[
 z=c^\top x.
-$</p>
+\]</div>
 <hr />
 <h3 id="362-lift-the-columns-into-one-higher-dimension">3.6.2 Lift the columns into one higher dimension<a class="headerlink" href="#362-lift-the-columns-into-one-higher-dimension" title="Permanent link">&para;</a></h3>
 <p>Let <span class="arithmatex">\(A_1,\dots,A_n\)</span> be the columns of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(c_1,\dots,c_n\)</span> be the cost coefficients.</p>
-<p>Because <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(\sum_i x_i=1\)</span>,
-$
+<p>Because <span class="arithmatex">\(x\ge 0\)</span> and <span class="arithmatex">\(\sum_i x_i=1\)</span>,</p>
+<div class="arithmatex">\[
 Ax = \sum_{i=1}^n x_i A_i = b,
-$
-so <span class="arithmatex">\(b\)</span> is a <strong>convex combination</strong> of the column vectors <span class="arithmatex">\(A_i\)</span>.</p>
-<p>Also
-$
+\]</div>
+<p>so <span class="arithmatex">\(b\)</span> is a <strong>convex combination</strong> of the column vectors <span class="arithmatex">\(A_i\)</span>.</p>
+<p>Also</p>
+<div class="arithmatex">\[
 z=c^\top x = \sum_{i=1}^n x_i c_i.
-$</p>
-<p>So the pair <span class="arithmatex">\((b,z)\)</span> is a convex combination of the lifted points
-$
+\]</div>
+<p>So the pair <span class="arithmatex">\((b,z)\)</span> is a convex combination of the lifted points</p>
+<div class="arithmatex">\[
 (A_i,c_i)\in\mathbb{R}^{m+1}.
-$</p>
+\]</div>
 <p>This is the <strong>column geometry</strong> picture:
 - Horizontal space: <span class="arithmatex">\(\mathbb{R}^m\)</span> containing the columns <span class="arithmatex">\(A_i\)</span> and the point <span class="arithmatex">\(b\)</span>.
 - Vertical axis: the cost coordinate <span class="arithmatex">\(z\)</span>.</p>
@@ -2505,10 +2512,10 @@ $</p>
 <hr />
 <h3 id="363-requirement-line-and-feasibility">3.6.3 Requirement line and feasibility<a class="headerlink" href="#363-requirement-line-and-feasibility" title="Permanent link">&para;</a></h3>
 <p>The vertical line through <span class="arithmatex">\((b,\cdot)\)</span> is the <strong>requirement line</strong>.</p>
-<p>Let <span class="arithmatex">\(H\)</span> be the convex hull of the lifted points:
-$
-H = \mathrm{conv}{(A_1,c_1),\dots,(A_n,c_n)}.
-$</p>
+<p>Let <span class="arithmatex">\(H\)</span> be the convex hull of the lifted points:</p>
+<div class="arithmatex">\[
+H = \mathrm{conv}\{(A_1,c_1),\dots,(A_n,c_n)\}.
+\]</div>
 <ul>
 <li>The LP is feasible iff the requirement line intersects <span class="arithmatex">\(H\)</span>.</li>
 <li>Among all intersection points, the optimal solution corresponds to the <strong>lowest</strong> point on that intersection (smallest <span class="arithmatex">\(z\)</span>).</li>
@@ -2519,11 +2526,11 @@ $</p>
 <p>(This is exactly what Figure 3.6 is showing.)</p>
 <hr />
 <h3 id="364-affine-independence-and-simplices-definition-36">3.6.4 Affine independence and simplices (Definition 3.6)<a class="headerlink" href="#364-affine-independence-and-simplices-definition-36" title="Permanent link">&para;</a></h3>
-<p>A collection of vectors <span class="arithmatex">\(y^1,\dots,y^{k+1}\in\mathbb{R}^n\)</span> is <strong>affinely independent</strong> if
-$
+<p>A collection of vectors <span class="arithmatex">\(y^1,\dots,y^{k+1}\in\mathbb{R}^n\)</span> is <strong>affinely independent</strong> if</p>
+<div class="arithmatex">\[
 y^1-y^{k+1},\ y^2-y^{k+1},\ \dots,\ y^k-y^{k+1}
-$
-are linearly independent.</p>
+\]</div>
+<p>are linearly independent.</p>
 <p>The convex hull of <span class="arithmatex">\(k+1\)</span> affinely independent points is a <strong><span class="arithmatex">\(k\)</span>-dimensional simplex</strong>:
 - <span class="arithmatex">\(k=1\)</span>: line segment
 - <span class="arithmatex">\(k=2\)</span>: triangle
@@ -2589,23 +2596,23 @@ The book gives an example where the optimal basis is found in <strong>two pivots
 <hr />
 <h3 id="372-worst-case-number-of-iterations-can-be-exponential">3.7.2 Worst-case number of iterations can be exponential<a class="headerlink" href="#372-worst-case-number-of-iterations-can-be-exponential" title="Permanent link">&para;</a></h3>
 <p>The book discusses a construction where simplex visits an exponentially long path of adjacent vertices.</p>
-<p>Start with the <span class="arithmatex">\(n\)</span>-dimensional unit cube:
-$
+<p>Start with the <span class="arithmatex">\(n\)</span>-dimensional unit cube:</p>
+<div class="arithmatex">\[
 0\le x_i\le 1,\quad i=1,\dots,n,
-$
-which has <span class="arithmatex">\(2^n\)</span> vertices.</p>
+\]</div>
+<p>which has <span class="arithmatex">\(2^n\)</span> vertices.</p>
 <p>There exists a <strong>spanning path</strong> that visits all <span class="arithmatex">\(2^n\)</span> vertices by moving along edges (Figures 3.8(a),(b) illustrate this for <span class="arithmatex">\(n=2,3\)</span>).
 With an appropriate objective and a suitable pivot rule, simplex can be forced to follow such a path.</p>
 <p>To make the objective strictly decrease each step, the book perturbs the cube with constraints (for some small <span class="arithmatex">\(\varepsilon\in(0,1/2)\)</span>):</p>
-<p>$
+<div class="arithmatex">\[
 \varepsilon\le x_1\le 1,
 \tag{3.7}
-$</p>
-<p>$
+\]</div>
+<div class="arithmatex">\[
 \varepsilon x_{i-1} \le x_i \le 1-\varepsilon x_{i-1},
 \quad i=2,\dots,n.
 \tag{3.8}
-$</p>
+\]</div>
 <p>Then one can choose a cost (book uses <span class="arithmatex">\(-x_n\)</span>) so that the simplex method decreases cost at every move along that spanning path.</p>
 <p><strong>Theorem 3.3 (worst case).</strong><br />
 For the LP that minimizes <span class="arithmatex">\(-x_n\)</span> subject to (3.7)–(3.8):
@@ -2618,29 +2625,31 @@ For the LP that minimizes <span class="arithmatex">\(-x_n\)</span> subject to (3
 <ul>
 <li>Two vertices are <strong>adjacent</strong> if connected by an edge.</li>
 <li>Let <span class="arithmatex">\(d(x,y)\)</span> be the minimum number of edges in a path from <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(y\)</span>.</li>
-<li>The <strong>diameter</strong> of a polyhedron <span class="arithmatex">\(P\)</span> is
-  $
-  D(P) = \max_{x,y\text{ vertices}} d(x,y).
-  $</li>
+<li>The <strong>diameter</strong> of a polyhedron <span class="arithmatex">\(P\)</span> is</li>
 </ul>
+<div class="arithmatex">\[
+D(P) = \max_{x,y\text{ vertices}} d(x,y).
+\]</div>
 <p>Define:
 - <span class="arithmatex">\(\Delta(n,m)\)</span> = maximum possible diameter over all <strong>bounded</strong> polyhedra in <span class="arithmatex">\(\mathbb{R}^n\)</span> described by <span class="arithmatex">\(m\)</span> linear inequalities.
 - <span class="arithmatex">\(\Delta_u(n,m)\)</span> = same but allowing <strong>unbounded</strong> polyhedra.</p>
 <p>If every bounded polyhedron had diameter polynomial in <span class="arithmatex">\(m,n\)</span>, then there would always exist a short vertex-to-vertex path, suggesting that an edge-following method might be polynomial with a good rule.
 However, simplex’s pivot rule might still fail to find the short path.</p>
-<p><strong>Hirsch conjecture (as stated in the book):</strong>
-$
+<p><strong>Hirsch conjecture (as stated in the book):</strong></p>
+<div class="arithmatex">\[
 \Delta(n,m) \le m-n.
-$</p>
+\]</div>
 <p>The book notes:
-- Hirsch is <strong>false for unbounded</strong> polyhedra (Klee and Walkup, 1967), and gives a lower bound:
-  $
-  \Delta_u(n,m) \ge m-n+\left\lfloor\frac{n}{5}\right\rfloor.
-  $
-- Worst-case upper bounds exist but are still large; the book quotes bounds of the form
-  $
-  \Delta(n,m) \le \Delta_u(n,m) \le m^{1+\log_2 n} = (2n)^{\log_2 m}.
-  $</p>
+- Hirsch is <strong>false for unbounded</strong> polyhedra (Klee and Walkup, 1967), and gives a lower bound:</p>
+<div class="arithmatex">\[
+\Delta_u(n,m) \ge m-n+\left\lfloor\frac{n}{5}\right\rfloor.
+\]</div>
+<ul>
+<li>Worst-case upper bounds exist but are still large; the book quotes bounds of the form</li>
+</ul>
+<div class="arithmatex">\[
+\Delta(n,m) \le \Delta_u(n,m) \le m^{1+\log_2 n} = (2n)^{\log_2 m}.
+\]</div>
 <p>So the true growth of diameters (and its relation to polynomial-time behavior) is subtle.</p>
 <hr />
 <h3 id="374-average-case-behavior-why-practice-looks-good">3.7.4 Average-case behavior (why practice looks good)<a class="headerlink" href="#374-average-case-behavior-why-practice-looks-good" title="Permanent link">&para;</a></h3>
@@ -2670,11 +2679,11 @@ $</p>
 <p>For a basis <span class="arithmatex">\(B\)</span>:</p>
 <ul>
 <li>Basic solution: <span class="arithmatex">\(x_B=B^{-1}b\)</span>, <span class="arithmatex">\(x_N=0\)</span>.</li>
-<li>Reduced cost:
-  $
-  \bar c_j = c_j - c_B^\top B^{-1}A_j.
-  $</li>
+<li>Reduced cost:</li>
 </ul>
+<div class="arithmatex">\[
+\bar c_j = c_j - c_B^\top B^{-1}A_j.
+\]</div>
 <p>Key optimality condition:
 - If <span class="arithmatex">\(\bar c_j\ge 0\)</span> for all nonbasic <span class="arithmatex">\(j\)</span>, the BFS is optimal.
 - If BFS is nondegenerate and some <span class="arithmatex">\(\bar c_j&lt;0\)</span>, then there is a feasible improving edge.</p>
@@ -2682,15 +2691,13 @@ $</p>
 <p>Given an entering index <span class="arithmatex">\(j\)</span>:</p>
 <ul>
 <li>Direction: <span class="arithmatex">\(d_B=-B^{-1}A_j\)</span> and <span class="arithmatex">\(d_j=1\)</span>.</li>
-<li>
-<p>Ratio test:
-  $
-  \theta^* = \min_{i: (B^{-1}A_j)_i&gt;0}\ \frac{(x_B)_i}{(B^{-1}A_j)_i}.
-  $</p>
-</li>
-<li>
-<p>Leaving variable is the one achieving the minimum.</p>
-</li>
+<li>Ratio test:</li>
+</ul>
+<div class="arithmatex">\[
+\theta^* = \min_{i: (B^{-1}A_j)_i&gt;0}\ \frac{(x_B)_i}{(B^{-1}A_j)_i}.
+\]</div>
+<ul>
+<li>Leaving variable is the one achieving the minimum.</li>
 <li>If no component of <span class="arithmatex">\(B^{-1}A_j\)</span> is positive, then <span class="arithmatex">\(d\ge 0\)</span> and <span class="arithmatex">\(c^\top d&lt;0\)</span> ⇒ objective is unbounded below (<span class="arithmatex">\(-\infty\)</span>).</li>
 </ul>
 <hr />
@@ -2720,12 +2727,12 @@ $</p>
 <h3 id="385-how-to-start-initial-bfs-section-35">3.8.5 How to start: initial BFS (Section 3.5)<a class="headerlink" href="#385-how-to-start-initial-bfs-section-35" title="Permanent link">&para;</a></h3>
 <p>If a BFS is not obvious:
 - Solve a <strong>Phase I auxiliary LP</strong> using artificial variables <span class="arithmatex">\(y\ge 0\)</span>:</p>
-<p>$
+<div class="arithmatex">\[
 \min\ \sum_{i=1}^m y_i
 \quad \text{s.t.}\quad
 Ax+y=b,\;
 x\ge 0,\ y\ge 0.
-$</p>
+\]</div>
 <ul>
 <li>If the optimal Phase I value is <span class="arithmatex">\(&gt;0\)</span>: original LP infeasible.</li>
 <li>If Phase I optimum is <span class="arithmatex">\(0\)</span>: obtain a feasible basis for Phase II (drive artificial variables out if needed).</li>
