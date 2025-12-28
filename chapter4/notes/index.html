@@ -929,6 +929,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#42-the-dual-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 The dual problem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 The dual problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-general-primaldual-definition-most-general-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 General primal–dual definition (most general form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-table-41-mechanical-rules-primal-min-dual-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 Table 4.1: mechanical rules (primal min ↔ dual max)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-compact-matrix-pairs-common-special-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 Compact matrix pairs (common special cases)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-example-41-the-dual-of-the-dual-is-the-primal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 Example 4.1: the dual of the dual is the primal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-theorem-41-dual-of-the-dual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 Theorem 4.1 (dual of the dual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1069,6 +1141,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#42-the-dual-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 The dual problem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 The dual problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-general-primaldual-definition-most-general-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 General primal–dual definition (most general form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-table-41-mechanical-rules-primal-min-dual-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 Table 4.1: mechanical rules (primal min ↔ dual max)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-compact-matrix-pairs-common-special-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 Compact matrix pairs (common special cases)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-example-41-the-dual-of-the-dual-is-the-primal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 Example 4.1: the dual of the dual is the primal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-theorem-41-dual-of-the-dual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 Theorem 4.1 (dual of the dual)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1192,6 +1336,309 @@ Therefore, the <strong>dual</strong> is:</p>
 - <span class="arithmatex">\(x = x^+ - x^-\)</span> with <span class="arithmatex">\(x^+\ge 0,\;x^-\ge 0\)</span></p>
 <p>This “splitting” is the algebraic reason dual constraints may become equalities (you effectively get two inequalities that must both hold, hence equality).</p>
 </div>
+<h2 id="42-the-dual-problem">4.2 The dual problem<a class="headerlink" href="#42-the-dual-problem" title="Permanent link">&para;</a></h2>
+<p>In Section 4.1 we built intuition: for a primal <strong>minimization</strong> problem, every choice of prices (dual variables) gives a <strong>lower bound</strong> on the primal optimal cost, and the dual problem maximizes this bound. In this section we define the dual for a <strong>general LP</strong> (with mixed constraint directions and mixed variable sign restrictions).</p>
+<hr />
+<h3 id="421-general-primaldual-definition-most-general-form">4.2.1 General primal–dual definition (most general form)<a class="headerlink" href="#421-general-primaldual-definition-most-general-form" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Definition box — General primal (minimization form)</p>
+<p>Let <span class="arithmatex">\(A\)</span> be a matrix with rows <span class="arithmatex">\(a_i^\top\)</span> and columns <span class="arithmatex">\(A_j\)</span>.<br />
+Partition the constraint indices into <span class="arithmatex">\(M_1, M_2, M_3\)</span> and the variable indices into <span class="arithmatex">\(N_1, N_2, N_3\)</span>.</p>
+<p>The <strong>primal</strong> problem is:
+- minimize <span class="arithmatex">\(c^\top x\)</span>
+- subject to<br />
+  - <span class="arithmatex">\(a_i^\top x \ge b_i,\ \ i\in M_1\)</span><br />
+  - <span class="arithmatex">\(a_i^\top x \le b_i,\ \ i\in M_2\)</span><br />
+  - <span class="arithmatex">\(a_i^\top x = b_i,\ \ i\in M_3\)</span><br />
+  - <span class="arithmatex">\(x_j \ge 0,\ \ j\in N_1\)</span><br />
+  - <span class="arithmatex">\(x_j \le 0,\ \ j\in N_2\)</span><br />
+  - <span class="arithmatex">\(x_j\)</span> free,\ \ <span class="arithmatex">\(j\in N_3\)</span></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Definition box — Dual associated with the above primal</p>
+<p>Introduce dual variables <span class="arithmatex">\(p_i\)</span> for primal constraints <span class="arithmatex">\(i\in M_1\cup M_2\cup M_3\)</span>.<br />
+The <strong>dual</strong> problem is:
+- maximize <span class="arithmatex">\(p^\top b\)</span>
+- subject to<br />
+  - <span class="arithmatex">\(p_i \ge 0,\ \ i\in M_1\)</span><br />
+  - <span class="arithmatex">\(p_i \le 0,\ \ i\in M_2\)</span><br />
+  - <span class="arithmatex">\(p_i\)</span> free,\ \ <span class="arithmatex">\(i\in M_3\)</span><br />
+  - <span class="arithmatex">\(p^\top A_j \le c_j,\ \ j\in N_1\)</span><br />
+  - <span class="arithmatex">\(p^\top A_j \ge c_j,\ \ j\in N_2\)</span><br />
+  - <span class="arithmatex">\(p^\top A_j = c_j,\ \ j\in N_3\)</span></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Key box — Constraint/variable “swap” principle</p>
+<ul>
+<li>Each <strong>primal constraint</strong> (other than sign constraints on variables) produces a <strong>dual variable</strong>.  </li>
+<li>Each <strong>primal variable</strong> produces a <strong>dual constraint</strong>.  </li>
+<li>The direction/equality and sign restrictions determine whether the dual side is <span class="arithmatex">\(\ge 0\)</span>, <span class="arithmatex">\(\le 0\)</span>, free, or <span class="arithmatex">\(\le/\ge/=\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h3 id="422-table-41-mechanical-rules-primal-min-dual-max">4.2.2 Table 4.1: mechanical rules (primal min ↔ dual max)<a class="headerlink" href="#422-table-41-mechanical-rules-primal-min-dual-max" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Key box — Table 4.1 (rules you should memorize)</p>
+<p><strong>Primal constraints</strong> <span class="arithmatex">\(\longrightarrow\)</span> <strong>Dual variable sign</strong> (dual is a maximization problem)</p>
+<table>
+<thead>
+<tr>
+<th>Primal constraint type</th>
+<th>Dual variable sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\ge b_i\)</span></td>
+<td><span class="arithmatex">\(p_i \ge 0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\le b_i\)</span></td>
+<td><span class="arithmatex">\(p_i \le 0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(= b_i\)</span></td>
+<td><span class="arithmatex">\(p_i\)</span> free</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Primal variable sign</strong> <span class="arithmatex">\(\longrightarrow\)</span> <strong>Dual constraint type</strong></p>
+<table>
+<thead>
+<tr>
+<th>Primal variable type</th>
+<th>Dual constraint on <span class="arithmatex">\(p^\top A_j\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x_j \ge 0\)</span></td>
+<td><span class="arithmatex">\(p^\top A_j \le c_j\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x_j \le 0\)</span></td>
+<td><span class="arithmatex">\(p^\top A_j \ge c_j\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x_j\)</span> free</td>
+<td><span class="arithmatex">\(p^\top A_j = c_j\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Convention box</p>
+<p>If we start with a <strong>maximization</strong> primal, we can convert it to an equivalent <strong>minimization</strong> problem and then apply the rules above.<br />
+To avoid confusion, we will adhere to the convention: <strong>primal = minimization</strong>, <strong>dual = maximization</strong>.</p>
+</div>
+<hr />
+<h3 id="423-compact-matrix-pairs-common-special-cases">4.2.3 Compact matrix pairs (common special cases)<a class="headerlink" href="#423-compact-matrix-pairs-common-special-cases" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Key box — Standard form (equalities + nonnegativity)</p>
+<p>Primal:
+- minimize <span class="arithmatex">\(c^\top x\)</span>
+- subject to <span class="arithmatex">\(Ax=b\)</span>, <span class="arithmatex">\(x\ge 0\)</span></p>
+<p>Dual:
+- maximize <span class="arithmatex">\(p^\top b\)</span>
+- subject to <span class="arithmatex">\(p^\top A \le c^\top\)</span><br />
+  (equivalently <span class="arithmatex">\(A^\top p \le c\)</span>)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Key box — Inequalities <span class="arithmatex">\(Ax\ge b\)</span> (no explicit sign constraint on <span class="arithmatex">\(x\)</span> shown here)</p>
+<p>Primal:
+- minimize <span class="arithmatex">\(c^\top x\)</span>
+- subject to <span class="arithmatex">\(Ax\ge b\)</span></p>
+<p>Dual:
+- maximize <span class="arithmatex">\(p^\top b\)</span>
+- subject to <span class="arithmatex">\(p^\top A = c^\top\)</span>, <span class="arithmatex">\(p\ge 0\)</span></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Intuition box</p>
+<ul>
+<li>A <strong>free</strong> primal variable forces an <strong>equality</strong> in the dual.  </li>
+<li>A primal constraint of type <span class="arithmatex">\(\ge\)</span> forces a <strong>nonnegative</strong> dual variable (prices cannot be negative when the constraint is of “at least” type).</li>
+</ul>
+</div>
+<hr />
+<h3 id="424-example-41-the-dual-of-the-dual-is-the-primal">4.2.4 Example 4.1: the dual of the dual is the primal<a class="headerlink" href="#424-example-41-the-dual-of-the-dual-is-the-primal" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Example box — Form the dual using Table 4.1</p>
+<p><strong>Primal (given):</strong><br />
+minimize <span class="arithmatex">\(x_1 + 2x_2 + 3x_3\)</span><br />
+subject to<br />
+- <span class="arithmatex">\(-x_1 + 3x_2 = 5\)</span><br />
+- <span class="arithmatex">\(2x_1 - x_2 + 3x_3 \ge 6\)</span><br />
+- <span class="arithmatex">\(x_3 \le 4\)</span><br />
+- <span class="arithmatex">\(x_1 \ge 0,\ \ x_2 \le 0,\ \ x_3\)</span> free</p>
+<p><strong>Dual (by the rules):</strong><br />
+maximize <span class="arithmatex">\(5p_1 + 6p_2 + 4p_3\)</span><br />
+subject to<br />
+- <span class="arithmatex">\(p_1\)</span> free (because the first primal constraint is an equality)<br />
+- <span class="arithmatex">\(p_2 \ge 0\)</span> (because the second primal constraint is <span class="arithmatex">\(\ge\)</span>)<br />
+- <span class="arithmatex">\(p_3 \le 0\)</span> (because the third primal constraint is <span class="arithmatex">\(\le\)</span>)<br />
+- <span class="arithmatex">\(-p_1 + 2p_2 \le 1\)</span> (because <span class="arithmatex">\(x_1\ge 0\)</span>)<br />
+- <span class="arithmatex">\(3p_1 - p_2 \ge 2\)</span> (because <span class="arithmatex">\(x_2\le 0\)</span>)<br />
+- <span class="arithmatex">\(3p_2 + p_3 = 3\)</span> (because <span class="arithmatex">\(x_3\)</span> is free)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Key box — Converting the dual back into the primal</p>
+<p>If we:
+1) transform the dual into an equivalent <strong>minimization</strong> problem,<br />
+2) and then form its <strong>dual</strong>,<br />
+we obtain a problem equivalent to the original primal.</p>
+<p>(This is illustrated in the text by explicitly dualizing twice and observing that the resulting problem matches the original primal up to trivial sign/format changes.)</p>
+</div>
+<hr />
+<h3 id="425-theorem-41-dual-of-the-dual">4.2.5 Theorem 4.1 (dual of the dual)<a class="headerlink" href="#425-theorem-41-dual-of-the-dual" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Theorem box — The dual of the dual is the primal</p>
+<p>If we transform the dual into an equivalent minimization problem and then form its dual, we obtain a problem equivalent to the original primal problem.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Remark box — Equivalent primal forms lead to equivalent duals</p>
+<p>A linear program can be rewritten in many equivalent ways (e.g., add slack/surplus variables; replace a free variable by the difference of two nonnegative variables).<br />
+These different—but equivalent—primal forms may yield different-looking duals, but the resulting dual problems are <strong>equivalent</strong>.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="gu">## 4.3 The duality theorem</span>
+
+<span class="gu">### 4.3.1 A useful decomposition: \(U_i\) and \(V_j\)</span>
+
+!!! tip &quot;Definition box — The quantities \(U<span class="ge">_i\) and \(V_</span>j\)&quot;
+    For any vectors \(x\) and \(p\), define
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>\(U<span class="ge">_i \;=\; p_</span>i\,(a_i^\top x - b_i)\)  (one term per <span class="gs">**primal constraint**</span>),
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>\(V<span class="ge">_j \;=\; (c_</span>j - p^\top A<span class="ge">_j)\,x_</span>j\) (one term per <span class="gs">**primal variable**</span>).
+
+!!! note &quot;Key box — Why \(U<span class="ge">_i\ge 0\) and \(V_</span>j\ge 0\) under feasibility&quot;
+    If \(x\) is <span class="gs">**primal feasible**</span> and \(p\) is <span class="gs">**dual feasible**</span>, then:
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>For each constraint \(i\), dual feasibility forces the <span class="gs">**sign of \(p_i\)**</span> to match the direction of the primal constraint, so \(p<span class="ge">_i(a_</span>i^\top x - b<span class="ge">_i)\ge 0\), hence \(U_</span>i\ge 0\).
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>For each variable \(j\), primal feasibility forces the <span class="gs">**sign of \(x_j\)**</span> (e.g., \(x<span class="ge">_j\ge 0\), \(x_</span>j\le 0\), or free), and dual feasibility forces the matching inequality/equality on \(p^\top A<span class="ge">_j\) relative to \(c_</span>j\); together they imply \((c_j - p^\top A<span class="ge">_j)x_</span>j\ge 0\), hence \(V_j\ge 0\).
+
+!!! info &quot;Key box — The identity behind weak duality&quot;
+    Expand the sums:
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>\(\sum_i U<span class="ge">_i = \sum_</span>i p<span class="ge">_i(a_</span>i^\top x - b_i) = p^\top A x - p^\top b\).
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>\(\sum_j V<span class="ge">_j = \sum_</span>j (c_j - p^\top A<span class="ge">_j)x_</span>j = c^\top x - p^\top A x\).
+
+    Adding them gives the key identity
+    \[
+    c^\top x - p^\top b \;=\; \sum_i U<span class="ge">_i \;+\; \sum_</span>j V_j \;\ge\; 0.
+    \]
+
+---
+
+<span class="gu">### 4.3.2 Weak duality</span>
+
+!!! info &quot;Theorem (Weak duality)&quot;
+    For any <span class="gs">**primal feasible**</span> \(x\) and any <span class="gs">**dual feasible**</span> \(p\),
+    \[
+    p^\top b \;\le\; c^\top x.
+    \]
+    So every dual feasible solution gives a <span class="gs">**lower bound**</span> on the optimal primal cost (for a minimization primal).
+
+!!! note &quot;Intuition box&quot;
+    Dual feasibility ensures the penalty vector \(p\) produces a valid bound; primal feasibility ensures the constraint residuals have the correct sign so the penalty can only increase the cost surrogate. The decomposition \(c^\top x - p^\top b = \sum_i U<span class="ge">_i + \sum_</span>j V_j\) makes this algebraic.
+
+---
+
+<span class="gu">### 4.3.3 Corollaries of weak duality</span>
+
+!!! note &quot;Corollary — Unboundedness implies infeasibility on the other side&quot;
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>If the primal (minimization) problem is <span class="gs">**unbounded**</span> (optimal cost \(=-\infty\)), then the dual cannot have any feasible solution (dual is <span class="gs">**infeasible**</span>).
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>Symmetrically, if the dual (maximization) problem is <span class="gs">**unbounded**</span> (optimal cost \(=+\infty\)), then the primal must be <span class="gs">**infeasible**</span>.
+
+!!! tip &quot;Corollary — Equal costs certify optimality&quot;
+    Suppose \(x\) is primal feasible and \(p\) is dual feasible, and
+    \[
+    c^\top x \;=\; p^\top b.
+    \]
+    Then \(x\) is <span class="gs">**optimal**</span> for the primal and \(p\) is <span class="gs">**optimal**</span> for the dual.
+
+    <span class="ge">*Reason:*</span> For any primal feasible \(y\), weak duality gives \(p^\top b \le c^\top y\). If \(p^\top b=c^\top x\), then \(c^\top x \le c^\top y\) for all feasible \(y\), so \(x\) is optimal. A symmetric argument gives optimality of \(p\).
+
+---
+
+<span class="gu">### 4.3.4 Strong duality (the duality theorem)</span>
+
+!!! info &quot;Key box — Strong duality (what we ultimately want)&quot;
+    Under the usual assumptions (feasibility and existence of an optimal solution),
+    \[
+    \min\{c^\top x : x \text{ primal feasible}\}
+    \;=\;
+    \max\{p^\top b : p \text{ dual feasible}\}.
+    \]
+    Moreover, there exist optimal solutions \(x^*\) and \(p^*\) that achieve equality:
+    \(\;c^\top x^* = (p^*)^\top b\).
+
+!!! note &quot;Proof idea box — Prove it in standard form via simplex, then extend&quot;
+    The book proves strong duality by:
+    1) proving it for a standard-form problem (with independent rows) using the simplex method, and  
+    2) reducing a general LP to an equivalent standard-form LP and invoking equivalence of duals (Theorem 4.2).
+
+<span class="gu">#### Simplex-based proof sketch in standard form</span>
+Consider the standard-form primal
+<span class="k">-</span><span class="w"> </span>minimize \(e^\top x\)
+<span class="k">-</span><span class="w"> </span>subject to \(Ax=b\), \(x\ge 0\).
+
+When simplex terminates (avoiding cycling), it returns an optimal basis \(B\) and basic variables \(x_B=B^{-1}b\).
+Let \(e_B^\top\) be the cost row for the basic variables (here, all ones), and define
+\[
+p^\top \;=\; e_B^\top B^{-1}.
+\]
+Then:
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dual feasibility:**</span> termination implies all reduced costs are nonnegative, which is equivalent to \(p^\top A \le e^\top\).
+<span class="k">-</span><span class="w"> </span><span class="gs">**Equal objective values:**</span>
+  \[
+  p^\top b \;=\; e<span class="ge">_B^\top B^{-1}b \;=\; e_</span>B^\top x_B \;=\; e^\top x.
+  \]
+So \(x\) and \(p\) are feasible with equal costs; by the “equal costs certify optimality” corollary, both are optimal and primal optimum \(=\) dual optimum.
+
+---
+
+<span class="gu">### 4.3.5 Example 4.4 (mechanical analogy)</span>
+
+!!! info &quot;Intuition box — Ball in a polyhedron&quot;
+    Think of the feasible region \( \{x : a<span class="ge">_i^\top x \ge b_</span>i\} \) as walls constraining a ball.
+    Gravity points in direction \(c\) (the objective), so equilibrium occurs at the “lowest” corner \(x^*\), i.e., an optimal solution.
+
+    At equilibrium, the net supporting force from the active walls balances gravity, giving
+    \[
+    c \;=\; \sum_i p<span class="ge">_i a_</span>i \quad \text{with } p_i \ge 0,
+    \]
+    i.e., \(p\) is dual feasible.
+
+    Walls that do <span class="gs">**not**</span> touch the ball exert <span class="gs">**no**</span> force, so if \(a<span class="ge">_i^\top x^* &gt; b_</span>i\) then \(p<span class="ge">_i=0\). This is the intuition behind conditions like \(p_</span>i(b_i-a_i^\top x^*)=0\).
+
+    With these forces,
+    \[
+    p^\top b \;=\; \sum_i p<span class="ge">_i b_</span>i \;=\; \sum_i p<span class="ge">_i a_</span>i^\top x^* \;=\; c^\top x^*,
+    \]
+    so the dual feasible \(p\) matches the primal cost at \(x^*\), certifying optimality.
+
+---
+
+<span class="gu">### 4.3.6 What can happen to (primal, dual)?</span>
+
+!!! note &quot;Key box — The three statuses&quot;
+    For each of the primal and dual:
+<span class="w">    </span><span class="k">-</span><span class="w"> </span><span class="gs">**Optimal solution exists**</span>, or
+<span class="w">    </span><span class="k">-</span><span class="w"> </span><span class="gs">**Unbounded**</span> (minimization: optimal cost \(=-\infty\); maximization: \(=+\infty\)), or
+<span class="w">    </span><span class="k">-</span><span class="w"> </span><span class="gs">**Infeasible**</span>.
+
+    This gives \(3\times 3 = 9\) combinations.
+    Strong duality says: if one has an optimal solution, so does the other (with equal optimal cost).
+    Weak duality says: if one is unbounded, the other must be infeasible.
+
+!!! tip &quot;Example 4.5 — Both can be infeasible&quot;
+    Primal (infeasible):
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>minimize \(x<span class="ge">_1 + 2x_</span>2\)
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>subject to \(x<span class="ge">_1 + x_</span>2 = 1\), and \(2x_1 + 2x_2 = 3\).
+
+    Dual (also infeasible):
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>maximize \(p<span class="ge">_1 + 3p_</span>2\)
+<span class="w">    </span><span class="k">-</span><span class="w"> </span>subject to \(p<span class="ge">_1 + 2p_</span>2 = 1\), and \(p<span class="ge">_1 + 2p_</span>2 = 2\).
+
+!!! note &quot;Remark — Clark&#39;s theorem&quot;
+    Unless <span class="gs">**both**</span> problems are infeasible, at least one of them must have an <span class="gs">**unbounded feasible set**</span> (see the referenced exercise in the text).
+</code></pre></div>
 
 
 
