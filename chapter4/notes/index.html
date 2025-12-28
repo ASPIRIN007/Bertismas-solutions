@@ -1059,10 +1059,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplex-based-proof-sketch-in-standard-form" class="md-nav__link">
+  <a href="#simplex-based-proof-sketch-standard-form" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplex-based proof sketch in standard form
+        Simplex-based proof sketch (standard form)
       
     </span>
   </a>
@@ -1371,10 +1371,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplex-based-proof-sketch-in-standard-form" class="md-nav__link">
+  <a href="#simplex-based-proof-sketch-standard-form" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplex-based proof sketch in standard form
+        Simplex-based proof sketch (standard form)
       
     </span>
   </a>
@@ -1703,135 +1703,119 @@ These different—but equivalent—primal forms may yield different-looking dual
 <h3 id="431-a-useful-decomposition-u_i-and-v_j">4.3.1 A useful decomposition: <span class="arithmatex">\(U_i\)</span> and <span class="arithmatex">\(V_j\)</span><a class="headerlink" href="#431-a-useful-decomposition-u_i-and-v_j" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Definition box — The quantities <span class="arithmatex">\(U_i\)</span> and <span class="arithmatex">\(V_j\)</span></p>
-<p>For any vectors <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(p\)</span>, define
-- <span class="arithmatex">\(U_i \;=\; p_i\,(a_i^\top x - b_i)\)</span>  (one term per <strong>primal constraint</strong>),
-- <span class="arithmatex">\(V_j \;=\; (c_j - p^\top A_j)\,x_j\)</span> (one term per <strong>primal variable</strong>).</p>
+<p>For any vectors <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(p\)</span>, define<br />
+- <span class="arithmatex">\(U_i = p_i\,(a_i^\top x - b_i)\)</span>  (one term per <strong>primal constraint</strong>)<br />
+- <span class="arithmatex">\(V_j = (c_j - p^\top A_j)\,x_j\)</span> (one term per <strong>primal variable</strong>)</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Key box — Why <span class="arithmatex">\(U_i\ge 0\)</span> and <span class="arithmatex">\(V_j\ge 0\)</span> under feasibility</p>
-<p>If <span class="arithmatex">\(x\)</span> is <strong>primal feasible</strong> and <span class="arithmatex">\(p\)</span> is <strong>dual feasible</strong>, then:
-- For each constraint <span class="arithmatex">\(i\)</span>, dual feasibility forces the <strong>sign of <span class="arithmatex">\(p_i\)</span></strong> to match the direction of the primal constraint, so <span class="arithmatex">\(p_i(a_i^\top x - b_i)\ge 0\)</span>, hence <span class="arithmatex">\(U_i\ge 0\)</span>.
-- For each variable <span class="arithmatex">\(j\)</span>, primal feasibility forces the <strong>sign of <span class="arithmatex">\(x_j\)</span></strong> (e.g., <span class="arithmatex">\(x_j\ge 0\)</span>, <span class="arithmatex">\(x_j\le 0\)</span>, or free), and dual feasibility forces the matching inequality/equality on <span class="arithmatex">\(p^\top A_j\)</span> relative to <span class="arithmatex">\(c_j\)</span>; together they imply <span class="arithmatex">\((c_j - p^\top A_j)x_j\ge 0\)</span>, hence <span class="arithmatex">\(V_j\ge 0\)</span>.</p>
+<p>If <span class="arithmatex">\(x\)</span> is <strong>primal feasible</strong> and <span class="arithmatex">\(p\)</span> is <strong>dual feasible</strong>, then:</p>
+<ul>
+<li>
+<p>For each constraint <span class="arithmatex">\(i\)</span>, dual feasibility forces the <strong>sign of <span class="arithmatex">\(p_i\)</span></strong> to match the direction of the primal constraint, so <span class="arithmatex">\(p_i(a_i^\top x - b_i)\ge 0\)</span>. Hence <span class="arithmatex">\(U_i\ge 0\)</span>.</p>
+</li>
+<li>
+<p>For each variable <span class="arithmatex">\(j\)</span>, primal feasibility forces the <strong>sign restriction on <span class="arithmatex">\(x_j\)</span></strong> (e.g., <span class="arithmatex">\(x_j\ge 0\)</span>, <span class="arithmatex">\(x_j\le 0\)</span>, or free), and dual feasibility forces the matching inequality or equality on <span class="arithmatex">\(p^\top A_j\)</span> relative to <span class="arithmatex">\(c_j\)</span>. Together they imply <span class="arithmatex">\((c_j - p^\top A_j)x_j\ge 0\)</span>. Hence <span class="arithmatex">\(V_j\ge 0\)</span>.</p>
+</li>
+</ul>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Key box — The identity behind weak duality</p>
-<p>Expand the sums:
-- <span class="arithmatex">\(\sum_i U_i = \sum_i p_i(a_i^\top x - b_i) = p^\top A x - p^\top b\)</span>.
-- <span class="arithmatex">\(\sum_j V_j = \sum_j (c_j - p^\top A_j)x_j = c^\top x - p^\top A x\)</span>.</p>
-<p>Adding them gives the key identity
-[
-c^\top x - p^\top b \;=\; \sum_i U_i \;+\; \sum_j V_j \;\ge\; 0.
-]</p>
+<p class="admonition-title">Key box — Identity behind weak duality</p>
+<p>Expand the sums:</p>
+<ul>
+<li><span class="arithmatex">\(\sum_i U_i = \sum_i p_i(a_i^\top x - b_i) = p^\top A x - p^\top b\)</span>  </li>
+<li><span class="arithmatex">\(\sum_j V_j = \sum_j (c_j - p^\top A_j)x_j = c^\top x - p^\top A x\)</span></li>
+</ul>
+<p>Adding them gives<br />
+<span class="arithmatex">\(c^\top x - p^\top b = \sum_i U_i + \sum_j V_j \ge 0\)</span>.</p>
 </div>
 <hr />
 <h3 id="432-weak-duality">4.3.2 Weak duality<a class="headerlink" href="#432-weak-duality" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Theorem (Weak duality)</p>
-<p>For any <strong>primal feasible</strong> <span class="arithmatex">\(x\)</span> and any <strong>dual feasible</strong> <span class="arithmatex">\(p\)</span>,
-[
-p^\top b \;\le\; c^\top x.
-]
-So every dual feasible solution gives a <strong>lower bound</strong> on the optimal primal cost (for a minimization primal).</p>
+<p class="admonition-title">Theorem box — Weak duality</p>
+<p>For any <strong>primal feasible</strong> <span class="arithmatex">\(x\)</span> and any <strong>dual feasible</strong> <span class="arithmatex">\(p\)</span>, we have<br />
+<span class="arithmatex">\(p^\top b \le c^\top x\)</span>.  </p>
+<p>Therefore, every dual feasible solution provides a <strong>lower bound</strong> on the optimal primal value (for a minimization primal).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Intuition box</p>
-<p>Dual feasibility ensures the penalty vector <span class="arithmatex">\(p\)</span> produces a valid bound; primal feasibility ensures the constraint residuals have the correct sign so the penalty can only increase the cost surrogate. The decomposition <span class="arithmatex">\(c^\top x - p^\top b = \sum_i U_i + \sum_j V_j\)</span> makes this algebraic.</p>
+<p>The gap <span class="arithmatex">\(c^\top x - p^\top b\)</span> splits into constraint-violation terms <span class="arithmatex">\(U_i\)</span> and reduced-cost-like terms <span class="arithmatex">\(V_j\)</span>, each of which is <span class="arithmatex">\(\ge 0\)</span> under feasibility.</p>
 </div>
 <hr />
 <h3 id="433-corollaries-of-weak-duality">4.3.3 Corollaries of weak duality<a class="headerlink" href="#433-corollaries-of-weak-duality" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Corollary — Unboundedness implies infeasibility on the other side</p>
+<p class="admonition-title">Corollary box — Unboundedness implies infeasibility on the other side</p>
 <ul>
-<li>If the primal (minimization) problem is <strong>unbounded</strong> (optimal cost <span class="arithmatex">\(=-\infty\)</span>), then the dual cannot have any feasible solution (dual is <strong>infeasible</strong>).</li>
-<li>Symmetrically, if the dual (maximization) problem is <strong>unbounded</strong> (optimal cost <span class="arithmatex">\(=+\infty\)</span>), then the primal must be <strong>infeasible</strong>.</li>
+<li>If the primal (minimization) problem is <strong>unbounded</strong> (optimal value <span class="arithmatex">\(=-\infty\)</span>), then the dual must be <strong>infeasible</strong>.  </li>
+<li>If the dual (maximization) problem is <strong>unbounded</strong> (optimal value <span class="arithmatex">\(=+\infty\)</span>), then the primal must be <strong>infeasible</strong>.</li>
 </ul>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Corollary — Equal costs certify optimality</p>
-<p>Suppose <span class="arithmatex">\(x\)</span> is primal feasible and <span class="arithmatex">\(p\)</span> is dual feasible, and
-[
-c^\top x \;=\; p^\top b.
-]
+<p class="admonition-title">Corollary box — Equal costs certify optimality</p>
+<p>Suppose <span class="arithmatex">\(x\)</span> is primal feasible and <span class="arithmatex">\(p\)</span> is dual feasible, and<br />
+<span class="arithmatex">\(c^\top x = p^\top b\)</span>.<br />
 Then <span class="arithmatex">\(x\)</span> is <strong>optimal</strong> for the primal and <span class="arithmatex">\(p\)</span> is <strong>optimal</strong> for the dual.</p>
-<p><em>Reason:</em> For any primal feasible <span class="arithmatex">\(y\)</span>, weak duality gives <span class="arithmatex">\(p^\top b \le c^\top y\)</span>. If <span class="arithmatex">\(p^\top b=c^\top x\)</span>, then <span class="arithmatex">\(c^\top x \le c^\top y\)</span> for all feasible <span class="arithmatex">\(y\)</span>, so <span class="arithmatex">\(x\)</span> is optimal. A symmetric argument gives optimality of <span class="arithmatex">\(p\)</span>.</p>
+<p>Reason: for any primal feasible <span class="arithmatex">\(y\)</span>, weak duality gives <span class="arithmatex">\(p^\top b \le c^\top y\)</span>. If <span class="arithmatex">\(p^\top b = c^\top x\)</span>, then <span class="arithmatex">\(c^\top x \le c^\top y\)</span> for all feasible <span class="arithmatex">\(y\)</span>, so <span class="arithmatex">\(x\)</span> is optimal. A symmetric argument gives optimality of <span class="arithmatex">\(p\)</span>.</p>
 </div>
 <hr />
 <h3 id="434-strong-duality-the-duality-theorem">4.3.4 Strong duality (the duality theorem)<a class="headerlink" href="#434-strong-duality-the-duality-theorem" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Key box — Strong duality (what we ultimately want)</p>
-<p>Under the usual assumptions (feasibility and existence of an optimal solution),
-[
-\min{c^\top x : x \text{ primal feasible}}
-\;=\;
-\max{p^\top b : p \text{ dual feasible}}.
-]
-Moreover, there exist optimal solutions <span class="arithmatex">\(x^*\)</span> and <span class="arithmatex">\(p^*\)</span> that achieve equality:
-<span class="arithmatex">\(\;c^\top x^* = (p^*)^\top b\)</span>.</p>
+<p class="admonition-title">Theorem box — Strong duality</p>
+<p>Under the standard assumptions (feasibility and existence of an optimal solution), the primal and dual optimal values are equal.<br />
+In particular, there exist optimal solutions <span class="arithmatex">\(x^*\)</span> and <span class="arithmatex">\(p^*\)</span> such that<br />
+<span class="arithmatex">\(c^\top x^* = (p^*)^\top b\)</span>.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Proof idea box — Prove it in standard form via simplex, then extend</p>
-<p>The book proves strong duality by:
-1) proving it for a standard-form problem (with independent rows) using the simplex method, and<br />
-2) reducing a general LP to an equivalent standard-form LP and invoking equivalence of duals (Theorem 4.2).</p>
+<p class="admonition-title">Proof idea box — Prove in standard form via simplex, then extend</p>
+<p>The book’s approach is:</p>
+<p>1) Prove strong duality for a standard-form problem (with independent rows) using simplex.<br />
+2) Reduce a general LP to an equivalent standard-form LP and use equivalence of duals.</p>
 </div>
-<h4 id="simplex-based-proof-sketch-in-standard-form">Simplex-based proof sketch in standard form<a class="headerlink" href="#simplex-based-proof-sketch-in-standard-form" title="Permanent link">&para;</a></h4>
-<p>Consider the standard-form primal
-- minimize <span class="arithmatex">\(e^\top x\)</span>
-- subject to <span class="arithmatex">\(Ax=b\)</span>, <span class="arithmatex">\(x\ge 0\)</span>.</p>
-<p>When simplex terminates (avoiding cycling), it returns an optimal basis <span class="arithmatex">\(B\)</span> and basic variables <span class="arithmatex">\(x_B=B^{-1}b\)</span>.
-Let <span class="arithmatex">\(e_B^\top\)</span> be the cost row for the basic variables (here, all ones), and define
-[
-p^\top \;=\; e_B^\top B^{-1}.
-]
-Then:
-- <strong>Dual feasibility:</strong> termination implies all reduced costs are nonnegative, which is equivalent to <span class="arithmatex">\(p^\top A \le e^\top\)</span>.
-- <strong>Equal objective values:</strong>
-  [
-  p^\top b \;=\; e_B^\top B^{-1}b \;=\; e_B^\top x_B \;=\; e^\top x.
-  ]
-So <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(p\)</span> are feasible with equal costs; by the “equal costs certify optimality” corollary, both are optimal and primal optimum <span class="arithmatex">\(=\)</span> dual optimum.</p>
+<h4 id="simplex-based-proof-sketch-standard-form">Simplex-based proof sketch (standard form)<a class="headerlink" href="#simplex-based-proof-sketch-standard-form" title="Permanent link">&para;</a></h4>
+<p>Consider the standard-form primal<br />
+- minimize <span class="arithmatex">\(e^\top x\)</span><br />
+- subject to <span class="arithmatex">\(Ax=b\)</span>, <span class="arithmatex">\(x\ge 0\)</span>.  </p>
+<p>When simplex terminates, it returns an optimal basis <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(x_B = B^{-1}b\)</span>.<br />
+Define the dual candidate by <span class="arithmatex">\(p^\top = e_B^\top B^{-1}\)</span>.</p>
+<ul>
+<li><strong>Dual feasibility:</strong> termination implies all reduced costs are nonnegative, which is equivalent to <span class="arithmatex">\(p^\top A \le e^\top\)</span>.  </li>
+<li><strong>Equal objective values:</strong> <span class="arithmatex">\(p^\top b = e_B^\top B^{-1}b = e_B^\top x_B = e^\top x\)</span>.</li>
+</ul>
+<p>So we have primal-feasible <span class="arithmatex">\(x\)</span> and dual-feasible <span class="arithmatex">\(p\)</span> with equal costs, hence both are optimal.</p>
 <hr />
 <h3 id="435-example-44-mechanical-analogy">4.3.5 Example 4.4 (mechanical analogy)<a class="headerlink" href="#435-example-44-mechanical-analogy" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Intuition box — Ball in a polyhedron</p>
-<p>Think of the feasible region <span class="arithmatex">\( \{x : a_i^\top x \ge b_i\} \)</span> as walls constraining a ball.
-Gravity points in direction <span class="arithmatex">\(c\)</span> (the objective), so equilibrium occurs at the “lowest” corner <span class="arithmatex">\(x^*\)</span>, i.e., an optimal solution.</p>
-<p>At equilibrium, the net supporting force from the active walls balances gravity, giving
-[
-c \;=\; \sum_i p_i a_i \quad \text{with } p_i \ge 0,
-]
-i.e., <span class="arithmatex">\(p\)</span> is dual feasible.</p>
-<p>Walls that do <strong>not</strong> touch the ball exert <strong>no</strong> force, so if <span class="arithmatex">\(a_i^\top x^* &gt; b_i\)</span> then <span class="arithmatex">\(p_i=0\)</span>. This is the intuition behind conditions like <span class="arithmatex">\(p_i(b_i-a_i^\top x^*)=0\)</span>.</p>
-<p>With these forces,
-[
-p^\top b \;=\; \sum_i p_i b_i \;=\; \sum_i p_i a_i^\top x^<em> \;=\; c^\top x^</em>,
-]
-so the dual feasible <span class="arithmatex">\(p\)</span> matches the primal cost at <span class="arithmatex">\(x^*\)</span>, certifying optimality.</p>
+<p>Think of the feasible region as walls that constrain a ball. Gravity points in direction <span class="arithmatex">\(c\)</span>, so equilibrium occurs at the “lowest” point <span class="arithmatex">\(x^*\)</span>, i.e., an optimal solution.</p>
+<p>At equilibrium, supporting forces from the active walls balance gravity, giving a representation like<br />
+<span class="arithmatex">\(c = \sum_i p_i a_i\)</span> with <span class="arithmatex">\(p_i \ge 0\)</span>.<br />
+This corresponds to dual feasibility.</p>
+<p>Walls that do <strong>not</strong> touch the ball exert <strong>no</strong> force, so if <span class="arithmatex">\(a_i^\top x^* &gt; b_i\)</span> then <span class="arithmatex">\(p_i=0\)</span>. This is the intuition behind conditions of the form <span class="arithmatex">\(p_i(a_i^\top x^* - b_i)=0\)</span>.</p>
+<p>With these forces, one gets a matching of objective values: <span class="arithmatex">\((p^*)^\top b = c^\top x^*\)</span>, which certifies optimality.</p>
 </div>
 <hr />
 <h3 id="436-what-can-happen-to-primal-dual">4.3.6 What can happen to (primal, dual)?<a class="headerlink" href="#436-what-can-happen-to-primal-dual" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Key box — The three statuses</p>
-<p>For each of the primal and dual:
+<p>Each of the primal and dual can be:
 - <strong>Optimal solution exists</strong>, or
-- <strong>Unbounded</strong> (minimization: optimal cost <span class="arithmatex">\(=-\infty\)</span>; maximization: <span class="arithmatex">\(=+\infty\)</span>), or
+- <strong>Unbounded</strong> (minimization: value <span class="arithmatex">\(=-\infty\)</span>; maximization: value <span class="arithmatex">\(=+\infty\)</span>), or
 - <strong>Infeasible</strong>.</p>
-<p>This gives <span class="arithmatex">\(3\times 3 = 9\)</span> combinations.
-Strong duality says: if one has an optimal solution, so does the other (with equal optimal cost).
+<p>Strong duality says: if one has an optimal solution, so does the other, and the optimal values are equal.<br />
 Weak duality says: if one is unbounded, the other must be infeasible.</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Example 4.5 — Both can be infeasible</p>
-<p>Primal (infeasible):
-- minimize <span class="arithmatex">\(x_1 + 2x_2\)</span>
-- subject to <span class="arithmatex">\(x_1 + x_2 = 1\)</span>, and <span class="arithmatex">\(2x_1 + 2x_2 = 3\)</span>.</p>
-<p>Dual (also infeasible):
-- maximize <span class="arithmatex">\(p_1 + 3p_2\)</span>
-- subject to <span class="arithmatex">\(p_1 + 2p_2 = 1\)</span>, and <span class="arithmatex">\(p_1 + 2p_2 = 2\)</span>.</p>
+<p class="admonition-title">Example box — Both can be infeasible</p>
+<p>Primal (infeasible):<br />
+- minimize <span class="arithmatex">\(x_1 + 2x_2\)</span><br />
+- subject to <span class="arithmatex">\(x_1 + x_2 = 1\)</span>, and <span class="arithmatex">\(2x_1 + 2x_2 = 3\)</span></p>
+<p>Dual (also infeasible):<br />
+- maximize <span class="arithmatex">\(p_1 + 3p_2\)</span><br />
+- subject to <span class="arithmatex">\(p_1 + 2p_2 = 1\)</span>, and <span class="arithmatex">\(p_1 + 2p_2 = 2\)</span></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Remark — Clark's theorem</p>
-<p>Unless <strong>both</strong> problems are infeasible, at least one of them must have an <strong>unbounded feasible set</strong> (see the referenced exercise in the text).</p>
+<p class="admonition-title">Remark box — Clark’s theorem</p>
+<p>Unless <strong>both</strong> problems are infeasible, at least one of them must have an <strong>unbounded feasible set</strong> (as referenced in the text/exercise).</p>
 </div>
 
 
